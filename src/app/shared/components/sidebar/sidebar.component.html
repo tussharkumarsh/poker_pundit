@@ -1,0 +1,414 @@
+<!-- <div class="home-side-bar">
+  <a href="#">
+    <img src="/assets/side-bar-img/toogle.svg" alt="toogle-image" />
+  </a>
+  <ul>
+    <li routerLink="/">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/home.svg"
+        alt="home-image"
+      />
+    </li>
+    <li routerLink="/news" routerLinkActive="active">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/news.svg"
+        alt="news-image"
+      />
+    </li>
+    <li routerLink="/forums">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/forms.svg"
+        alt="forms-image"
+      />
+    </li>
+    <li routerLink="/website">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/website.svg"
+        alt="website-image"
+      />
+    </li>
+    <li>
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/events.svg"
+        alt="events-image"
+      />
+    </li>
+    <li>
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/offers.svg"
+        alt="offers-image"
+      />
+    </li>
+    <li>
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/shops.svg"
+        alt="shops-image"
+      />
+    </li>
+    <li>
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/lives.svg"
+        alt="live-image"
+      />
+    </li>
+    <li>
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/rankings.svg"
+        alt="rankings-image"
+      />
+    </li>
+  </ul>
+</div> -->
+
+<!-- second version -->
+<!-- <div class="home-side-bar">
+  <a href="#">
+    <img src="/assets/side-bar-img/toogle.svg" alt="toogle-image" />
+  </a>
+  <ul>
+    <li routerLink="/" [routerLinkActive]="['active']">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/home.svg"
+        alt="home-image"
+      />
+    </li>
+    <li routerLink="/news" routerLinkActive="active">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/news.svg"
+        alt="news-image"
+      />
+    </li>
+    <li routerLink="/forums" routerLinkActive="active">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/forms.svg"
+        alt="forms-image"
+      />
+    </li>
+    <li routerLink="/website" routerLinkActive="active">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/website.svg"
+        alt="website-image"
+      />
+    </li>
+    <li routerLink="/events" routerLinkActive="active">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/events.svg"
+        alt="events-image"
+      />
+    </li>
+    <li routerLink="/offers" routerLinkActive="active">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/offers.svg"
+        alt="offers-image"
+      />
+    </li>
+    <li routerLink="/shops" routerLinkActive="active">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/shops.svg"
+        alt="shops-image"
+      />
+    </li>
+    <li routerLink="/lives" routerLinkActive="active">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/lives.svg"
+        alt="live-image"
+      />
+    </li>
+    <li routerLink="/rankings" routerLinkActive="active">
+      <img
+        class="side-bar-icon"
+        src="/assets/side-bar-img/rankings.svg"
+        alt="rankings-image"
+      />
+    </li>
+  </ul>
+</div> -->
+<div class="sidebar sticky" [ngClass]="{ expanded: isExpanded }">
+  <div class="header mb-5">
+    <div class="toggle" (click)="handleSidebarToggle()">
+      <span class="chevron"></span>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="link" (click)="handleSidebarHideToggle()">
+      <div
+        class="content"
+        [routerLink]="['/home/main']"
+        [routerLinkActive]="'active'"
+      >
+        <div class="icon">
+          <svg (mouseover)="over('Home')" (mouseout)="out('Home')"
+            width="60"
+            height="65"
+            viewBox="0 0 60 65"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 65V21.6667L30 0L60 21.6667V65H37.5V39.7222H22.5V65H0Z"
+              fill="#6A3791"
+            />
+          </svg>
+          <div class="buttonTip" style="display: none;" id="Home">Home</div>
+        </div>
+        <div class="title">Home</div>
+      </div>
+    </div>
+    <!-- second -->
+    <div class="link" (click)="handleSidebarHideToggle()">
+      <div
+        class="content"
+        [routerLink]="['/home/news']"
+        [routerLinkActive]="'active'"
+      >
+        <div class="icon">
+          <svg (mouseover)="over('news')" (mouseout)="out('news')"
+            width="60"
+            height="54"
+            viewBox="0 0 60 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 41.8627H27V35.8824H12V41.8627ZM42 41.8627H48V35.8824H42V41.8627ZM12 29.902H27V23.9216H12V29.902ZM42 29.902H48V11.9608H42V29.902ZM12 17.9412H27V11.9608H12V17.9412ZM6 53.8235C4.35 53.8235 2.938 53.2384 1.764 52.0683C0.588 50.8961 0 49.4877 0 47.8431V5.98039C0 4.33578 0.588 2.9274 1.764 1.75524C2.938 0.585081 4.35 0 6 0H54C55.65 0 57.063 0.585081 58.239 1.75524C59.413 2.9274 60 4.33578 60 5.98039V47.8431C60 49.4877 59.413 50.8961 58.239 52.0683C57.063 53.2384 55.65 53.8235 54 53.8235H6Z"
+              fill="#6A3791"
+            />
+          </svg>
+          <div class="buttonTip" style="display: none;" id="news">News</div>
+        </div>
+        <div class="title">News</div>
+      </div>
+    </div>
+    <!-- three -->
+    <!-- <div class="link" (click)="handleSidebarHideToggle()">
+      <div
+        class="content"
+        [routerLink]="['/home/forums']"
+        [routerLinkActive]="'active'"
+      >
+        <div class="icon">
+          <svg
+            width="60"
+            height="61"
+            viewBox="0 0 60 61"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 45.8235V3.82349C0 2.97349 0.288 2.26049 0.864 1.68449C1.438 1.11049 2.15 0.823486 3 0.823486H42C42.85 0.823486 43.562 1.11049 44.136 1.68449C44.712 2.26049 45 2.97349 45 3.82349V30.8235C45 31.6735 44.712 32.3855 44.136 32.9595C43.562 33.5355 42.85 33.8235 42 33.8235H12L0 45.8235ZM15 48.8235C14.15 48.8235 13.437 48.5355 12.861 47.9595C12.287 47.3855 12 46.6735 12 45.8235V39.8235H51V12.8235H57C57.85 12.8235 58.562 13.1105 59.136 13.6845C59.712 14.2605 60 14.9735 60 15.8235V60.8235L48 48.8235H15Z"
+              fill="#6A3791"
+            />
+          </svg>
+        </div>
+        <div class="title">Forums</div>
+      </div>
+    </div> -->
+    <!-- four -->
+    <div class="link" (click)="handleSidebarHideToggle()">
+      <div
+        class="content"
+        [routerLink]="['/home/website']"
+        [routerLinkActive]="'active'"
+      >
+        <div class="icon">
+          <svg (mouseover)="over('Websites')" (mouseout)="out('Websites')"
+            width="60"
+            height="61"
+            viewBox="0 0 60 61"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M43.08 36.8235C43.32 34.8435 43.5 32.8635 43.5 30.8235C43.5 28.7835 43.32 26.8035 43.08 24.8235H53.22C53.7 26.7435 54 28.7535 54 30.8235C54 32.8935 53.7 34.9035 53.22 36.8235M37.77 53.5035C39.57 50.1735 40.95 46.5735 41.91 42.8235H50.76C47.8535 47.8283 43.2423 51.6195 37.77 53.5035ZM37.02 36.8235H22.98C22.68 34.8435 22.5 32.8635 22.5 30.8235C22.5 28.7835 22.68 26.7735 22.98 24.8235H37.02C37.29 26.7735 37.5 28.7835 37.5 30.8235C37.5 32.8635 37.29 34.8435 37.02 36.8235ZM30 54.7035C27.51 51.1035 25.5 47.1135 24.27 42.8235H35.73C34.5 47.1135 32.49 51.1035 30 54.7035ZM18 18.8235H9.24C12.1166 13.8051 16.7244 10.0079 22.2 8.14349C20.4 11.4735 19.05 15.0735 18 18.8235ZM9.24 42.8235H18C19.05 46.5735 20.4 50.1735 22.2 53.5035C16.7359 51.6185 12.1345 47.8266 9.24 42.8235ZM6.78 36.8235C6.3 34.9035 6 32.8935 6 30.8235C6 28.7535 6.3 26.7435 6.78 24.8235H16.92C16.68 26.8035 16.5 28.7835 16.5 30.8235C16.5 32.8635 16.68 34.8435 16.92 36.8235M30 6.91349C32.49 10.5135 34.5 14.5335 35.73 18.8235H24.27C25.5 14.5335 27.51 10.5135 30 6.91349ZM50.76 18.8235H41.91C40.9711 15.1079 39.5807 11.5212 37.77 8.14349C43.29 10.0335 47.88 13.8435 50.76 18.8235ZM30 0.823486C13.41 0.823486 0 14.3235 0 30.8235C0 38.78 3.16071 46.4106 8.7868 52.0367C11.5726 54.8224 14.8797 57.0322 18.5195 58.5399C22.1593 60.0475 26.0603 60.8235 30 60.8235C37.9565 60.8235 45.5871 57.6628 51.2132 52.0367C56.8393 46.4106 60 38.78 60 30.8235C60 26.8838 59.224 22.9827 57.7164 19.343C56.2087 15.7032 53.999 12.396 51.2132 9.61028C48.4274 6.82453 45.1203 4.61474 41.4805 3.1071C37.8407 1.59946 33.9397 0.823486 30 0.823486Z"
+              fill="#6A3791"
+            />
+          </svg>
+          <div class="buttonTip" style="display: none;" id="Websites">Websites</div>
+        </div>
+        <div class="title">Websites</div>
+      </div>
+    </div>
+    <!-- five -->
+    <!-- <div class="link" (click)="handleSidebarHideToggle()">
+      <div
+        class="content"
+        [routerLink]="['/home/events']"
+        [routerLinkActive]="'active'"
+      >
+        <div class="icon">
+          <svg
+            width="60"
+            height="68"
+            viewBox="0 0 60 68"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M38.3333 54.3317C36 54.3317 34.0278 53.5235 32.4167 51.9071C30.8056 50.2907 30 48.312 30 45.971C30 43.63 30.8056 41.6514 32.4167 40.035C34.0278 38.4186 36 37.6104 38.3333 37.6104C40.6667 37.6104 42.6389 38.4186 44.25 40.035C45.8611 41.6514 46.6667 43.63 46.6667 45.971C46.6667 48.312 45.8611 50.2907 44.25 51.9071C42.6389 53.5235 40.6667 54.3317 38.3333 54.3317ZM6.66667 67.7087C4.83333 67.7087 3.26333 67.0544 1.95667 65.7457C0.652222 64.4347 0 62.8596 0 61.0202V14.2005C0 12.3612 0.652222 10.7872 1.95667 9.47844C3.26333 8.16749 4.83333 7.51201 6.66667 7.51201H10V0.823486H16.6667V7.51201H43.3333V0.823486H50V7.51201H53.3333C55.1667 7.51201 56.7367 8.16749 58.0433 9.47844C59.3478 10.7872 60 12.3612 60 14.2005V61.0202C60 62.8596 59.3478 64.4347 58.0433 65.7457C56.7367 67.0544 55.1667 67.7087 53.3333 67.7087H6.66667ZM6.66667 61.0202H53.3333V27.5776H6.66667V61.0202Z"
+              fill="#6A3791"
+            />
+          </svg>
+        </div>
+        <div class="title">Events</div>
+      </div>
+    </div> -->
+    <!-- six -->
+    <!-- <div class="link" (click)="handleSidebarHideToggle()">
+      <div
+        class="content"
+        [routerLink]="['/home/offers']"
+        [routerLinkActive]="'active'"
+      >
+        <div class="icon">
+          <svg
+            width="60"
+            height="61"
+            viewBox="0 0 60 61"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M58.23 29.4487L31.23 2.44874C30.15 1.36874 28.65 0.70874 27 0.70874H6C2.7 0.70874 0 3.40874 0 6.70874V27.7087C0 29.3587 0.66 30.8587 1.77 31.9687L28.77 58.9687C29.85 60.0487 31.35 60.7087 33 60.7087C34.65 60.7087 36.15 60.0487 37.23 58.9387L58.23 37.9387C59.34 36.8587 60 35.3587 60 33.7087C60 32.0587 59.31 30.5287 58.23 29.4487ZM10.5 15.7087C8.01 15.7087 6 13.6987 6 11.2087C6 8.71874 8.01 6.70874 10.5 6.70874C12.99 6.70874 15 8.71874 15 11.2087C15 13.6987 12.99 15.7087 10.5 15.7087Z"
+              fill="#6A3791"
+            />
+          </svg>
+        </div>
+        <div class="title">Offers</div>
+      </div>
+    </div> -->
+    <!-- seven -->
+    <div
+      class="link"
+      (click)="handleSidebarHideToggle()"
+      style="z-index: 9999999999"
+    >
+      <div
+        class="content"
+        [routerLink]="['/home/shop']"
+        [routerLinkActive]="'active'"
+      >
+        <div class="icon">
+          <!-- <svg (mouseover)="over('Shop')" (mouseout)="out('Shop')"
+            width="64"
+            height="65"
+            viewBox="0 0 64 65"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask
+              id="mask0_109_41"
+              style="mask-type: luminance"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="64"
+              height="65"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2 17.7087H62L58.6667 62.7087H5.33333L2 17.7087Z"
+                fill="#6A3791"
+                stroke="white"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.668 24.3754V2.70874H45.3346V24.3754"
+                stroke="#6A3791"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.668 49.3755H45.3346"
+                stroke="#6A3791"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+            </mask>
+            <g mask="url(#mask0_109_41)">
+              <path
+                d="M-8.00195 -7.29126H71.998V72.7087H-8.00195V-7.29126Z"
+                fill="#6A3791"
+              />
+            </g>
+          </svg> -->
+
+          <svg (mouseover)="over('Shop')" (mouseout)="out('Shop')" xmlns="http://www.w3.org/2000/svg" width="64" height="65" fill="none" class="bi bi-handbag-fill" viewBox="0 0 16 16">
+            <path fill="#6A3791" d="M8 1a2 2 0 0 0-2 2v2H5V3a3 3 0 1 1 6 0v2h-1V3a2 2 0 0 0-2-2zM5 5H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11v1.5a.5.5 0 0 1-1 0V5H6v1.5a.5.5 0 0 1-1 0V5z"/>
+          </svg>
+          <div class="buttonTip" style="display: none;" id="Shop">Shop</div>
+        </div>
+        <div class="title">Shop</div>
+      </div>
+    </div>
+    <!-- eight -->
+    <div class="link" (click)="handleSidebarHideToggle()">
+      <div
+        class="content"
+        [routerLink]="['/home/live']"
+        [routerLinkActive]="'active'"
+      >
+        <div class="icon">
+          <svg (mouseover)="over('Videos')" (mouseout)="out('Videos')"
+            width="60"
+            height="56"
+            viewBox="0 0 60 56"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.5 38.6989L43.5 25.0225L22.5 11.346V38.6989ZM18 55.4146V49.3362H6C4.35 49.3362 2.938 48.7415 1.764 47.5522C0.588 46.3608 0 44.9293 0 43.2578V6.78717C0 5.1156 0.588 3.68413 1.764 2.49276C2.938 1.30341 4.35 0.70874 6 0.70874H54C55.65 0.70874 57.063 1.30341 58.239 2.49276C59.413 3.68413 60 5.1156 60 6.78717V43.2578C60 44.9293 59.413 46.3608 58.239 47.5522C57.063 48.7415 55.65 49.3362 54 49.3362H42V55.4146H18Z"
+              fill="#6A3791"
+            />
+          </svg>
+          <div class="buttonTip" style="display: none;" id="Videos">Videos</div>
+        </div>
+        <div class="title">Videos</div>
+      </div>
+    </div>
+    <!-- nine -->
+    <!-- <div class="link" (click)="handleSidebarHideToggle()">
+      <div
+        class="content"
+        [routerLink]="['/home/ranking']"
+        [routerLinkActive]="'active'"
+      >
+        <div class="icon">
+          <svg
+            width="60"
+            height="55"
+            viewBox="0 0 60 55"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 54.2381C2.15 54.2381 1.438 53.951 0.864 53.3769C0.288 52.8048 0 52.0951 0 51.2479V21.3459C0 20.4987 0.288 19.788 0.864 19.2139C1.438 18.6418 2.15 18.3557 3 18.3557H13.5C14.35 18.3557 15.063 18.6418 15.639 19.2139C16.213 19.788 16.5 20.4987 16.5 21.3459V51.2479C16.5 52.0951 16.213 52.8048 15.639 53.3769C15.063 53.951 14.35 54.2381 13.5 54.2381H3ZM24.75 54.2381C23.9 54.2381 23.188 53.951 22.614 53.3769C22.038 52.8048 21.75 52.0951 21.75 51.2479V3.40475C21.75 2.55752 22.038 1.84685 22.614 1.27274C23.188 0.700613 23.9 0.414551 24.75 0.414551H35.25C36.1 0.414551 36.813 0.700613 37.389 1.27274C37.963 1.84685 38.25 2.55752 38.25 3.40475V51.2479C38.25 52.0951 37.963 52.8048 37.389 53.3769C36.813 53.951 36.1 54.2381 35.25 54.2381H24.75ZM46.5 54.2381C45.65 54.2381 44.938 53.951 44.364 53.3769C43.788 52.8048 43.5 52.0951 43.5 51.2479V27.3263C43.5 26.4791 43.788 25.7684 44.364 25.1943C44.938 24.6222 45.65 24.3361 46.5 24.3361H57C57.85 24.3361 58.562 24.6222 59.136 25.1943C59.712 25.7684 60 26.4791 60 27.3263V51.2479C60 52.0951 59.712 52.8048 59.136 53.3769C58.562 53.951 57.85 54.2381 57 54.2381H46.5Z"
+              fill="#6A3791"
+            />
+          </svg>
+        </div>
+        <div class="title">Ranking</div>
+      </div>
+    </div> -->
+  </div>
+</div>

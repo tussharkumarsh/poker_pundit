@@ -1,0 +1,222 @@
+// live single is comented home/live/single
+
+.bookmark-icon-livestream {
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
+.play-button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.title-border-bottom {
+  border-bottom: 0.5px solid gray;
+  padding: 1em 0em;
+}
+
+.owl-item {
+  cursor: pointer;
+  opacity: 0.3;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.owl-item.center {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+//video owl-carousel
+.owl-carousel .owl-video-tn {
+  background-size: cover;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+}
+
+.owl-video-frame {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  display: inline-block;
+}
+
+.owl-dot span {
+  width: 11px;
+  height: 11px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: block;
+  margin: 5px 3px;
+}
+
+.owl-dot.active span {
+  background-color: #000;
+}
+
+.btn-wrap {
+  min-width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.prev-btn,
+.next-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: black;
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.owl-prev:before,
+.owl-next:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.show-mobile{
+  display: none;
+}
+
+.hide-mobile{
+  display: block;
+}
+
+.section-heading-1{
+  font-weight: 700; font-size: 3.5rem
+}
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .show-mobile{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .hide-mobile{
+    display: none;
+  }
+  .padding-0{
+    padding: 0 !important;
+  }
+  .play_button{
+    width: 50px !important;
+  }
+
+  .section-heading-1{
+    font-weight: 700; font-size: 2.9rem
+  }
+
+  #stickey-page{
+    position: relative !important;
+    padding: 0 !important;
+    width: 100%!important;
+  }
+}
+
+
+.hero-pokerRooms {
+  gap: 1.5rem;
+}
+.pokerRooms {
+  background: #242424;
+  padding: 1.5em;
+  border-radius: 2rem;
+}
+.pokerRoom-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.pookerRoom-description {
+  font-size: 1.5rem;
+}
+.pokerRoom-button {
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+.share {
+  background: #363636;
+}
+button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  background: #6a3791;
+  border: none;
+  cursor: pointer;
+}
+
+button, [type=button] {
+  -webkit-appearance: button-bevel !important;
+}
+
+
+@media (max-width: 1450px) and (min-width: 993px) {
+  .section-heading-1{
+    font-weight: 700; 
+    font-size: 2.6rem
+  } 
+  .pookerRoom-description {
+    font-size: 1.1rem;
+  }
+  button {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background: #6a3791;
+    border: none;
+    cursor: pointer;
+  }
+  .pokerRooms {
+    background: #242424;
+    padding: 1em;
+    border-radius: 2rem;
+  }
+}

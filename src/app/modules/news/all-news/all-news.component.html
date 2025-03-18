@@ -1,0 +1,143 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > <img src="./assets/side-bar-img/new_poker_logo.svg" alt=""> </p></ngx-spinner>
+<div class="container" style="min-width: 100%">
+  <div class="row gx-5">
+    <div class="col-md-12">
+      <div class="row mb-5">
+        <span
+          routerLink="/home/news"
+          class="d-flex align-items-center"
+          style="gap: 2rem; cursor: pointer"
+        >
+          <svg
+            width="12"
+            height="30"
+            viewBox="0 0 24 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M23.1686 58.8142C23.7229 58.0237 24 57.0877 24 56.0063C24 54.927 23.7229 53.9921 23.1686 53.2016L6.92841 30.0395L23.224 6.79842C23.7413 6.06061 24 5.13834 24 4.03162C24 2.9249 23.7229 1.97628 23.1686 1.18577C22.6143 0.395257 21.9581 0 21.1998 0C20.443 0 19.7875 0.395257 19.2333 1.18577L0.609699 27.8261C0.387991 28.1423 0.230577 28.4848 0.137461 28.8538C0.0458202 29.2227 0 29.6179 0 30.0395C0 30.4611 0.0458202 30.8564 0.137461 31.2253C0.230577 31.5942 0.387991 31.9368 0.609699 32.253L19.2887 58.8933C19.806 59.6311 20.443 60 21.1998 60C21.9581 60 22.6143 59.6047 23.1686 58.8142Z"
+              fill="#6A3791"
+            />
+          </svg>
+          <span style="font-size: 2.5rem; font-weight: 500"> News</span>
+        </span>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-md-12">
+          <div class="row" style="place-content: center">
+            <div id="filter-tab">
+              <div
+                class="d-flex title-border-bottom"
+                style="position: relative; justify-content: space-between; padding-top: 15px;"
+              >
+                <h1
+                  style="
+                    font-weight: 600;
+                    font-size: 3rem;
+                    margin-bottom: 10px !important;
+                  "
+                  class="mb-5 mt-1 display-none-mobile"
+                >
+                  All Articles
+                </h1>
+                <li class="d-flex align-item-center" id="product-title-2">
+                  <label class="dropdown">
+                    <div class="dd-button">
+                      <span class="filter-button"
+                        >Sort by: {{filteredBy}}
+                      </span>
+                    </div>
+                    <input type="checkbox" class="dd-input" id="test" />
+                    <ul class="dd-menu">
+                      <li (click)="sortAscending()"><span *ngIf="filteredBy == 'All'"> &#10004;</span> &nbsp;All</li>
+                      <li (click)="getFilteredFeaturedNews()"><span *ngIf="filteredBy == 'Spotlight'"> &#10004;</span>&nbsp;Spotlight</li>
+                      <li (click)="getFilteredLatestNews()"><span *ngIf="filteredBy == 'Latest'"> &#10004;</span>&nbsp;Latest</li>
+                      <li (click)="getFilteredTournamentHighlightsNews()"><span *ngIf="filteredBy == 'Tournament Highlights'"> &#10004;</span>&nbsp;Tournament Highlights</li>
+                      <li (click)="getFilteredgiantsNews()"><span *ngIf="filteredBy == 'Giants'"> &#10004;</span>&nbsp;Giants</li>
+                      <li (click)="getFilteredWinsNews()"><span *ngIf="filteredBy == 'Wins'"> &#10004;</span>&nbsp;Wins</li>
+                      <li (click)="getFilteredBubblesNews()"><span *ngIf="filteredBy == 'Bubbles'"> &#10004;</span>&nbsp;Bubbles</li>
+
+                      <li (click)="getFilteredLastToLatest()"><span *ngIf="filteredBy == 'Last To Latest'"> &#10004;</span>&nbsp;Last to Latest</li>
+                      <li (click)="getFilteredLatestToLast()"><span *ngIf="filteredBy == 'Latest To Last'"> &#10004;</span>&nbsp;Latest to Last</li>
+                      <!-- <li (click)="sortDescending()"><span *ngIf="filteredBy == 'All'"> &#10004;</span>&nbsp; Oldest First</li> -->
+                    </ul>
+                  </label>
+                </li>
+              </div>
+            </div>
+
+            <div class="row">
+              <div
+                class="col-md-4 g-5"
+                style="cursor: pointer"
+                *ngFor="let newsObj of news"
+              >
+                <div class="row">
+                  <div class="col-md-12 col-5 padding-0-m">
+                    <div style="position: relative">
+                      <img
+                        src="{{ newsObj.images[1] }}"
+                        alt="artical-img"
+                        style="width: 100%"
+                        (click)="goToSinglePage(newsObj)"
+                      />
+                      <div
+                        class="top-right"
+                        *ngIf="newsObj.tags == 'News'"
+                        style="background-color: #0460ac"
+                      >
+                        {{ newsObj.tags }}
+                      </div>
+                      <div
+                        class="top-right"
+                        *ngIf="newsObj.tags == 'Promotion'"
+                        style="background-color: #ef1178"
+                      >
+                        {{ newsObj.tags }}
+                      </div>
+                      <div
+                        class="top-right"
+                        *ngIf="newsObj.tags == 'Featured'"
+                        style="background-color: #ba1616"
+                      >
+                        {{ newsObj.tags }}
+                      </div>
+                      <div
+                        class="top-right"
+                        *ngIf="
+                          newsObj.tags != 'News' &&
+                          newsObj.tags != 'Featured' &&
+                          newsObj.tags != 'Promotion'
+                        "
+                        style="background-color: #6a3791"
+                      >
+                        {{ newsObj.tags }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-7">
+                    <p
+                      class="small-article-text margin-b-0"
+                      (click)="goToSinglePage(newsObj)"
+                    >
+                      {{ newsObj.heading }}
+                    </p>
+                    <p class="artical-time-text">
+                      <i style="color: gray"
+                        >{{ newsObj.authorName }} |
+                        {{ newsObj.timeForReadingMinutes }} |
+                        {{ newsObj.createdAt | dateAgo }}</i
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

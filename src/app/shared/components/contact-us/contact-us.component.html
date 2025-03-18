@@ -1,0 +1,126 @@
+<div class="container" style="background-image: url(./assets/img/wht.png); background-repeat: repeat;">
+
+  <!-- <div class="row">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSesXiWY2ccxK4OCCw2teknUF5vYO2iBx9kc863Ottq7n5xbKg/viewform?embedded=true" width="640" height="643" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    
+  </div> -->
+  <div class="row">
+    <div class="col-md-12 d-flex justify-content-center">
+      <h1 class="contact-us-title">Contact us</h1>
+    </div>
+    <div class="col-md-12 d-flex justify-content-center">
+      <p class="contact-text font-12-mob">
+        Our team is here to assist you with any inquiries, account assistance, platform questions, or poker game help you need. Your ideas and feedback are essential to enhancing Poker Pundit. We're dedicated to creating the best poker experience possible.
+      </p>
+    </div>
+
+    <div class="col-md-12 mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="contact-us-inputs-wrapper">
+            <form #form="ngForm">
+              <div style="position: relative;">
+                <input class="contact-us-input font-12-mob " type="text" placeholder="Name" required
+                  minlength="5"
+                  name="name"
+                  [(ngModel)]="contactUs.name"
+                  #name="ngModel"
+                  [ngClass]="{ 'is-invalid': name.invalid && name.touched }" />
+                  
+                  <div style="position: absolute; top: 60px; left: 41px;" class="invalid-feedback" class="newsLetter-form-error" *ngIf="name.invalid && name.touched">
+                      <div *ngIf="name.errors?.['required']">
+                        Name is required.
+                      </div>
+                      <div *ngIf="name.errors?.['minlength']">
+                        Name must be at least 5 characters long.
+                      </div>
+                      <div *ngIf="name.errors?.['email']">
+                        Please enter a valid name.
+                      </div>
+                  </div>
+                </div>
+                
+              <div style="position: relative;">
+                <input class="contact-us-input font-12-mob" type="email" placeholder="Email" 
+                  minlength="5"
+                  name="email"
+                  [(ngModel)]="contactUs.email"
+                  #email="ngModel"
+                  [ngClass]="{ 'is-invalid': email.invalid && email.touched }"/>
+                <div style="position: absolute; top: 60px; left: 41px;" class="invalid-feedback" class="newsLetter-form-error" *ngIf="email.invalid && email.touched">
+                  <div *ngIf="email.errors?.['required']">
+                    email is required.
+                  </div>
+                  <div *ngIf="email.errors?.['minlength']">
+                    email must be at least 5 characters long.
+                  </div>
+                  <div *ngIf="email.errors?.['email']">
+                    Please enter a valid email.
+                  </div>
+              </div>
+              </div>
+  
+              <textarea
+                class="contact-us-input-message font-12-mob"
+                name="message"
+                id="message"
+                rows="5"
+                placeholder="Message"
+              ></textarea>
+              <button (click)="handleSubmit(form)">Send</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="image-wrapper">
+            <img class="shark-img"
+              src="/assets/img/contact-us-sharky-map.png"
+              alt="sharky map"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-12 contact-text d-flex justify-content-center">
+          <div class="font-12-mob">
+            <p style="text-align: center">
+              For any queries, kindly send an email to info@pokerpundit.in
+            </p>
+            <p style="text-align: center">Regards,</p>
+            <p style="text-align: center">Team PokerPundit</p>
+          </div>
+        </div>
+        <!-- <div class="col-md-6 contact-us-info">
+          <div class="contact-us-hero-wrapper">
+            <div class="contact-us-info-wrapper" style="margin-bottom: 2em">
+              <span>
+                <img src="/assets/side-bar-img/email.svg" alt="email-icon" />
+              </span>
+              <p class="contact-text">info@pokerpundit.in</p>
+            </div>
+            <div class="contact-us-info-wrapper">
+              <span>
+                <img src="/assets/side-bar-img/email.svg" alt="email-icon" />
+              </span>
+              <p class="contact-text">info@pokerpundit.in</p>
+            </div>
+          </div>
+          <div class="contact-us-hero-wrapper mt-5">
+            <div class="contact-us-info-wrapper" style="margin-bottom: 2em">
+              <span>
+                <img src="/assets/side-bar-img/phone.svg" alt="phone-icon" />
+              </span>
+              <p class="contact-text">+91 XXXXX XXXXX</p>
+            </div>
+            <div class="contact-us-info-wrapper">
+              <span>
+                <img src="/assets/side-bar-img/phone.svg" alt="phone-icon" />
+              </span>
+              <p class="contact-text">+91 XXXXX XXXXX</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

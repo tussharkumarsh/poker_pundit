@@ -1,0 +1,442 @@
+<div class="main-container">
+  <div class="container" style="min-width: 100%">
+    <div class="row">
+      <div class="col-md-8">
+        <div
+          class="p-0 river-table"
+          style="
+            border-radius: 2rem;
+            background-color: #242424;
+            box-shadow: 0px 0px 15px 15px rgba(12, 10, 53, 0.15);
+          "
+        >
+          <div>
+            <div class="row show-mobile p-4">
+              <div class="col-6">
+                <div class="accordion" id="leaderboardAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="leaderboardDropdown">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#leaderboardCollapse"
+                        aria-expanded="true"
+                        aria-controls="leaderboardCollapse"
+                        style="border-radius: 2rem; border: none"
+                      >
+                        All Leaderboards
+                      </button>
+                    </h2>
+                    <!-- if we use show keyword it will by default show this dropdown -->
+                    <div
+                      id="leaderboardCollapse"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="leaderboardDropdown"
+                      data-bs-parent="#leaderboardAccordion"
+                    >
+                      <div class="accordion-body">
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              style="white-space: nowrap;"
+                              id="cashes-tab"
+                              data-bs-toggle="pill"
+                              href="#cashes"
+                              >Cash Leaderboard</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link"
+                              style="white-space: nowrap;"
+                              id="profit-tab"
+                              data-bs-toggle="pill"
+                              href="#profit"
+                              >Profit Leaderboard</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link"
+                              id="tlb-tab"
+                              style="white-space: nowrap;"
+                              data-bs-toggle="pill"
+                              href="#tlb"
+                              >Tournament Leaderboard</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="accordion" id="timeAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="timeDropdown">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#timeCollapse"
+                        aria-expanded="false"
+                        aria-controls="timeCollapse"
+                        style="border-radius: 2rem; border: none"
+                      >
+                        Any Time
+                      </button>
+                    </h2>
+                    <div
+                      id="timeCollapse"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="timeDropdown"
+                      data-bs-parent="#timeAccordion"
+                    >
+                      <div class="accordion-body">
+                        <!-- <ul class="list-unstyled">
+                          <li>Weekly</li>
+                          <li>Monthly</li>
+                          <li>Yearly</li>
+                        </ul> -->
+                        <ul class="nav nav-pills flex-column">
+                          <li class="nav-item">
+                            <a
+                              class="nav-link active"
+                              id="Weekly-tab"
+                              data-bs-toggle="pill"
+                              href=""
+                              >Weekly</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link"
+                              id="Monthly-tab"
+                              data-bs-toggle="pill"
+                              href=""
+                              >Monthly</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link"
+                              id="Yearly-tab"
+                              data-bs-toggle="pill"
+                              href=""
+                              >Yearly</a
+                            >
+                          </li>
+                        </ul>
+        
+        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              
+            </div>
+            <div class="row padding-5rem">
+              <div class="col-md-12 d-flex justify-content-center">
+                <span class="online-poker-room-heading">Online Poker Rankings</span
+                >
+              </div>
+
+              <div class="container mt-3">
+                <div class="container">
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="cashes">
+                      <ul class="nav d-flex justify-content-between" style="border-bottom: 1px solid gray;border-top: 1px solid gray; padding-left: 4rem;
+                      padding-right: 4rem;">
+                        <li class="nav-item">
+                          <span class="nav-link" style="color: white"
+                            >Name</span
+                          >
+                        </li>
+
+                        <li class="nav-item">
+                          <span class="nav-link" style="color: white">Won</span>
+                        </li>
+                      </ul>
+                      <ul style="padding-left: 0px">
+                        <li
+                          *ngFor="
+                            let riverTransferRanking of riverTransferRankings;
+                            trackBy: trackById;
+                            index as i
+                          "
+                        >
+                          <div
+                            class="d-flex justify-content-between"
+                            style="line-height: 4rem"
+                          >
+                            <div class="text-truncate">
+                              {{ i + 1 }}. {{ riverTransferRanking.member }}
+                            </div>
+                            <div class="text-truncate">
+                              {{ riverTransferRanking.won }}
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-pane fade" id="profit">
+                      <ul class="nav d-flex justify-content-between" style="border-bottom: 1px solid gray;border-top: 1px solid gray; padding-left: 4rem;
+                      padding-right: 4rem;">
+                        <li class="nav-item">
+                          <span class="nav-link" style="color: white"
+                            >Names</span
+                          >
+                        </li>
+
+                        <li class="nav-item">
+                          <span class="nav-link" style="color: white"
+                            >Profit</span
+                          >
+                        </li>
+                      </ul>
+                      <ul style="padding-left: 0px">
+                        <li
+                          *ngFor="
+                            let riverTransferRanking of riverTransferRankings;
+                            trackBy: trackById;
+                            index as i
+                          "
+                        >
+                          <div
+                            class="d-flex justify-content-between"
+                            style="line-height: 4rem"
+                          >
+                            <div class="text-truncate">
+                              {{ i + 1 }}. {{ riverTransferRanking.member }}
+                            </div>
+                            <div class="text-truncate">
+                              {{ riverTransferRanking.profit }}
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tlb">
+                      <ul class="nav d-flex justify-content-between" style="border-bottom: 1px solid gray;border-top: 1px solid gray; padding-left: 4rem;
+                      padding-right: 4rem;">
+                        <li class="nav-item">
+                          <span class="nav-link" style="color: white"
+                            >Names</span
+                          >
+                        </li>
+
+                        <li class="nav-item">
+                          <span class="nav-link" style="color: white"
+                            >Points</span
+                          >
+                        </li>
+                      </ul>
+                      <ul style="padding-left: 0px">
+                        <li
+                          *ngFor="
+                            let riverTransferRanking of riverTransferRankings;
+                            trackBy: trackById;
+                            index as i
+                          "
+                        >
+                          <div
+                            class="d-flex justify-content-between"
+                            style="line-height: 4rem"
+                          >
+                            <div class="text-truncate">
+                              {{ i + 1 }}. {{ riverTransferRanking.member }}
+                            </div>
+                            <div class="text-truncate" style="padding-right: 30px;">
+                              {{ riverTransferRanking.points }}
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-border"></div>
+                <div class="mb-4">
+                  <div class="pagination">
+                    <span style="margin-right: 1.2rem; cursor: pointer">
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 11 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.5299 1.40039L2.38037 5.37971L9.5299 9.35904"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </span>
+                    <div class="pages d-flex justify-content-center">
+                      <a class="page active">1</a>
+                      <a class="page">2</a>
+                      <a class="page">3</a>
+                      <a class="page">4</a>
+                      <a class="page">5</a>
+                      <a class="page">...</a>
+                      <a class="page">150</a>
+                    </div>
+                    <span style="margin-left: 1.2rem; cursor: pointer">
+                      <svg
+                        width="11"
+                        height="11"
+                        viewBox="0 0 11 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.860726 1.40039L8.01025 5.37971L0.860726 9.35904"
+                          stroke="white"
+                          stroke-width="2"
+                        /></svg>
+                      </span>
+                  </div>
+                </div>
+                <div class="d-flex cursor-pointer justify-content-center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 hide-mobile">
+        <div class="accordion" id="leaderboardAccordion">
+          <div class="mb-5">
+            <!-- <img src="/assets/side-bar-img/filter.svg" alt="filter-svg-icon" /> -->
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="leaderboardDropdown">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#leaderboardCollapse"
+                aria-expanded="true"
+                aria-controls="leaderboardCollapse"
+                style="border-radius: 2rem; border: none"
+              >
+                All Leaderboards
+              </button>
+            </h2>
+            <!-- if we use show keyword it will by default show this dropdown -->
+            <div
+              id="leaderboardCollapse"
+              class="accordion-collapse collapse"
+              aria-labelledby="leaderboardDropdown"
+              data-bs-parent="#leaderboardAccordion"
+            >
+              <div class="accordion-body">
+                <ul class="nav nav-pills flex-column">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      style="white-space: nowrap;"
+                      id="cashes-tab"
+                      data-bs-toggle="pill"
+                      href="#cashes"
+                      >Cash Leaderboard</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      style="white-space: nowrap;"
+                      id="profit-tab"
+                      data-bs-toggle="pill"
+                      href="#profit"
+                      >Profit Leaderboard</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="tlb-tab"
+                      style="white-space: nowrap;"
+                      data-bs-toggle="pill"
+                      href="#tlb"
+                      >Tournament Leaderboard</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" id="timeAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="timeDropdown">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#timeCollapse"
+                aria-expanded="false"
+                aria-controls="timeCollapse"
+                style="border-radius: 2rem; border: none"
+              >
+                Any Time
+              </button>
+            </h2>
+            <div
+              id="timeCollapse"
+              class="accordion-collapse collapse"
+              aria-labelledby="timeDropdown"
+              data-bs-parent="#timeAccordion"
+            >
+              <div class="accordion-body">
+                <!-- <ul class="list-unstyled">
+                  <li>Weekly</li>
+                  <li>Monthly</li>
+                  <li>Yearly</li>
+                </ul> -->
+                <ul class="nav nav-pills flex-column">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="Weekly-tab"
+                      data-bs-toggle="pill"
+                      href=""
+                      >Weekly</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="Monthly-tab"
+                      data-bs-toggle="pill"
+                      href=""
+                      >Monthly</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="Yearly-tab"
+                      data-bs-toggle="pill"
+                      href=""
+                      >Yearly</a
+                    >
+                  </li>
+                </ul>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

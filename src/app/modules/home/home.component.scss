@@ -1,0 +1,440 @@
+// .input {
+//   background-color: #f7f7f7;
+//   border: 2px solid transparent;
+//   border-radius: 4px;
+//   padding: 10px 15px;
+//   outline: 0;
+//   width: 100%;
+//   font-size: 14px;
+//   &:focus {
+//     border-color: #e3e3e3;
+//   }
+//   &--select {
+//     // background-image: url("/assets/img/icon/down.svg");
+//     background-position: 98% center;
+//     background-repeat: no-repeat;
+//     appearance: none;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//   }
+//   &--textarea {
+//     resize: vertical;
+//   }
+// }
+
+// .btn {
+//   cursor: pointer;
+//   display: inline-flex;
+//   align-items: center;
+//   padding: 8px 12px;
+//   margin-right: 5px;
+//   border: 0;
+//   border-radius: 4px;
+//   transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+//   &--grey {
+//     background: #f7f7f7;
+//     color: #444;
+//   }
+//   &--green {
+//     background: #01a3a4;
+//     color: #fff;
+//   }
+//   &:hover {
+//     opacity: 0.8;
+//     transform: translateY(-2px);
+//   }
+//   &:disabled {
+//     cursor: no-drop;
+//   }
+// }
+
+//this are the importents
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+//this are the importents
+
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
+// padding-block: min(20vh,10rem)
+.common-card-background {
+  background: #242424;
+}
+
+.artical-text:hover {
+  cursor: pointer;
+  color: #a86fbb;
+}
+
+.title-border-bottom {
+  border-bottom: 0.5px solid gray;
+  padding: 1em 0em;
+}
+
+.add-card {
+  background: #242424;
+  padding: 0;
+  font-weight: 700;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+// .top-right {
+//   background-color: #0460ac;
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   position: absolute;
+//   padding: 0.5rem 3rem;
+// }
+
+//image ratio
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #0460ac;
+  color: #fff;
+  font-size: 14px;
+  padding: 0.3rem 1rem;
+  border-bottom-left-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.fixed-height-img {
+  object-fit: contain;
+  height: 80px; /* Set the desired height */
+}
+
+.artical-time-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.artical-description {
+  font-size: 2rem;
+  font-weight: 600;
+
+  display: -webkit-box;
+  // -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.small-article-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bookmark-icon-livestream {
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
+.play-button-container {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// .line-3 {
+//   border: 1px solid rgba(255, 255, 255, 0.25);
+// }
+
+.bookmark-icon {
+  height: 4rem;
+  width: 4rem;
+}
+
+button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  background: #6a3791;
+  border: none;
+  cursor: pointer;
+}
+
+.read-more {
+  border-radius: 2.5rem;
+  font-size: 1.2rem;
+  padding: 1em 2em;
+}
+
+.rankings-button button.active {
+  background-color: #6a3791;
+  color: #fff;
+  border-color: #6a3791;
+}
+
+//image zoom
+// .hover img {
+//   backface-visibility: hidden;
+//   transition: transform 0.2s ease-in-out;
+// }
+
+.artical-img-opacity {
+  opacity: 0.8;
+}
+
+.hover:hover img {
+  opacity: 1.2;
+}
+// River Transfer Rankings
+
+.owl-item {
+  cursor: pointer;
+  opacity: 0.3;
+  transform: scale(1);
+}
+
+.owl-item.center {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+//video owl-carousel
+.owl-carousel .owl-video-tn {
+  background-size: cover;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+}
+
+.owl-video-frame {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  display: inline-block;
+}
+
+.owl-dot span {
+  width: 11px;
+  height: 11px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: block;
+  margin: 5px 3px;
+}
+
+.owl-dot.active span {
+  background-color: #000;
+}
+
+.btn-wrap {
+  min-width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.prev-btn,
+.next-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: black;
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.owl-prev:before,
+.owl-next:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 1;
+}
+.hero-pokerRooms {
+  gap: 1.5rem;
+}
+.pokerRooms {
+  background: #242424;
+  padding: 1.5em;
+  border-radius: 2rem;
+}
+
+.pokerRoom-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.pookerRoom-description {
+  font-size: 1.5rem;
+}
+
+.pokerRoom-button {
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.upcoming-tournaments-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+}
+
+.share {
+  background: #363636;
+}
+
+.owl-stage-outer {
+  height: 100%;
+}
+.owl-stage {
+  height: 100%;
+}
+
+/* media query */
+@media only screen and (max-width: 767px) {
+  .my-card {
+    margin-bottom: 1rem;
+  }
+
+  .side-card-div {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .side-card {
+    min-width: 100%;
+  }
+}
+
+// @media only screen and (max-width: 1200px) {
+//   .main-div {
+//     display: flex;
+//   }
+// }
+
+@media only screen and (max-width: 1200px) {
+  // .col-md-8 {
+  //   flex: 0 0 100%; /* make the column take full width of the screen */
+  //   max-width: 100%; /* set the maximum width to 100% */
+  // }
+  // .col-md-4 {
+  //   flex: 0 0 100%; /* make the column take full width of the screen */
+  //   max-width: 100%; /* set the maximum width to 100% */
+  // }
+  .app-ranking {
+    margin-top: 2rem;
+  }
+}
+
+// @media (min-width: 768px) and (max-width: 1259px) {
+//   .artical-description {
+//     font-size: 1.2rem;
+//   }
+//   .read-more {
+//     border-radius: 2.5rem;
+//     font-size: 1.2rem;
+//     padding: 0.5em 1.5em;
+//   }
+
+//   .bookmark-icon {
+//     height: 3rem;
+//     width: 3rem;
+//   }
+// }
+//  @media (min-width: 480px) and (max-width: 767px) {}
+
+
+.section-heading{
+  font-weight: 700; 
+  font-size: 3.5rem
+}
+
+.show-mobile{
+  display: none;
+}
+
+.hide-mobile{
+  display: block;
+}
+
+.text-cut {
+  overflow: hidden !important;  
+  display: -webkit-box !important;
+  line-clamp: 2 !important; 
+  -webkit-line-clamp: 2 !important; /* Number of lines to display */
+  -webkit-box-orient: vertical !important;
+  text-overflow: ellipsis !important;
+}
+
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .show-mobile{
+    display: block;
+  }
+
+  .hide-mobile{
+    display: none;
+  }
+
+  .padding-0{
+    padding: 0 !important;
+  }
+
+  .artical-time-text{
+    margin-top: 0 !important;
+  }
+
+  .small-article-text{
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .section-heading{
+    font-weight: 700; 
+    font-size: 2.9rem
+  }
+
+  .upcoming-tournaments-button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+  }
+
+  .text-cut {
+    overflow: hidden !important;  
+    display: -webkit-box !important;
+    line-clamp: 2 !important; 
+    -webkit-line-clamp: 2 !important; /* Number of lines to display */
+    -webkit-box-orient: vertical !important;
+    text-overflow: ellipsis !important;
+    height: 4.5em !important;
+  }
+}

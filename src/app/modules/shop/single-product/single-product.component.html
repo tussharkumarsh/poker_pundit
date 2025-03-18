@@ -1,0 +1,357 @@
+<div *ngIf="!waitingLoader"> 
+ <h1> Please Wait </h1> 
+</div>
+
+<div *ngIf="waitingLoader" class="container" style="min-width: 100%">
+  <div class="row hide-mobile" id="sticky-header1">
+    <div class="col-md-6 col-6">
+      <span
+        routerLink="/home/shop"
+        class="d-flex align-items-center"
+        style="gap: 2rem; cursor: pointer"
+      >
+        <svg
+          width="12"
+          height="30"
+          viewBox="0 0 24 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M23.1686 58.8142C23.7229 58.0237 24 57.0877 24 56.0063C24 54.927 23.7229 53.9921 23.1686 53.2016L6.92841 30.0395L23.224 6.79842C23.7413 6.06061 24 5.13834 24 4.03162C24 2.9249 23.7229 1.97628 23.1686 1.18577C22.6143 0.395257 21.9581 0 21.1998 0C20.443 0 19.7875 0.395257 19.2333 1.18577L0.609699 27.8261C0.387991 28.1423 0.230577 28.4848 0.137461 28.8538C0.0458202 29.2227 0 29.6179 0 30.0395C0 30.4611 0.0458202 30.8564 0.137461 31.2253C0.230577 31.5942 0.387991 31.9368 0.609699 32.253L19.2887 58.8933C19.806 59.6311 20.443 60 21.1998 60C21.9581 60 22.6143 59.6047 23.1686 58.8142Z"
+            fill="#6A3791"
+          />
+        </svg>
+        <span style="font-size: 2.5rem; font-weight: 500">All Products</span>
+      </span>
+    </div>
+    <div class="col-md-6 col-6" style="text-align: right">
+      <div style="cursor: pointer" (click)="goToCartPage(productObj)">
+        <span style="position: relative">
+          <img src="./assets/img/cart.png" width="25px" alt="" />
+          <span class="badge">
+            {{ productCartArr.length }}
+          </span>
+        </span>
+        <span class="hide-view-cart-mobile"
+          style="
+            font-size: 2rem;
+            font-weight: 500;
+            vertical-align: middle;
+            padding-left: 10px;
+          "
+        >
+          View cart
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row show-mobole" id="sticky-header">
+    <div class="col-md-6 col-6">
+      <span
+        routerLink="/home/shop"
+        class="d-flex align-items-center"
+        style="gap: 2rem; cursor: pointer"
+      >
+        <svg
+          width="12"
+          height="30"
+          viewBox="0 0 24 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M23.1686 58.8142C23.7229 58.0237 24 57.0877 24 56.0063C24 54.927 23.7229 53.9921 23.1686 53.2016L6.92841 30.0395L23.224 6.79842C23.7413 6.06061 24 5.13834 24 4.03162C24 2.9249 23.7229 1.97628 23.1686 1.18577C22.6143 0.395257 21.9581 0 21.1998 0C20.443 0 19.7875 0.395257 19.2333 1.18577L0.609699 27.8261C0.387991 28.1423 0.230577 28.4848 0.137461 28.8538C0.0458202 29.2227 0 29.6179 0 30.0395C0 30.4611 0.0458202 30.8564 0.137461 31.2253C0.230577 31.5942 0.387991 31.9368 0.609699 32.253L19.2887 58.8933C19.806 59.6311 20.443 60 21.1998 60C21.9581 60 22.6143 59.6047 23.1686 58.8142Z"
+            fill="#6A3791"
+          />
+        </svg>
+        <span style="font-size: 2.5rem; font-weight: 500">All Products</span>
+      </span>
+    </div>
+    <div class="col-md-6 col-6" style="text-align: right">
+      <div style="cursor: pointer" (click)="goToCartPage(productObj)">
+        <span style="position: relative">
+          <img src="./assets/img/cart.png" width="25px" alt="" />
+          <span class="badge">
+            {{ productCartArr.length }}
+          </span>
+        </span>
+        <span class="hide-view-cart-mobile"
+          style="
+            font-size: 2rem;
+            font-weight: 500;
+            vertical-align: middle;
+            padding-left: 10px;
+          "
+        >
+          View cart
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 d-flex justify-content-center">
+    <div class="col-md-6 col-12">
+      <div class="image-slider-box" style="margin-top: 0em">
+        <div class="row h-100">
+          
+          <div
+            class="col-md-3 col-12 hide-mobile flex-column align-items-center justify-content-center "
+          >
+            <div class="img-grid--div">
+
+              <img
+                class="img-fluid thumbnail"
+                [src]="productObj.images"
+                alt="Thumbnail Image"
+                (click)="changeMainImage(productObj.images)"
+              />
+              <img
+                class="img-fluid thumbnail"
+                [src]="productObj.previewImages[0]"
+                alt="Thumbnail Image"
+                (click)="changeMainImage(productObj.previewImages[0])"
+              />
+              <img
+                class="img-fluid thumbnail"
+                [src]="productObj.previewImages[1]"
+                alt="Thumbnail Image"
+                (click)="changeMainImage(productObj.previewImages[1])"
+              />
+            </div>
+          </div>
+
+          <div
+            class="col-md-9 col-12 d-flex align-items-center justify-content-center" style="position: relative;"
+          >
+          <div style="position: absolute; top: 0; right: 8px; background-color: #6a3791; font-size: 19px; padding: 8px;" *ngIf="productObj.discountCode != ''" class="off50">{{productObj.discountCode}}</div>
+            <img
+              class="img-fluid main-image"
+              [src]="mainImage"
+              alt="Main Image"
+              id="gfg-img" (mouseover)='over()' (mouseout)='out()'
+            />
+          </div>
+          <div class="zoom-preview" *ngIf="showZoomImg" style="position: absolute; top: 27rem; right: 30rem; background-color: #000 !important;"></div>
+
+
+          <div
+          class="col-md-3 col-12 show-mobole flex-column align-items-center justify-content-center "
+        >
+          <div class="img-grid--div">
+
+            <img
+              class="img-fluid thumbnail"
+              [src]="productObj.images"
+              alt="Thumbnail Image"
+              (click)="changeMainImage(productObj.images)"
+            />
+            <img
+              class="img-fluid thumbnail"
+              [src]="productObj.previewImages[0]"
+              alt="Thumbnail Image"
+              (click)="changeMainImage(productObj.previewImages[0])"
+            />
+            <img
+              class="img-fluid thumbnail"
+              [src]="productObj.previewImages[1]"
+              alt="Thumbnail Image"
+              (click)="changeMainImage(productObj.previewImages[1])"
+            />
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-12 col-lg-6 mt-md-0 mt-5">
+      <div
+        class="row h-100 flex-column justify-content-between align-items-center"
+      >
+        <h1 style="font-weight: 600" class="font-size-res">
+          {{ productObj.productName }}
+        </h1>
+        <h1 class="shop-hero-text" style="font-weight: 800; padding: 10px 10px">
+          <span *ngIf="showSelectedOptionDiscount" style="text-decoration: line-through; text-decoration-color: red; text-decoration-thickness: 5;">₹ {{showSelectedOptionDiscount}}</span> ₹ {{ showSelectedOptionItem }}
+        </h1>
+        <div class="d-flex-contener justify-content-between align-items-center margin-top-mob">
+          <div class="rating-box">
+            <div class="rating-container">
+              <input type="radio" name="rating" value="5" id="star-5" />
+              <label for="star-5" class="padding-lr-15px">&#9733;</label>
+
+              <input type="radio" name="rating" value="4" id="star-4" />
+              <label for="star-4" class="padding-lr-15px">&#9733;</label>
+
+              <input type="radio" name="rating" value="3" id="star-3" />
+              <label for="star-3" class="padding-lr-15px">&#9733;</label>
+
+              <input type="radio" name="rating" value="2" id="star-2" />
+              <label for="star-2" class="padding-lr-15px">&#9733;</label>
+
+              <input type="radio" name="rating" value="1" id="star-1" />
+              <label for="star-1" class="padding-lr-15px">&#9733;</label>
+            </div>
+          </div>
+          <div>
+            <span (click)="copyRouteLink()" style="cursor: pointer;" title="Copy Link">
+              <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="28" height="26" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16"> 
+                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" fill="white"></path> <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" fill="white"></path> </svg>
+            </span>
+          </div>
+          <!-- <span class="hide-mobile shop-hero-text padding-left-20px">5 ratings</span> -->
+        </div>
+        <div class="py-04">
+          <p class="font-size-3rem">Select Option:</p>
+          <select
+            name="selectedOptionItem"
+            id="selectedOptionItem"
+            [(ngModel)]="selectedOptionItemIndex"  (change)="selectedOption()"
+            class="w-100 shop-hero-text p-3 selectoptionList dropdown-font-size"
+          >
+            <option [value]="undefined" disabled>Select Option</option>
+            <option
+              [value]="i"
+              *ngFor="let item of Object.keys(productObj.coloursAndPrices); let i = index"
+            >
+              {{ item }} 
+              <!-- : ₹ {{ productObj.coloursAndPrices[item] }} -->
+            </option>
+          </select>
+        </div>
+        <div class="py-04">
+          <p class="font-size-3rem mt-md-0 mt-3">Quantity:</p>
+          <div
+            class="btn-group w-100 option-dropdown-height"
+            role="group" style="width: 50% !important;"
+            aria-label="Basic outlined example"
+          >
+            <button
+              type="button"
+              class="btn btn-outline-light shop-hero-text p-3 font-size-15px"
+              (click)="decreaseValue()"
+              style="
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+              "
+            >
+              -
+            </button>
+            <div type="button" class="btn btn-outline-light shop-hero-text p-3 font-size-15px">
+              {{ count }}
+            </div>
+            <button
+              type="button"
+              style="
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+              "
+              class="btn btn-outline-light shop-hero-text p-3 font-size-15px"
+              (click)="increaseValue()"
+            >
+              +
+            </button>
+          </div>
+        </div>
+        <div
+          class="d-flex justify-content-center w-100 mt-md-0 margin-top-5 py-4 hide-mobile"
+        >
+          <!-- <div class="col-md-6">
+            
+          </div> -->
+          <button
+            type="button"
+            class="buy-now-button"
+            (click)="goToBuyNowPage(productObj)"
+          >
+            Buy Now
+          </button>
+          <button type="button" class="add-card-button" (click)="addToCart()">
+            Add to Cart
+          </button>
+          <!-- <div class="col-md-6">
+            <button type="button" class="add-card-button" (click)="goToCartPage(productObj)">
+              Add to Cart
+            </button>
+         
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="row justify-content-between w-100 mt-md-0 margin-top-5 py-4 show-mobole"
+    >
+      <div class="col-md-6 col-6">
+        <button
+          type="button"
+          class="buy-now-button"
+          (click)="goToBuyNowPage(productObj)"
+        >
+          Buy Now
+        </button>
+      </div>
+      <div class="col-md-6 col-6">
+        <button
+          type="button"
+          class="add-card-button"
+          (click)="addToCart()"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5 d-flex justify-content-center">
+    <div class="col-md-12">
+      <div
+        class="description-box d-flex align-items-start justify-content-between flex-column p-5"
+      >
+        <h1 style="font-weight: 600">Description:</h1>
+
+        <p [innerHtml]="productObj.description" class="paragraph-s"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12 my-3">
+        <p class="fw-bold" style="font-size: 3rem">You Might Also Like</p>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+
+      <div class="container">
+        <div class="row justify-content-left">
+
+          <ng-container *ngFor="let pokerChipsSet of youMyaLimkProducts.slice(0, 12)">
+            <div class="col-md-2 col-6 mt-md-0 my-5">
+              <div (click)="goToSinglePage(pokerChipsSet)"
+                class="box d-flex flex-column align-items-center justify-content-between"
+              >
+                <img 
+                  
+                  class="img-fluid product-img-width"
+                  src="{{ pokerChipsSet.images }}"
+                  alt="{{ pokerChipsSet.description }}"
+                />
+                <p
+                  class="text-center mb-0 p-font-size"
+                  style="font-weight: 600; word-wrap: break-word; height: 10rem;"
+                >
+                {{ pokerChipsSet.productName }}
+                </p>
+                <p class="text-center p-font-size">
+                  ₹ {{ pokerChipsSet.pricing }}
+                </p>
+              </div>
+            </div>
+          </ng-container>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.about-us-title {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 1em;
+}
+
+.about-us-description {
+  font-size: 2rem;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+@media (max-width: 992px) and (min-width: 300px){
+  .font-17-mob{
+    font-size: 17px !important;
+  }
+
+  .font-20-mob{
+    font-size: 20px !important;
+  }
+
+  .font-12-mob{
+    font-size: 12px !important;
+  }
+}

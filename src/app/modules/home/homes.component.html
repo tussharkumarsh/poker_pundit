@@ -1,0 +1,713 @@
+<!-- <div style="margin: 0px 0px">
+  <app-ticker-advertisement></app-ticker-advertisement>
+</div> -->
+
+<div class="container" style="min-width: 100%">
+  <div class="row gx-5">
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 style="font-weight: 700; font-size: 3.5rem" class="mb-5">
+            Featured
+          </h1>
+        </div>
+        <div class="row d-flex flex-wrap">
+          <div
+            class="col-md-8 cursor-pointer hover"
+            style="position: relative; padding: 0em"
+          >
+            <img
+              class="artical-img-opacity"
+              src="{{ articles[0].imges }}"
+              alt="article-img"
+              style="width: 100%"
+            />
+            <div class="top-right">News</div>
+          </div>
+
+          <div
+            class="col-md-4 d-flex flex-column justify-content-start mt-md-0 mt-3"
+          >
+            <p class="artical-description artical-text">
+              Top 5 Developments of 2022: Online Poker’s Meteoric Surge Plateaus
+              After Two Years, Foreshadowing Steady Growth Ahead, Top 5
+              Developments of 2022: Online Poker’s Meteoric Surge Plateaus After
+              Two Years.
+            </p>
+            <p class="artical-time-text mt-md-0 mt-3">
+              <i> PokerPundit | 3 hours ago</i>
+            </p>
+            <!-- <div class="d-flex align-items-center justify-content-between mt-5">
+                <button
+                  class="read-more d-flex align-items-center justify-content-between"
+                >
+                  <span class="text-truncate">Read More</span>
+                  <span style="margin-left: 1rem">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.8619 15C19.8619 14.8 19.8315 14.6125 19.7706 14.4375C19.7107 14.2625 19.6083 14.1 19.4634 13.95L15.6954 10.05C15.4297 9.775 15.0916 9.6375 14.681 9.6375C14.2703 9.6375 13.9322 9.775 13.6665 10.05C13.4008 10.325 13.268 10.675 13.268 11.1C13.268 11.525 13.4008 11.875 13.6665 12.15L14.9708 13.5L10.3333 13.5C9.92268 13.5 9.57824 13.6435 9.29999 13.9305C9.02271 14.2185 8.88407 14.575 8.88407 15C8.88407 15.425 9.02271 15.781 9.29999 16.068C9.57824 16.356 9.92268 16.5 10.3333 16.5L14.9708 16.5L13.6665 17.85C13.4008 18.125 13.268 18.475 13.268 18.9C13.268 19.325 13.4008 19.675 13.6665 19.95C13.9322 20.225 14.2703 20.3625 14.681 20.3625C15.0916 20.3625 15.4297 20.225 15.6954 19.95L19.4634 16.05C19.6083 15.9 19.7107 15.7375 19.7706 15.5625C19.8315 15.3875 19.8619 15.2 19.8619 15ZM29.1732 15C29.1732 17.075 28.7925 19.025 28.0312 20.85C27.2709 22.675 26.2385 24.2625 24.9342 25.6125C23.6299 26.9625 22.0962 28.031 20.3329 28.818C18.5697 29.606 16.6857 30 14.681 30C12.6762 30 10.7922 29.606 9.02899 28.818C7.26577 28.031 5.732 26.9625 4.4277 25.6125C3.1234 24.2625 2.09059 22.675 1.32926 20.85C0.5689 19.025 0.18872 17.075 0.18872 15C0.18872 12.925 0.5689 10.975 1.32926 9.15C2.09059 7.325 3.1234 5.7375 4.4277 4.3875C5.732 3.0375 7.26577 1.969 9.02899 1.182C10.7922 0.394001 12.6762 -5.9515e-07 14.681 -6.90696e-07C16.6857 -7.86242e-07 18.5697 0.394 20.3329 1.182C22.0962 1.969 23.6299 3.0375 24.9342 4.3875C26.2385 5.7375 27.2709 7.325 28.0312 9.15C28.7925 10.975 29.1732 12.925 29.1732 15Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <img
+                  class="bookmark-icon cursor-pointer"
+                  src="/assets/side-bar-img/bookmark.svg"
+                  alt="bookmark-icon"
+                />
+              </div> -->
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-4 col-sm-6 cursor-pointer hover">
+            <div style="position: relative">
+              <img
+                src="{{ articles[0].imges }}"
+                alt="artical-img"
+                class="artical-img-opacity"
+                style="width: 100%"
+              />
+              <div class="top-right">News</div>
+            </div>
+            <p class="mt-3 artical-text small-article-text">
+              MPL Poker’s Cash Bash & Daily Bash Promotions Can Earn You Up To
+              100% Rakeback in February MPL Poker’s Cash Bash & Daily Bash
+              Promotions Can Earn You Up To 100% Rakeback in February
+            </p>
+            <p class="mt-4 artical-time-text">
+              <i>PokerPundit | 3 hours ago</i>
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 cursor-pointer hover">
+            <div style="position: relative">
+              <img
+                src="{{ articles[2].imges }}"
+                alt="artical-img"
+                class="artical-img-opacity"
+                style="width: 100%"
+              />
+              <div class="top-right">News</div>
+            </div>
+            <p class="mt-3 artical-text small-article-text">
+              MPL Poker’s Cash Bash & Daily Bash Promotions Can Earn You Up To
+              100% Rakeback in February
+            </p>
+            <p class="mt-4 artical-time-text">
+              <i>PokerPundit | 3 hours ago</i>
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 cursor-pointer hover">
+            <div style="position: relative">
+              <img
+                src="{{ articles[3].imges }}"
+                alt="artical-img"
+                class="artical-img-opacity"
+                style="width: 100%"
+              />
+              <div class="top-right" style="background-color: #ef1178">
+                Promotion
+              </div>
+            </div>
+            <p class="mt-3 artical-text small-article-text">
+              MPL Poker’s Cash Bash & Daily Bash Promotions Can Earn You Up To
+              100% Rakeback in February
+            </p>
+            <p class="mt-4 artical-time-text">
+              <i>PokerPundit | 3 hours ago</i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 app-ranking">
+      <app-rankings></app-rankings>
+    </div>
+  </div>
+  <div class="row mt-5 gx-5">
+    <div class="col-md-8">
+      <div class="row" style="position: relative">
+        <div class="col-md-12">
+          <h1 style="font-weight: 700; font-size: 35px" class="mb-5">
+            Websites
+          </h1>
+        </div>
+        <div class="col-md-12">
+          <div
+            class="d-flex align-items-center justify-content-around flex-wrap"
+            style="
+              background: #242424;
+              border-radius: 10px;
+              min-height: 10rem;
+              padding: 1rem;
+            "
+          >
+            <div class="owl-carousel carousel2" style="width: 90%; height: 40%">
+              <div class="item">
+                <img
+                  src="/assets/img/website-img-1.png"
+                  alt="carousel_img"
+                  class="fixed-height-img"
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="/assets/img/website-img-2.png"
+                  alt="carousel_img"
+                  class="fixed-height-img"
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="/assets/img/website-img-3.png"
+                  alt="carousel_img"
+                  class="fixed-height-img"
+                />
+              </div>
+            </div>
+            <div
+              class="btn-wrap"
+              style="position: absolute; top: 50%; z-index: 1"
+            >
+              <svg
+                class="prev-btn prev-btn2"
+                width="12"
+                height="30"
+                viewBox="0 0 24 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.1686 58.8142C23.7229 58.0237 24 57.0877 24 56.0063C24 54.927 23.7229 53.9921 23.1686 53.2016L6.92841 30.0395L23.224 6.79842C23.7413 6.06061 24 5.13834 24 4.03162C24 2.9249 23.7229 1.97628 23.1686 1.18577C22.6143 0.395257 21.9581 0 21.1998 0C20.443 0 19.7875 0.395257 19.2333 1.18577L0.609699 27.8261C0.387991 28.1423 0.230577 28.4848 0.137461 28.8538C0.0458202 29.2227 0 29.6179 0 30.0395C0 30.4611 0.0458202 30.8564 0.137461 31.2253C0.230577 31.5942 0.387991 31.9368 0.609699 32.253L19.2887 58.8933C19.806 59.6311 20.443 60 21.1998 60C21.9581 60 22.6143 59.6047 23.1686 58.8142Z"
+                  fill="#ffffff"
+                />
+              </svg>
+
+              <svg
+                class="next-btn next-btn2"
+                width="12"
+                height="30"
+                viewBox="0 0 24 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.831409 58.8142C0.277136 58.0237 0 57.0877 0 56.0063C0 54.927 0.277136 53.9921 0.831409 53.2016L17.0716 30.0395L0.775981 6.79842C0.25866 6.06061 0 5.13834 0 4.03162C0 2.9249 0.277136 1.97628 0.831409 1.18577C1.38568 0.395257 2.04194 0 2.80018 0C3.55695 0 4.21247 0.395257 4.76674 1.18577L23.3903 27.8261C23.612 28.1423 23.7694 28.4848 23.8625 28.8538C23.9542 29.2227 24 29.6179 24 30.0395C24 30.4611 23.9542 30.8564 23.8625 31.2253C23.7694 31.5942 23.612 31.9368 23.3903 32.253L4.71132 58.8933C4.19399 59.6311 3.55695 60 2.80018 60C2.04194 60 1.38568 59.6047 0.831409 58.8142Z"
+                  fill="#ffffff"
+                />
+              </svg>
+            </div>
+            <!-- <span style="cursor: pointer">
+                <svg
+                  width="19"
+                  height="34"
+                  viewBox="0 0 19 34"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.33472 1.43799L16.7756 16.8789L1.33472 32.3198"
+                    stroke="white"
+                    stroke-width="2"
+                  />
+                </svg>
+              </span> -->
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row mt-5">
+          <div class="col-md-12">
+            <div>
+              <h1 style="font-weight: 700; font-size: 3.5rem" class="mb-5">
+                Forums
+              </h1>
+            </div>
+          </div>
+  
+          <div class="col-md-12">
+            <div class="row gx-5">
+              <div class="col-md-6 mb-4 mb-md-0">
+                <div
+                  class="common-card-background rounded-5 d-flex align-items-center justify-content-around"
+                  style="min-height: 100%"
+                >
+                  <div
+                    class="d-flex align-items-center justify-content-between flex-column p-5"
+                    style="min-height: 15rem"
+                  >
+                    <h5 class="fw-bold fs-5 fs-md-3">
+                      MPL Poker’s Cash Bash & Daily Bash Promotions Can Earn You
+                      Up To 100% Rakeback in February
+                    </h5>
+                    <p class="fs-6 fs-md-4 mt-5">
+                      MPL Poker’s Cash Bash & Daily Bash Promotions Can Earn You
+                      Up To 100% Rakeback in FebruaryMPL Poker’s Cash Bash & Daily
+                      Bash Promotions Can Earn You Up To 100% Rakeback in February
+                    </p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-6">
+                <div
+                  class="container d-flex align-items-center justify-content-around flex-column"
+                  style="min-height: 100%"
+                >
+                  <p
+                    style="
+                      font-weight: 600;
+                      font-size: 14px;
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+                      padding-bottom: 1.5rem;
+                    "
+                  >
+                    MPL Poker’s Cash Bash & Daily Bash Promotions Can Earn You Up
+                    To 100% Rakeback in February
+                  </p>
+  
+                  <p
+                    style="
+                      font-weight: 600;
+                      font-size: 14px;
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+                      padding-bottom: 1.5rem;
+                    "
+                  >
+                    MPL Poker’s Cash Bash & Daily Bash Promotions Can Earn You Up
+                    To 100% Rakeback in February
+                  </p>
+                  <p style="font-weight: 600; font-size: 14px">
+                    MPL Poker’s Cash Bash & Daily Bash Promotions Can Earn You Up
+                    To 100% Rakeback in February
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <div>
+            <h1 style="font-weight: 700; font-size: 3.5rem" class="mb-5">
+              Upcoming Tournaments
+            </h1>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <app-tournaments></app-tournaments>
+            </div>
+            <div class="col-md-6 mt-md-0 mt-3">
+              <app-tournaments></app-tournaments>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12" style="margin-top: 8em">
+          <div class="row">
+            <div class="col-md-6"><app-tournaments></app-tournaments></div>
+            <div class="col-md-6 mt-md-0 mt-3">
+              <app-tournaments></app-tournaments>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mt-md-0 mt-5">
+      <app-top-promotions></app-top-promotions>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-5">
+      <h1 style="font-weight: 700; font-size: 3.5rem">Livestreaming</h1>
+    </div>
+    <div class="row" style="position: relative">
+      <div class="owl-carousel owl-theme owl-loaded carousel1">
+        <div class="owl-stage-outer">
+          <div class="owl-stage">
+            <div class="owl-item" routerLink="/home/live/single">
+              <div>
+                <div style="position: relative" routerLink="/home/live/single">
+                  <img
+                    src="/assets/img/video-img.png"
+                    alt="live-streem-img"
+                    class="img-fluid"
+                  />
+                  <div class="play-button-container">
+                    <img
+                      src="/assets/side-bar-img/play_button.svg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="d-flex align-items-center justify-content-between mt-4"
+                >
+                  <div type="button">
+                    <h3 class="fw-bold fs-md-3">
+                      APPT Cambodia: Taiwan’s Chang Yu Chung Chip Leads <br />
+                      Main Event Final Table, India’s Akshay Kapoor in
+                      Contention
+                    </h3>
+                    <p
+                      class="mt-3 fs-md-4"
+                      style="font-size: 1.5rem; color: gray"
+                    >
+                      Posted By: RT Daily | On: 16/11/22
+                    </p>
+                  </div>
+                  <!-- <div
+                      class="d-flex justify-content-between"
+                      style="width: 25%"
+                    >
+                      <span>
+                        <svg
+                          class="bookmark-icon-livestream"
+                          width="96"
+                          height="71"
+                          viewBox="0 0 96 71"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g filter="url(#filter0_d_101_474)">
+                            <path
+                              d="M48.3226 0.983887H48.8037C53.2463 1.00037 75.7566 1.16524 81.826 2.82487C83.6609 3.33138 85.3329 4.31866 86.6749 5.68805C88.0169 7.05744 88.982 8.76098 89.4736 10.6284C90.0195 12.7167 90.4032 15.4809 90.6627 18.3331L90.7167 18.9046L90.8356 20.3334L90.8788 20.905C91.2301 25.9278 91.2734 30.6319 91.2788 31.6596V32.0717C91.2734 33.1379 91.2247 38.1607 90.8356 43.3924L90.7924 43.9694L90.7437 44.541C90.4735 47.6844 90.0735 50.8058 89.4736 53.1029C88.9835 54.9711 88.0189 56.6754 86.6767 58.0451C85.3344 59.4147 83.6616 60.4015 81.826 60.9065C75.5567 62.621 51.7276 62.7419 48.4253 62.7474H47.6579C45.9878 62.7474 39.0807 62.7145 31.8385 62.4617L30.9197 62.4287L30.4495 62.4067L29.5253 62.3682L28.6011 62.3298C22.6019 62.0605 16.8892 61.6264 14.2571 60.901C12.4222 60.3964 10.7499 59.4105 9.40768 58.0419C8.06549 56.6733 7.10056 54.9701 6.60956 53.1029C6.00965 50.8113 5.6097 47.6844 5.33947 44.541L5.29623 43.9639L5.253 43.3924C4.98626 39.6687 4.83846 35.9371 4.80981 32.2036L4.80981 31.5277C4.82062 30.3462 4.86386 26.263 5.15571 21.7567L5.19354 21.1907L5.20976 20.905L5.253 20.3334L5.3719 18.9046L5.42594 18.3331C5.68537 15.4809 6.0691 12.7112 6.61497 10.6284C7.10513 8.76023 8.06969 7.05589 9.41194 5.68626C10.7542 4.31663 12.427 3.32986 14.2625 2.82487C16.8946 2.11046 22.6073 1.67082 28.6065 1.39605L29.5253 1.35758L30.4549 1.32461L30.9197 1.30812L31.8439 1.26965C36.9875 1.10135 42.1333 1.00792 47.2795 0.989382H48.3226V0.983887ZM39.3996 18.6243V45.1015L61.8667 31.8684L39.3996 18.6243Z"
+                              fill="#6B3691"
+                            />
+                            <path
+                              d="M90.1649 18.3802L90.1647 18.3784C89.9061 15.5352 89.5253 12.8032 88.9899 10.7549C88.5201 8.97107 87.5984 7.34474 86.3178 6.03802C85.0372 4.73134 83.4427 3.79 81.6938 3.30707C80.2263 2.90585 77.724 2.58689 74.6896 2.3377C71.6671 2.08948 68.1539 1.91311 64.6868 1.78787C57.7747 1.53821 51.063 1.4924 48.8226 1.48396V1.48938H48.3226H47.2804C42.1401 1.50791 37.0002 1.60122 31.8624 1.76931C31.8617 1.76934 31.861 1.76936 31.8602 1.76938L30.9405 1.80769L30.9374 1.80782L30.4726 1.82429L29.5462 1.85714L29.543 1.85726L28.6294 1.89552C28.629 1.89554 28.6287 1.89555 28.6284 1.89557C22.6131 2.1711 16.9624 2.61038 14.3944 3.30718C12.6449 3.78862 11.0497 4.72941 9.76905 6.03623C8.48814 7.34326 7.56691 8.97051 7.09863 10.7552L90.1649 18.3802ZM90.1649 18.3802L90.2184 18.9461L90.2189 18.9517L90.337 20.3711L90.3373 20.3749L90.3801 20.9398C90.3801 20.9403 90.3801 20.9408 90.3802 20.9413C90.7301 25.9454 90.7734 30.6343 90.7788 31.6608C90.7788 31.6612 90.7788 31.6617 90.7788 31.6622V32.0692C90.7788 32.0697 90.7788 32.0702 90.7788 32.0707C90.7734 33.1358 90.7247 38.1429 90.337 43.355C90.337 43.3551 90.337 43.3552 90.337 43.3553L90.2942 43.927L90.2938 43.9321L90.2456 44.4981L90.7437 44.541L90.2455 44.4986M90.1649 18.3802L90.2455 44.4986M30.4703 61.9071L30.4728 61.9072L30.9376 61.929L30.943 61.9292L31.8559 61.962C31.8561 61.962 31.8562 61.962 31.8564 61.962M30.4703 61.9071L47.6579 62.7474C45.9878 62.7474 39.0807 62.7145 31.8385 62.4617L31.8564 61.962M30.4703 61.9071L29.5461 61.8687L28.6235 61.8303C28.623 61.8303 28.6225 61.8302 28.622 61.8302C22.6054 61.5601 16.9561 61.1262 14.39 60.4189L14.3897 60.4188M30.4703 61.9071L14.3897 60.4188M31.8564 61.962C39.0906 62.2145 45.9912 62.2474 47.6579 62.2474H48.4245M31.8564 61.962L48.4245 62.2474M48.4245 62.2474C50.0732 62.2447 56.8499 62.2131 63.9959 61.9681C67.5692 61.8456 71.2304 61.6699 74.3869 61.4183C77.5558 61.1656 80.1768 60.839 81.6934 60.4244M48.4245 62.2474L86.6767 58.0451C88.0189 56.6754 88.9835 54.9711 89.4736 53.1029M81.6934 60.4244L81.826 60.9065L81.6942 60.4242C81.6939 60.4242 81.6937 60.4243 81.6934 60.4244ZM81.6934 60.4244C83.4432 59.943 85.0387 59.0021 86.3195 57.6951C87.6004 56.3882 88.5215 54.7611 88.9899 52.9765M88.9899 52.9765L89.4736 53.1029M88.9899 52.9765C89.5786 50.7223 89.9758 47.6359 90.2455 44.4986M88.9899 52.9765C88.9899 52.9764 88.99 52.9762 88.99 52.976L89.4736 53.1029M89.4736 53.1029L90.2455 44.4986M14.3897 60.4188C12.6406 59.9379 11.0455 58.9978 9.76466 57.6918C8.48377 56.3857 7.56218 54.7595 7.09312 52.9757C6.50472 50.7279 6.10758 47.6374 5.83787 44.5008C5.83779 44.4999 5.83771 44.499 5.83763 44.4981L5.79484 43.9266L5.79481 43.9262M14.3897 60.4188L5.79481 43.9262M5.79481 43.9262L5.75172 43.3567C5.75169 43.3563 5.75167 43.356 5.75165 43.3557C5.48576 39.6435 5.33841 35.9236 5.30981 32.2017V31.53C5.32064 30.348 5.36392 26.2786 5.65463 21.7896C5.65464 21.7894 5.65466 21.7892 5.65467 21.7891L5.69243 21.2241L5.69246 21.2241M5.79481 43.9262L5.69246 21.2241M5.69246 21.2241L5.69274 21.219M5.69246 21.2241L5.69274 21.219M5.69274 21.219L5.70869 20.938L5.75127 20.3749L5.75157 20.3711L5.86994 18.9489L5.92373 18.3801L5.92389 18.3784M5.69274 21.219L5.92389 18.3784M5.92389 18.3784C6.18251 15.5351 6.56329 12.7979 7.0986 10.7553L5.92389 18.3784ZM39.6535 18.1936L38.8996 17.7492V18.6243V45.1015V45.9763L39.6533 45.5323L62.1204 32.2992L62.8516 31.8686L62.1206 31.4377L39.6535 18.1936Z"
+                              stroke="black"
+                            />
+                          </g>
+                          <defs>
+                            <filter
+                              id="filter0_d_101_474"
+                              x="0.809814"
+                              y="0.983887"
+                              width="94.469"
+                              height="69.7637"
+                              filterUnits="userSpaceOnUse"
+                              color-interpolation-filters="sRGB"
+                            >
+                              <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                              />
+                              <feColorMatrix
+                                in="SourceAlpha"
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha"
+                              />
+                              <feOffset dy="4" />
+                              <feGaussianBlur stdDeviation="2" />
+                              <feComposite in2="hardAlpha" operator="out" />
+                              <feColorMatrix
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in2="BackgroundImageFix"
+                                result="effect1_dropShadow_101_474"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="effect1_dropShadow_101_474"
+                                result="shape"
+                              />
+                            </filter>
+                          </defs>
+                        </svg>
+                      </span>
+                      <span>
+                        <svg
+                          class="bookmark-icon-livestream"
+                          width="62"
+                          height="71"
+                          viewBox="0 0 62 71"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g filter="url(#filter0_d_101_473)">
+                            <mask id="path-1-inside-1_101_473" fill="white">
+                              <path
+                                d="M29.7777 13.1204H34.1577V26.3378H29.7777M41.8151 13.1204H46.1951V26.3378H41.8151M15.5656 0.983887L4.63086 12.0087V51.7226H17.7403V62.7474L28.7057 51.7226H37.4351L57.1299 31.8657V0.983887M52.7498 29.6731L44.0204 38.4744H35.2604L27.603 46.1948V38.4744H17.7403V5.39998H52.7498V29.6731Z"
+                              />
+                            </mask>
+                            <path
+                              d="M29.7777 13.1204H34.1577V26.3378H29.7777M41.8151 13.1204H46.1951V26.3378H41.8151M15.5656 0.983887L4.63086 12.0087V51.7226H17.7403V62.7474L28.7057 51.7226H37.4351L57.1299 31.8657V0.983887M52.7498 29.6731L44.0204 38.4744H35.2604L27.603 46.1948V38.4744H17.7403V5.39998H52.7498V29.6731Z"
+                              fill="#6B3691"
+                            />
+                            <path
+                              d="M34.1577 13.1204H35.1577V12.1204H34.1577V13.1204ZM34.1577 26.3378V27.3378H35.1577V26.3378H34.1577ZM46.1951 13.1204H47.1951V12.1204H46.1951V13.1204ZM46.1951 26.3378V27.3378H47.1951V26.3378H46.1951ZM4.63086 12.0087L3.92086 11.3045L3.63086 11.5969V12.0087H4.63086ZM4.63086 51.7226H3.63086V52.7226H4.63086V51.7226ZM17.7403 51.7226H18.7403V50.7226H17.7403V51.7226ZM17.7403 62.7474H16.7403V65.1709L18.4493 63.4526L17.7403 62.7474ZM28.7057 51.7226V50.7226H28.2899L27.9967 51.0174L28.7057 51.7226ZM37.4351 51.7226V52.7226H37.8517L38.1451 52.4268L37.4351 51.7226ZM57.1299 31.8657L57.8399 32.5699L58.1299 32.2775V31.8657H57.1299ZM52.7498 29.6731L53.4599 30.3773L53.7498 30.0849V29.6731H52.7498ZM44.0204 38.4744V39.4744H44.4371L44.7304 39.1786L44.0204 38.4744ZM35.2604 38.4744V37.4744H34.8438L34.5504 37.7702L35.2604 38.4744ZM27.603 46.1948H26.603V48.6231L28.313 46.899L27.603 46.1948ZM27.603 38.4744H28.603V37.4744H27.603V38.4744ZM17.7403 38.4744H16.7403V39.4744H17.7403V38.4744ZM17.7403 5.39998V4.39998H16.7403V5.39998H17.7403ZM52.7498 5.39998H53.7498V4.39998H52.7498V5.39998ZM29.7777 14.1204H34.1577V12.1204H29.7777V14.1204ZM33.1577 13.1204V26.3378H35.1577V13.1204H33.1577ZM34.1577 25.3378H29.7777V27.3378H34.1577V25.3378ZM41.8151 14.1204H46.1951V12.1204H41.8151V14.1204ZM45.1951 13.1204V26.3378H47.1951V13.1204H45.1951ZM46.1951 25.3378H41.8151V27.3378H46.1951V25.3378ZM14.8556 0.279686L3.92086 11.3045L5.34086 12.7129L16.2756 1.68809L14.8556 0.279686ZM3.63086 12.0087V51.7226H5.63086V12.0087H3.63086ZM4.63086 52.7226H17.7403V50.7226H4.63086V52.7226ZM16.7403 51.7226V62.7474H18.7403V51.7226H16.7403ZM18.4493 63.4526L29.4147 52.4278L27.9967 51.0174L17.0313 62.0422L18.4493 63.4526ZM28.7057 52.7226H37.4351V50.7226H28.7057V52.7226ZM38.1451 52.4268L57.8399 32.5699L56.4199 31.1615L36.7251 51.0184L38.1451 52.4268ZM58.1299 31.8657V0.983887H56.1299V31.8657H58.1299ZM52.0398 28.9689L43.3104 37.7702L44.7304 39.1786L53.4599 30.3773L52.0398 28.9689ZM44.0204 37.4744H35.2604V39.4744H44.0204V37.4744ZM34.5504 37.7702L26.893 45.4906L28.313 46.899L35.9704 39.1786L34.5504 37.7702ZM28.603 46.1948V38.4744H26.603V46.1948H28.603ZM27.603 37.4744H17.7403V39.4744H27.603V37.4744ZM18.7403 38.4744V5.39998H16.7403V38.4744H18.7403ZM17.7403 6.39998H52.7498V4.39998H17.7403V6.39998ZM51.7498 5.39998V29.6731H53.7498V5.39998H51.7498Z"
+                              fill="black"
+                              mask="url(#path-1-inside-1_101_473)"
+                            />
+                          </g>
+                          <defs>
+                            <filter
+                              id="filter0_d_101_473"
+                              x="0.630859"
+                              y="0.983887"
+                              width="60.499"
+                              height="69.7637"
+                              filterUnits="userSpaceOnUse"
+                              color-interpolation-filters="sRGB"
+                            >
+                              <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                              />
+                              <feColorMatrix
+                                in="SourceAlpha"
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha"
+                              />
+                              <feOffset dy="4" />
+                              <feGaussianBlur stdDeviation="2" />
+                              <feComposite in2="hardAlpha" operator="out" />
+                              <feColorMatrix
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in2="BackgroundImageFix"
+                                result="effect1_dropShadow_101_473"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="effect1_dropShadow_101_473"
+                                result="shape"
+                              />
+                            </filter>
+                          </defs>
+                        </svg>
+                      </span>
+                    </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="owl-item" routerLink="/home/live/single">
+              <div>
+                <div style="position: relative">
+                  <img
+                    src="/assets/img/artical6.png"
+                    alt="live-streem-img"
+                    class="img-fluid"
+                  />
+                  <div class="play-button-container">
+                    <img
+                      src="/assets/side-bar-img/play_button.svg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+
+                <div
+                  class="d-flex align-items-center justify-content-between mt-4"
+                >
+                  <div type="button">
+                    <h3 class="fw-bold fs-md-3">
+                      APPT Cambodia: Taiwan’s Chang Yu Chung Chip Leads <br />
+                      Main Event Final Table, India’s Akshay Kapoor in
+                      Contention
+                    </h3>
+                    <p
+                      class="mt-3 fs-md-4"
+                      style="font-size: 1.5rem; color: gray"
+                    >
+                      Posted By: RT Daily | On: 16/11/22
+                    </p>
+                  </div>
+                  <!-- <div
+                      class="d-flex justify-content-between"
+                      style="width: 25%"
+                    >
+                      <span>
+                        <svg
+                          class="bookmark-icon-livestream"
+                          width="96"
+                          height="71"
+                          viewBox="0 0 96 71"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g filter="url(#filter0_d_101_474)">
+                            <path
+                              d="M48.3226 0.983887H48.8037C53.2463 1.00037 75.7566 1.16524 81.826 2.82487C83.6609 3.33138 85.3329 4.31866 86.6749 5.68805C88.0169 7.05744 88.982 8.76098 89.4736 10.6284C90.0195 12.7167 90.4032 15.4809 90.6627 18.3331L90.7167 18.9046L90.8356 20.3334L90.8788 20.905C91.2301 25.9278 91.2734 30.6319 91.2788 31.6596V32.0717C91.2734 33.1379 91.2247 38.1607 90.8356 43.3924L90.7924 43.9694L90.7437 44.541C90.4735 47.6844 90.0735 50.8058 89.4736 53.1029C88.9835 54.9711 88.0189 56.6754 86.6767 58.0451C85.3344 59.4147 83.6616 60.4015 81.826 60.9065C75.5567 62.621 51.7276 62.7419 48.4253 62.7474H47.6579C45.9878 62.7474 39.0807 62.7145 31.8385 62.4617L30.9197 62.4287L30.4495 62.4067L29.5253 62.3682L28.6011 62.3298C22.6019 62.0605 16.8892 61.6264 14.2571 60.901C12.4222 60.3964 10.7499 59.4105 9.40768 58.0419C8.06549 56.6733 7.10056 54.9701 6.60956 53.1029C6.00965 50.8113 5.6097 47.6844 5.33947 44.541L5.29623 43.9639L5.253 43.3924C4.98626 39.6687 4.83846 35.9371 4.80981 32.2036L4.80981 31.5277C4.82062 30.3462 4.86386 26.263 5.15571 21.7567L5.19354 21.1907L5.20976 20.905L5.253 20.3334L5.3719 18.9046L5.42594 18.3331C5.68537 15.4809 6.0691 12.7112 6.61497 10.6284C7.10513 8.76023 8.06969 7.05589 9.41194 5.68626C10.7542 4.31663 12.427 3.32986 14.2625 2.82487C16.8946 2.11046 22.6073 1.67082 28.6065 1.39605L29.5253 1.35758L30.4549 1.32461L30.9197 1.30812L31.8439 1.26965C36.9875 1.10135 42.1333 1.00792 47.2795 0.989382H48.3226V0.983887ZM39.3996 18.6243V45.1015L61.8667 31.8684L39.3996 18.6243Z"
+                              fill="#6B3691"
+                            />
+                            <path
+                              d="M90.1649 18.3802L90.1647 18.3784C89.9061 15.5352 89.5253 12.8032 88.9899 10.7549C88.5201 8.97107 87.5984 7.34474 86.3178 6.03802C85.0372 4.73134 83.4427 3.79 81.6938 3.30707C80.2263 2.90585 77.724 2.58689 74.6896 2.3377C71.6671 2.08948 68.1539 1.91311 64.6868 1.78787C57.7747 1.53821 51.063 1.4924 48.8226 1.48396V1.48938H48.3226H47.2804C42.1401 1.50791 37.0002 1.60122 31.8624 1.76931C31.8617 1.76934 31.861 1.76936 31.8602 1.76938L30.9405 1.80769L30.9374 1.80782L30.4726 1.82429L29.5462 1.85714L29.543 1.85726L28.6294 1.89552C28.629 1.89554 28.6287 1.89555 28.6284 1.89557C22.6131 2.1711 16.9624 2.61038 14.3944 3.30718C12.6449 3.78862 11.0497 4.72941 9.76905 6.03623C8.48814 7.34326 7.56691 8.97051 7.09863 10.7552L90.1649 18.3802ZM90.1649 18.3802L90.2184 18.9461L90.2189 18.9517L90.337 20.3711L90.3373 20.3749L90.3801 20.9398C90.3801 20.9403 90.3801 20.9408 90.3802 20.9413C90.7301 25.9454 90.7734 30.6343 90.7788 31.6608C90.7788 31.6612 90.7788 31.6617 90.7788 31.6622V32.0692C90.7788 32.0697 90.7788 32.0702 90.7788 32.0707C90.7734 33.1358 90.7247 38.1429 90.337 43.355C90.337 43.3551 90.337 43.3552 90.337 43.3553L90.2942 43.927L90.2938 43.9321L90.2456 44.4981L90.7437 44.541L90.2455 44.4986M90.1649 18.3802L90.2455 44.4986M30.4703 61.9071L30.4728 61.9072L30.9376 61.929L30.943 61.9292L31.8559 61.962C31.8561 61.962 31.8562 61.962 31.8564 61.962M30.4703 61.9071L47.6579 62.7474C45.9878 62.7474 39.0807 62.7145 31.8385 62.4617L31.8564 61.962M30.4703 61.9071L29.5461 61.8687L28.6235 61.8303C28.623 61.8303 28.6225 61.8302 28.622 61.8302C22.6054 61.5601 16.9561 61.1262 14.39 60.4189L14.3897 60.4188M30.4703 61.9071L14.3897 60.4188M31.8564 61.962C39.0906 62.2145 45.9912 62.2474 47.6579 62.2474H48.4245M31.8564 61.962L48.4245 62.2474M48.4245 62.2474C50.0732 62.2447 56.8499 62.2131 63.9959 61.9681C67.5692 61.8456 71.2304 61.6699 74.3869 61.4183C77.5558 61.1656 80.1768 60.839 81.6934 60.4244M48.4245 62.2474L86.6767 58.0451C88.0189 56.6754 88.9835 54.9711 89.4736 53.1029M81.6934 60.4244L81.826 60.9065L81.6942 60.4242C81.6939 60.4242 81.6937 60.4243 81.6934 60.4244ZM81.6934 60.4244C83.4432 59.943 85.0387 59.0021 86.3195 57.6951C87.6004 56.3882 88.5215 54.7611 88.9899 52.9765M88.9899 52.9765L89.4736 53.1029M88.9899 52.9765C89.5786 50.7223 89.9758 47.6359 90.2455 44.4986M88.9899 52.9765C88.9899 52.9764 88.99 52.9762 88.99 52.976L89.4736 53.1029M89.4736 53.1029L90.2455 44.4986M14.3897 60.4188C12.6406 59.9379 11.0455 58.9978 9.76466 57.6918C8.48377 56.3857 7.56218 54.7595 7.09312 52.9757C6.50472 50.7279 6.10758 47.6374 5.83787 44.5008C5.83779 44.4999 5.83771 44.499 5.83763 44.4981L5.79484 43.9266L5.79481 43.9262M14.3897 60.4188L5.79481 43.9262M5.79481 43.9262L5.75172 43.3567C5.75169 43.3563 5.75167 43.356 5.75165 43.3557C5.48576 39.6435 5.33841 35.9236 5.30981 32.2017V31.53C5.32064 30.348 5.36392 26.2786 5.65463 21.7896C5.65464 21.7894 5.65466 21.7892 5.65467 21.7891L5.69243 21.2241L5.69246 21.2241M5.79481 43.9262L5.69246 21.2241M5.69246 21.2241L5.69274 21.219M5.69246 21.2241L5.69274 21.219M5.69274 21.219L5.70869 20.938L5.75127 20.3749L5.75157 20.3711L5.86994 18.9489L5.92373 18.3801L5.92389 18.3784M5.69274 21.219L5.92389 18.3784M5.92389 18.3784C6.18251 15.5351 6.56329 12.7979 7.0986 10.7553L5.92389 18.3784ZM39.6535 18.1936L38.8996 17.7492V18.6243V45.1015V45.9763L39.6533 45.5323L62.1204 32.2992L62.8516 31.8686L62.1206 31.4377L39.6535 18.1936Z"
+                              stroke="black"
+                            />
+                          </g>
+                          <defs>
+                            <filter
+                              id="filter0_d_101_474"
+                              x="0.809814"
+                              y="0.983887"
+                              width="94.469"
+                              height="69.7637"
+                              filterUnits="userSpaceOnUse"
+                              color-interpolation-filters="sRGB"
+                            >
+                              <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                              />
+                              <feColorMatrix
+                                in="SourceAlpha"
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha"
+                              />
+                              <feOffset dy="4" />
+                              <feGaussianBlur stdDeviation="2" />
+                              <feComposite in2="hardAlpha" operator="out" />
+                              <feColorMatrix
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in2="BackgroundImageFix"
+                                result="effect1_dropShadow_101_474"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="effect1_dropShadow_101_474"
+                                result="shape"
+                              />
+                            </filter>
+                          </defs>
+                        </svg>
+                      </span>
+                      <span>
+                        <svg
+                          class="bookmark-icon-livestream"
+                          width="62"
+                          height="71"
+                          viewBox="0 0 62 71"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g filter="url(#filter0_d_101_473)">
+                            <mask id="path-1-inside-1_101_473" fill="white">
+                              <path
+                                d="M29.7777 13.1204H34.1577V26.3378H29.7777M41.8151 13.1204H46.1951V26.3378H41.8151M15.5656 0.983887L4.63086 12.0087V51.7226H17.7403V62.7474L28.7057 51.7226H37.4351L57.1299 31.8657V0.983887M52.7498 29.6731L44.0204 38.4744H35.2604L27.603 46.1948V38.4744H17.7403V5.39998H52.7498V29.6731Z"
+                              />
+                            </mask>
+                            <path
+                              d="M29.7777 13.1204H34.1577V26.3378H29.7777M41.8151 13.1204H46.1951V26.3378H41.8151M15.5656 0.983887L4.63086 12.0087V51.7226H17.7403V62.7474L28.7057 51.7226H37.4351L57.1299 31.8657V0.983887M52.7498 29.6731L44.0204 38.4744H35.2604L27.603 46.1948V38.4744H17.7403V5.39998H52.7498V29.6731Z"
+                              fill="#6B3691"
+                            />
+                            <path
+                              d="M34.1577 13.1204H35.1577V12.1204H34.1577V13.1204ZM34.1577 26.3378V27.3378H35.1577V26.3378H34.1577ZM46.1951 13.1204H47.1951V12.1204H46.1951V13.1204ZM46.1951 26.3378V27.3378H47.1951V26.3378H46.1951ZM4.63086 12.0087L3.92086 11.3045L3.63086 11.5969V12.0087H4.63086ZM4.63086 51.7226H3.63086V52.7226H4.63086V51.7226ZM17.7403 51.7226H18.7403V50.7226H17.7403V51.7226ZM17.7403 62.7474H16.7403V65.1709L18.4493 63.4526L17.7403 62.7474ZM28.7057 51.7226V50.7226H28.2899L27.9967 51.0174L28.7057 51.7226ZM37.4351 51.7226V52.7226H37.8517L38.1451 52.4268L37.4351 51.7226ZM57.1299 31.8657L57.8399 32.5699L58.1299 32.2775V31.8657H57.1299ZM52.7498 29.6731L53.4599 30.3773L53.7498 30.0849V29.6731H52.7498ZM44.0204 38.4744V39.4744H44.4371L44.7304 39.1786L44.0204 38.4744ZM35.2604 38.4744V37.4744H34.8438L34.5504 37.7702L35.2604 38.4744ZM27.603 46.1948H26.603V48.6231L28.313 46.899L27.603 46.1948ZM27.603 38.4744H28.603V37.4744H27.603V38.4744ZM17.7403 38.4744H16.7403V39.4744H17.7403V38.4744ZM17.7403 5.39998V4.39998H16.7403V5.39998H17.7403ZM52.7498 5.39998H53.7498V4.39998H52.7498V5.39998ZM29.7777 14.1204H34.1577V12.1204H29.7777V14.1204ZM33.1577 13.1204V26.3378H35.1577V13.1204H33.1577ZM34.1577 25.3378H29.7777V27.3378H34.1577V25.3378ZM41.8151 14.1204H46.1951V12.1204H41.8151V14.1204ZM45.1951 13.1204V26.3378H47.1951V13.1204H45.1951ZM46.1951 25.3378H41.8151V27.3378H46.1951V25.3378ZM14.8556 0.279686L3.92086 11.3045L5.34086 12.7129L16.2756 1.68809L14.8556 0.279686ZM3.63086 12.0087V51.7226H5.63086V12.0087H3.63086ZM4.63086 52.7226H17.7403V50.7226H4.63086V52.7226ZM16.7403 51.7226V62.7474H18.7403V51.7226H16.7403ZM18.4493 63.4526L29.4147 52.4278L27.9967 51.0174L17.0313 62.0422L18.4493 63.4526ZM28.7057 52.7226H37.4351V50.7226H28.7057V52.7226ZM38.1451 52.4268L57.8399 32.5699L56.4199 31.1615L36.7251 51.0184L38.1451 52.4268ZM58.1299 31.8657V0.983887H56.1299V31.8657H58.1299ZM52.0398 28.9689L43.3104 37.7702L44.7304 39.1786L53.4599 30.3773L52.0398 28.9689ZM44.0204 37.4744H35.2604V39.4744H44.0204V37.4744ZM34.5504 37.7702L26.893 45.4906L28.313 46.899L35.9704 39.1786L34.5504 37.7702ZM28.603 46.1948V38.4744H26.603V46.1948H28.603ZM27.603 37.4744H17.7403V39.4744H27.603V37.4744ZM18.7403 38.4744V5.39998H16.7403V38.4744H18.7403ZM17.7403 6.39998H52.7498V4.39998H17.7403V6.39998ZM51.7498 5.39998V29.6731H53.7498V5.39998H51.7498Z"
+                              fill="black"
+                              mask="url(#path-1-inside-1_101_473)"
+                            />
+                          </g>
+                          <defs>
+                            <filter
+                              id="filter0_d_101_473"
+                              x="0.630859"
+                              y="0.983887"
+                              width="60.499"
+                              height="69.7637"
+                              filterUnits="userSpaceOnUse"
+                              color-interpolation-filters="sRGB"
+                            >
+                              <feFlood
+                                flood-opacity="0"
+                                result="BackgroundImageFix"
+                              />
+                              <feColorMatrix
+                                in="SourceAlpha"
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha"
+                              />
+                              <feOffset dy="4" />
+                              <feGaussianBlur stdDeviation="2" />
+                              <feComposite in2="hardAlpha" operator="out" />
+                              <feColorMatrix
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in2="BackgroundImageFix"
+                                result="effect1_dropShadow_101_473"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="effect1_dropShadow_101_473"
+                                result="shape"
+                              />
+                            </filter>
+                          </defs>
+                        </svg>
+                      </span>
+                    </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-wrap" style="position: absolute; top: 30%; z-index: 1">
+        <span>
+          <svg
+            class="prev-btn prev-btn1"
+            width="24"
+            height="60"
+            viewBox="0 0 24 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M23.1686 58.8142C23.7229 58.0237 24 57.0877 24 56.0063C24 54.927 23.7229 53.9921 23.1686 53.2016L6.92841 30.0395L23.224 6.79842C23.7413 6.06061 24 5.13834 24 4.03162C24 2.9249 23.7229 1.97628 23.1686 1.18577C22.6143 0.395257 21.9581 0 21.1998 0C20.443 0 19.7875 0.395257 19.2333 1.18577L0.609699 27.8261C0.387991 28.1423 0.230577 28.4848 0.137461 28.8538C0.0458202 29.2227 0 29.6179 0 30.0395C0 30.4611 0.0458202 30.8564 0.137461 31.2253C0.230577 31.5942 0.387991 31.9368 0.609699 32.253L19.2887 58.8933C19.806 59.6311 20.443 60 21.1998 60C21.9581 60 22.6143 59.6047 23.1686 58.8142Z"
+              fill="#FFFFFF"
+            /></svg
+        ></span>
+
+        <span>
+          <svg
+            class="next-btn next-btn1"
+            width="24"
+            height="60"
+            viewBox="0 0 24 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.831409 58.8142C0.277136 58.0237 0 57.0877 0 56.0063C0 54.927 0.277136 53.9921 0.831409 53.2016L17.0716 30.0395L0.775981 6.79842C0.25866 6.06061 0 5.13834 0 4.03162C0 2.9249 0.277136 1.97628 0.831409 1.18577C1.38568 0.395257 2.04194 0 2.80018 0C3.55695 0 4.21247 0.395257 4.76674 1.18577L23.3903 27.8261C23.612 28.1423 23.7694 28.4848 23.8625 28.8538C23.9542 29.2227 24 29.6179 24 30.0395C24 30.4611 23.9542 30.8564 23.8625 31.2253C23.7694 31.5942 23.612 31.9368 23.3903 32.253L4.71132 58.8933C4.19399 59.6311 3.55695 60 2.80018 60C2.04194 60 1.38568 59.6047 0.831409 58.8142Z"
+              fill="#FFFFFF"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

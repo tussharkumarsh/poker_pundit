@@ -1,0 +1,200 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.box {
+  margin-top: 1rem;
+  background-color: #393939;
+  min-height: 150px;
+}
+
+.play-button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.news-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+.news-description {
+  font-size: 2rem;
+}
+
+.top-right {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #0460ac;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-bottom-left-radius: 0.5rem;
+  font-size: 14px;
+}
+
+.artical-time-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.small-article-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.small-article-text:hover {
+  cursor: pointer;
+  color: #a86fbb;
+}
+
+.box_square {
+  margin-top: 1rem;
+  background-color: #393939;
+  min-height: 150px;
+}
+
+.custom-svg {
+  width: 52%;
+  height: 52%;
+}
+
+.image-container {
+  width: 100% !important;
+  background-image: url('/assets/img/wht.png'); 
+  background-repeat: repeat;
+}
+
+@media only screen and (max-width: 1200px) {
+  .col-md-8 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%; /* make the column take full width of the screen */
+    max-width: 100%; /* set the maximum width to 100% */
+  }
+  .col-md-4 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%; /* make the column take full width of the screen */
+    max-width: 100%; /* set the maximum width to 100% */
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .news-description {
+    font-size: 1.5rem;
+  }
+  .play_button{
+    width: 75px !important;
+  }
+}
+
+
+.hero-pokerRooms {
+  gap: 1.5rem;
+}
+.pokerRooms {
+  background: #242424;
+  padding: 1.5em;
+  border-radius: 2rem;
+}
+.pokerRoom-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.pookerRoom-description {
+  font-size: 1.5rem;
+}
+.pokerRoom-button {
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+.share {
+  background: #363636;
+}
+button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  background: #6a3791;
+  border: none;
+  cursor: pointer;
+}
+
+.section-heading{
+  font-weight: 700; 
+  font-size: 3.5rem
+}
+
+.ytvideo-size{
+  height: 500px;
+  width: 100%;
+}
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .ytvideo-size{
+    height: 200px;
+    width: 100%;
+  }
+
+  .section-heading{
+    font-weight: 700; 
+    font-size: 2.9rem
+  }
+
+  #stickey-page{
+    position: relative !important;
+    padding: 0 !important;
+    width: 100%!important;
+  }
+
+  .hide-mobile{
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 1450px) and (min-width: 993px) {
+  .section-heading{
+    font-weight: 700; 
+    font-size: 2.6rem
+  } 
+  .pookerRoom-description {
+    font-size: 1.1rem;
+  }
+  button {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background: #6a3791;
+    border: none;
+    cursor: pointer;
+  }
+  .pokerRooms {
+    background: #242424;
+    padding: 1em;
+    border-radius: 2rem;
+  }
+}
+
+.image-bg{
+  background-image: url('/assets/img/wht.png'); 
+  background-repeat: repeat;
+}

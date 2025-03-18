@@ -1,0 +1,456 @@
+<div
+  class="p-0 river-table"
+  style="
+    border-radius: 2rem;
+    background-color: #242424;
+    box-shadow: 0px 0px 15px 15px rgba(12, 10, 53, 0.15);
+  "
+>
+  <div>
+    <div class="row p-5 pb-0">
+      <div class="col-md-12 d-flex justify-content-center">
+        <span
+          style="
+            font-style: normal;
+            font-weight: 800;
+            font-size: 2.2rem;
+            color: #ffffff;
+          "
+          >Online Poker Rankings</span
+        >
+      </div>
+
+      <div class="container mt-3">
+        <div class="container">
+          <ul class="nav d-flex">
+            <li class="nav-item col">
+              <a
+                class="nav-link active text-center"
+                data-bs-toggle="tab"
+                href="#cashes"
+                >Cashes</a
+              >
+            </li>
+            <li class="nav-item col">
+              <a
+                class="nav-link text-center"
+                data-bs-toggle="tab"
+                href="#profit"
+                >Profit</a
+              >
+            </li>
+            <li class="nav-item col">
+              <a class="nav-link text-center" data-bs-toggle="tab" href="#tlb"
+                >TLB</a
+              >
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="cashes">
+              <div class="poker-ranking-top-border">
+                <ul
+                  class="nav d-flex justify-content-between"
+                  style="width: 80%; margin: auto"
+                >
+                  <li class="nav-item">
+                    <span class="nav-link" style="color: white">Name</span>
+                  </li>
+
+                  <li class="nav-item">
+                    <span class="nav-link" style="color: white">Won</span>
+                  </li>
+                </ul>
+              </div>
+              <ul style="padding-left: 0px">
+                <li
+                  *ngFor="
+                    let riverTransferRanking of riverTransferRankings;
+                    trackBy: trackById;
+                    index as i
+                  "
+                >
+                  <div
+                    class="d-flex justify-content-between"
+                    style="line-height: 3rem;"
+                  >
+                    <div class="text-truncate">
+                      {{ i + 1 }}. 
+                      {{ riverTransferRanking.member }}
+                    </div>
+                    <div class="text-truncate">
+                      {{ riverTransferRanking.won }}
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="profit">
+              <div class="poker-ranking-top-border">
+                <ul
+                  class="nav d-flex justify-content-between"
+                  style="width: 80%; margin: auto"
+                >
+                  <li class="nav-item">
+                    <span class="nav-link" style="color: white">Name</span>
+                  </li>
+
+                  <li class="nav-item">
+                    <span class="nav-link" style="color: white">Profit</span>
+                  </li>
+                </ul>
+              </div>
+
+              <ul style="padding-left: 0px">
+                <li
+                  *ngFor="
+                    let riverTransferRanking of riverTransferRankings;
+                    trackBy: trackById;
+                    index as i
+                  "
+                >
+                  <div
+                    class="d-flex justify-content-between"
+                    style="line-height: 3rem"
+                  >
+                    <div class="text-truncate">
+                      {{ i + 1 }}. 
+                      {{ riverTransferRanking.member }}
+                    </div>
+                    <div class="text-truncate">
+                      {{ riverTransferRanking.profit }}
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="tlb">
+              <div class="poker-ranking-top-border">
+                <ul
+                  class="nav d-flex justify-content-between"
+                  style="width: 80%; margin: auto"
+                >
+                  <li class="nav-item">
+                    <span class="nav-link" style="color: white">Name</span>
+                  </li>
+
+                  <li class="nav-item">
+                    <span class="nav-link" style="color: white">Points</span>
+                  </li>
+                </ul>
+              </div>
+
+              <ul style="padding-left: 0px">
+                <li
+                  *ngFor="
+                    let riverTransferRanking of riverTransferRankings;
+                    trackBy: trackById;
+                    index as i
+                  "
+                >
+                  <div
+                    class="d-flex justify-content-between"
+                    style="line-height: 3rem; padding: 0 3.55rem 0 0;"
+                  >
+                    <div class="text-truncate">
+                      {{ i + 1 }}. 
+                      {{ riverTransferRanking.member }}
+                    </div>
+                    <div class="text-truncate">
+                      {{ riverTransferRanking.points }}
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-border"></div>
+        <div class="mb-4">
+          <!-- <div class="pagination">
+            <span style="margin-right: 1.2rem; cursor: pointer">
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 11 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.5299 1.40039L2.38037 5.37971L9.5299 9.35904"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+            <div class="pages d-flex justify-content-center">
+              <a class="page active">1</a>
+              <a class="page">2</a>
+              <a class="page">3</a>
+              <a class="page">4</a>
+              <a class="page">5</a>
+              <a class="page">...</a>
+              <a class="page">150</a>
+            </div>
+            <span style="margin-left: 1.2rem; cursor: pointer">
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 11 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.860726 1.40039L8.01025 5.37971L0.860726 9.35904"
+                  stroke="white"
+                  stroke-width="2"
+                /></svg
+            ></span>
+          </div> -->
+        </div>
+        <div class="d-flex cursor-pointer justify-content-center"></div>
+      </div>
+    </div>
+  </div>
+  <div style="min-width: 100%">
+    <div
+      class="btn-group rankings-button"
+      role="group"
+      aria-label="Basic outlined example"
+    >
+      <button
+        type="button"
+        class="btn p-4"
+        [class.active]="selectedButton === 'Weekly'"
+        (click)="selectedButton = 'Weekly'"
+        style="border-bottom-left-radius: 2rem; z-index: 0;"
+      >
+        Weekly
+      </button>
+      <button
+        type="button"
+        class="btn p-4"
+        [class.active]="selectedButton === 'Monthly'"
+        (click)="selectedButton = 'Monthly'"
+      >
+        Monthly
+      </button>
+      <button
+        type="button"
+        class="btn p-4"
+        [class.active]="selectedButton === 'Yearly'"
+        (click)="selectedButton = 'Yearly'"
+      >
+        Yearly
+      </button>
+      <button
+        routerLink="/home/ranking"
+        type="button"
+        class="btn p-4"
+        [class.active]="selectedButton === 'View All'"
+        (click)="selectedButton = 'View All'"
+        style="border-bottom-right-radius: 2rem"
+      >
+        View All
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- test -->
+<!-- <div
+      class="col-md-4 p-0 river-table"
+      style="
+        border-radius: 2rem;
+        background-color: #242424;
+        box-shadow: 0px 0px 15px 15px rgba(12, 10, 53, 0.15);
+        position: relative;
+      "
+    >
+      <div>
+        <div class="row p-5 pb-0">
+          <div class="col-md-12 d-flex justify-content-center">
+            <span
+              style="
+                font-style: normal;
+                font-weight: 900;
+                font-size: 2rem;
+                color: #6a3791;
+              "
+              >River Transfer Rankings</span
+            >
+          </div>
+
+          <div class="container mt-3">
+            <div class="container">
+              <ul class="nav d-flex justify-content-between">
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="tab" href="#cashes"
+                    >Cashes</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#profit"
+                    >Profit</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tlb">TLB</a>
+                </li>
+              </ul>
+
+              <ul class="nav d-flex justify-content-between">
+                <li class="nav-item">
+                  <span class="nav-link" style="color: white">Names</span>
+                </li>
+
+                <li class="nav-item">
+                  <span class="nav-link" style="color: white">Won</span>
+                </li>
+              </ul>
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="cashes">
+                  <ul style="padding-left: 0px">
+                    <li
+                      *ngFor="
+                        let riverTransferRanking of riverTransferRankings;
+                        trackBy: trackById;
+                        index as i
+                      "
+                    >
+                      <div class="d-flex justify-content-between">
+                        <div class="text-truncate">
+                          {{ i + 1 }}. Ashish Ahuja
+                        </div>
+                        <div class="text-truncate">₹3,52,46,542</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="profit">
+                  <ul style="padding-left: 0px">
+                    <li
+                      *ngFor="
+                        let riverTransferRanking of riverTransferRankings;
+                        trackBy: trackById;
+                        index as i
+                      "
+                    >
+                      <div class="d-flex justify-content-between">
+                        <div class="text-truncate">{{ i + 1 }}. Deepak</div>
+                        <div class="text-truncate">₹3,52,46,542</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="tlb">
+                  <ul style="padding-left: 0px">
+                    <li
+                      *ngFor="
+                        let riverTransferRanking of riverTransferRankings;
+                        trackBy: trackById;
+                        index as i
+                      "
+                    >
+                      <div class="d-flex justify-content-between">
+                        <div class="text-truncate">{{ i + 1 }}. Sandip</div>
+                        <div class="text-truncate">₹3,52,46,542</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-border"></div>
+            <div class="mb-4">
+              <div class="pagination">
+                <span style="margin-right: 1.2rem; cursor: pointer">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.5299 1.40039L2.38037 5.37971L9.5299 9.35904"
+                      stroke="white"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </span>
+                <div class="pages" style="font-size: 2rem">
+                  <a class="page active">1</a>
+                  <a class="page">2</a>
+                  <a class="page">3</a>
+                  <a class="page">4</a>
+                  <a class="page">5</a>
+                  <a class="page">...</a>
+                  <a class="page">150</a>
+                </div>
+                <span style="margin-left: 1.2rem; cursor: pointer">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.860726 1.40039L8.01025 5.37971L0.860726 9.35904"
+                      stroke="white"
+                      stroke-width="2"
+                    /></svg
+                ></span>
+              </div>
+            </div>
+            <div class="d-flex cursor-pointer justify-content-center"></div>
+          </div>
+        </div>
+      </div>
+      <div style="position: absolute; bottom: 0; width: 100%">
+        <div
+          class="btn-group w-100 rankings-button"
+          role="group"
+          aria-label="Basic outlined example"
+        >
+          <button
+            type="button "
+            class="btn p-4"
+            [class.active]="selectedButton === 'Weekly'"
+            (click)="selectedButton = 'Weekly'"
+            style="margin-left: 0px; border-bottom-left-radius: 2rem"
+          >
+            Weekly
+          </button>
+          <button
+            type="button"
+            class="btn p-4"
+            [class.active]="selectedButton === 'Monthly'"
+            (click)="selectedButton = 'Monthly'"
+          >
+            Monthly
+          </button>
+          <button
+            type="button"
+            class="btn p-4"
+            [class.active]="selectedButton === 'Yearly'"
+            (click)="selectedButton = 'Yearly'"
+          >
+            Yearly
+          </button>
+          <button
+            type="button"
+            class="btn p-4"
+            [class.active]="selectedButton === 'View All'"
+            (click)="selectedButton = 'View All'"
+            style="margin-right: 0px; border-bottom-right-radius: 2rem"
+          >
+            View All
+          </button>
+        </div>
+      </div>
+    </div> -->

@@ -1,0 +1,96 @@
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+:host ::ng-deep .my-element {
+  background: #1e1e1e;
+}
+
+html,
+body {
+  font-size: 62.5%; /* equivalent to 10px for easier rem calculations */
+
+  @media (max-width: 768px) {
+    font-size: 55%; /* equivalent to 12px for better readability on tablets */
+  }
+
+  // @media (max-width: 992px) {
+  //   font-size: 45%; /* equivalent to 14px for better readability on desktops */
+  // }
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  margin: 0;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  span {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+// ::placeholder {
+//   color: white;
+//   opacity: 1; /* Firefox */
+
+//   @media (max-width: 767px) {
+//     color: gray; /* change placeholder color for small screens */
+//   }
+// }
+
+
+*:focus {outline:none !important}
+
+
+.owl-next{
+  background-color: #6a3791 !important;
+  padding: 5px 20px !important;
+  border-radius: 20px !important;
+}
+
+.owl-prev{
+  background-color: #6a3791 !important;
+  padding: 5px 20px !important;
+  border-radius: 20px !important;
+}
+
+
+.swal2-image{
+  margin: 0 !important;
+}
+
+div:where(.swal2-container).swal2-center>.swal2-popup{
+  padding: 0;
+  border-radius: 16px;
+}
+
+
+div:where(.swal2-container) div:where(.swal2-actions) {
+  margin: 0 !important;
+}
+
+div:where(.swal2-actions) {
+  display: none !important;
+}

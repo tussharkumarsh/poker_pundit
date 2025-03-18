@@ -1,0 +1,183 @@
+.input-grey-rounded {
+  font-size: 1.6rem;
+  background: #242424;
+  border: none;
+  border-radius: 23px;
+  width: 100%;
+  padding: 0.5em 1em;
+  color: white;
+}
+
+.box {
+  background: #242424;
+  border-radius: 20px;
+  min-height: 50%;
+  cursor: pointer;
+}
+
+.input-grey-rounded-address {
+  font-size: 1.6rem;
+  background: #242424;
+  border: none;
+  border-radius: 23px;
+  width: 100%;
+  height: 10rem;
+  padding: 0.5em 1em;
+  color: white;
+}
+
+.input-grey-rounded-discount {
+  font-size: 1.6rem;
+  background: #181818;
+  border: none;
+  border-radius: 23px;
+  width: 100%;
+  height: 4.5rem;
+  padding: 0.5em 1em;
+  color: white;
+}
+
+.input-grey-rounded-textarea {
+  font-size: 1.6rem;
+  background: #181818;
+  border: none;
+  border-radius: 23px;
+  width: 100%;
+  padding: 0.5em 1em;
+  color: white;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+  background: #242424;
+  border-radius: 23px;
+  // Dropdown icon
+  &::after {
+    color: white;
+    content: "▾";
+    margin-right: 10px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    font-size: 20px;
+  }
+}
+
+// Default state
+.select {
+  color: white;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: #242424;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  width: 100%;
+  font-size: 1.8rem;
+  border-radius: 2.3rem;
+  &:focus {
+    color: white;
+  }
+  // Hack for IE 11+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+//button
+
+.continue-submit-button {
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  background: #6a3791;
+  border: none;
+  border-radius: 41px;
+  cursor: pointer;
+}
+
+//check box
+
+.form-group {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.form-group label {
+  position: relative;
+  cursor: pointer;
+}
+
+.form-group label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.form-group input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.proceedPay{
+  font-size: 4rem; font-weight: 700;
+}
+
+.proceedPayAmt{
+  font-size: 3rem; font-weight: 700;
+}
+
+.payment-div{
+  align-self: center; text-align-last: center;
+}
+
+.phone-grid{
+  display: grid; grid-template-columns: 15% 85%;
+}
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .proceedPay{
+    font-size: 2rem; font-weight: 700;
+  }
+  
+  .proceedPayAmt{
+    font-size: 1.5rem; font-weight: 700;
+  } 
+
+  .payment-div{
+    align-self: center; text-align-last: center;
+    margin-top: 10px;
+  }
+
+  .phone-grid{
+    display: grid; grid-template-columns: 25% 75%;
+  }
+}

@@ -1,0 +1,124 @@
+.text-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+.padding-15 {
+    padding-left: 15px;
+}
+
+.billing-text {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.bottom-border-div {
+    border-bottom: 1px solid #fff;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.amount-text {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.amount-amount {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: right;
+}
+
+.amount-text-big {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-top: 2rem;
+}
+.amount-amount-big {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: right;
+    padding-top: 2rem;
+}
+
+
+.input-grey-rounded {
+    font-size: 1.6rem;
+    background: #242424;
+    border: none;
+    border-radius: 23px;
+    width: 100%;
+    padding: 0.5em 1em;
+    color: white;
+}
+
+.order-summary-div {
+    background-color: #242424;
+    padding: 3rem;
+    border-radius: 50px;
+}
+
+@media (max-width: 992px) and (min-width: 300px) {
+    .billing-text {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+    }
+
+    .order-summary-div {
+        background-color: #242424;
+        padding: 1rem;
+        border-radius: 50px;
+    }
+
+
+    .amount-text {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .amount-amount {
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: right;
+    }
+
+    .amount-text-big {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding-top: 2rem;
+    }
+
+    .amount-amount-big {
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: right;
+        padding-top: 2rem;
+    }
+}

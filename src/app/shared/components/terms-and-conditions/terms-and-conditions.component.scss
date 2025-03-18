@@ -1,0 +1,46 @@
+.terms-and-conditions-title {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 1em;
+}
+
+ol {
+  font-size: 2rem;
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+  padding-left: 20px;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+  padding-left: 20px;
+}
+
+ol ol ol ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+
+
+@media (max-width: 992px) and (min-width: 300px){
+  .font-17-mob{
+    font-size: 17px !important;
+  }
+
+  .font-20-mob{
+    font-size: 20px !important;
+  }
+
+  .font-12-mob{
+    font-size: 12px !important;
+  }
+}

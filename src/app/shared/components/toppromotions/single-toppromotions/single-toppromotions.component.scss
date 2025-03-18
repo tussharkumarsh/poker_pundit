@@ -1,0 +1,54 @@
+.box {
+  margin-top: 1rem;
+  background-color: #393939;
+  min-height: 100px;
+}
+
+.box_square {
+  margin-top: 1rem;
+  background-color: #393939;
+  min-height: 150px;
+}
+
+button {
+  padding: 0.5em 4em;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  background: #6a3791;
+  border: none;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+// @media only screen and (max-width: 767px) {
+//   .vertical {
+//     display: none;
+//   }
+// }
+
+@media only screen and (max-width: 1200px) {
+  .col-md-8 {
+    flex: 0 0 100%; /* make the column take full width of the screen */
+    max-width: 100%; /* set the maximum width to 100% */
+  }
+  .col-md-4 {
+    flex: 0 0 100%; /* make the column take full width of the screen */
+    max-width: 100%; /* set the maximum width to 100% */
+  }
+}
+
+
+.paragraph{
+  font-size: 2rem
+}
+
+@media (max-width: 992px) and (min-width: 300px){
+  .paragraph{
+    font-size: 1.3rem
+  } 
+  .padding-0px{
+    padding: 0px !important;
+  }
+}

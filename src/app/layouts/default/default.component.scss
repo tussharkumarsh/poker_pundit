@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  background: hsl(0, 0%, 12%);
+  color: white;
+  overflow: hidden;
+}
+
+.modal-body {
+  background: #1e1e1e;
+}
+
+.modal-header {
+  background: #6a3791;
+}
+
+.close {
+  border: none;
+}
+
+.aspectratio {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: calc(100% / (var(--aspect-ratio)));
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 1536px) {
+  .container {
+    margin: 0px;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .container {
+    margin: 0px;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}

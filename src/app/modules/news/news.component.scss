@@ -1,0 +1,322 @@
+button {
+  padding: 1rem 3rem;
+  gap: 1rem;
+  color: #ffffff;
+  border: none;
+  background: #6a3791;
+  border-radius: 2.5rem;
+}
+
+.artical-time-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.artical-description {
+  font-size: 2rem;
+  font-weight: 600;
+
+  display: -webkit-box;
+  // -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.small-article-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  overflow: hidden !important;  
+  display: -webkit-box !important;
+  line-clamp: 2 !important; 
+  -webkit-line-clamp: 2 !important; /* Number of lines to display */
+  -webkit-box-orient: vertical !important;
+  text-overflow: ellipsis !important;
+}
+
+.artical-text:hover {
+  cursor: pointer;
+  color: #a86fbb;
+}
+
+.read-more-button {
+  margin-top: 3rem;
+  width: 50%;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-right {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  // background-color: #0460ac;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-bottom-left-radius: 0.5rem;
+  font-size: 14px;
+}
+
+.hover:hover img {
+  opacity: 1.2;
+}
+
+//image ratio
+.artical-and-blog-image-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  // padding-bottom: 42.86%; /* 21:9 ratio */
+}
+
+.artical-and-blog-image {
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.owl-item {
+  img {
+    opacity: 0.8;
+  }
+}
+
+.owl-item {
+  img:hover {
+    opacity: 1.2;
+  }
+}
+
+.artical-and-blog-image:hover {
+  opacity: 1.2;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.title-border-bottom {
+  border-bottom: 0.5px solid gray;
+  padding: 1em 0em;
+}
+
+.prev-btn,
+.next-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: black;
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.owl-prev:before,
+.owl-next:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.sticky {
+  position: sticky;
+  top: 0px;
+}
+
+// .card-container {
+//   margin-top: 2rem;
+//   height: 400px;
+//   overflow-y: scroll;
+//   scrollbar-width: none; /* Remove scrollbar for Firefox */
+//   -ms-overflow-style: none; /* Remove scrollbar for IE/Edge */
+// }
+// .card-container::-webkit-scrollbar {
+//   width: 0; /* Remove scrollbar for Chrome/Safari/Opera */
+// }
+// .loading-text {
+//   text-align: center;
+//   margin-top: 20px;
+//   font-style: italic;
+//   color: #888;
+// }
+
+@media (max-width: 768px) {
+  .read-more-button {
+    width: 100%;
+  }
+}
+
+// @media only screen and (max-width: 1200px) {
+//   .col-md-8 {
+//     flex: 0 0 100%; /* make the column take full width of the screen */
+//     max-width: 100%; /* set the maximum width to 100% */
+//   }
+//   .col-md-4 {
+//     flex: 0 0 100%; /* make the column take full width of the screen */
+//     max-width: 100%; /* set the maximum width to 100% */
+//   }
+//   .app-ranking {
+//     // margin-top: 2%;
+//   }
+// }
+
+
+.enter-button {
+  padding: 0.5em 1.5em;
+  background: #6a3791;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  color: #ffffff;
+}
+
+.enter-button:hover {
+  background: #542c7b;
+  cursor: pointer;
+}
+
+.section-heading{
+  font-weight: 700; 
+  font-size: 3.5rem
+}
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .section-heading{
+    font-weight: 700; 
+    font-size: 2.9rem
+  }
+
+  .padding-0{
+    padding: 0 !important;
+  }
+}
+
+.hero-pokerRooms {
+  gap: 1.5rem;
+}
+.pokerRooms {
+  background: #242424;
+  padding: 1.5em;
+  border-radius: 2rem;
+}
+.pokerRoom-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.pookerRoom-description {
+  font-size: 1.5rem;
+}
+.pokerRoom-button {
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+.share {
+  background: #363636;
+}
+button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  background: #6a3791;
+  border: none;
+  cursor: pointer;
+}
+
+
+.show-mobile{
+  display: none;
+}
+
+.hide-mobile{
+  display: block;
+}
+
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .show-mobile{
+    display: flex;
+  }
+
+  .hide-mobile{
+    display: none;
+  }
+
+  .small-article-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0px !important;
+
+    overflow: hidden !important;  
+    display: -webkit-box !important;
+    line-clamp: 2 !important; 
+    -webkit-line-clamp: 2 !important; /* Number of lines to display */
+    -webkit-box-orient: vertical !important;
+    text-overflow: ellipsis !important;
+  }
+  .text-height-3em{
+    height: 2.5em !important;
+  }  
+
+  #stickey-page{
+    position: relative !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 1450px) and (min-width: 993px) {
+  .section-heading{
+    font-weight: 700; 
+    font-size: 2.6rem
+  } 
+  .pookerRoom-description {
+    font-size: 1.1rem;
+  }
+  button {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background: #6a3791;
+    border: none;
+    cursor: pointer;
+  }
+  .pokerRooms {
+    background: #242424;
+    padding: 1em;
+    border-radius: 2rem;
+  }
+}
+
+.arrow-style{
+  width: 20px!important; 
+  rotate: 270deg;
+}
+
+.sticky-element {
+  position: sticky;
+  top: 20px; /* Adjust the top value as needed */
+  /* Add any other necessary styles */
+}

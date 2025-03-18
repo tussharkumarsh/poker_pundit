@@ -1,0 +1,322 @@
+button {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.nav-link {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+.pages {
+  display: flex;
+  gap: 0.1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  & a {
+    text-decoration: none;
+    color: gray;
+  }
+}
+.page {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.page:hover {
+  background-color: #6a3791;
+  color: #fff;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+.active {
+  // background-color: #6a3791;
+  color: #fff;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.nav-link {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.tab-content {
+  font-size: 1.7rem;
+}
+
+// .nav-link.active {
+//   background: none;
+//   color: white;
+//   background-color: #6a3791;
+//   border-color: #6a3791;
+// }
+.nav {
+  padding: 0;
+}
+
+.nav-link:not(.active) {
+  color: gray;
+}
+
+.rankings-button {
+  width: 100%;
+}
+
+.rankings-button button {
+  background: #242424;
+}
+
+// .rankings-button button {
+//   // border: 1px solid #ced4da;
+// }
+.rankings-button button.active {
+  background-color: #6a3791;
+  color: #fff;
+  border-color: #6a3791;
+}
+
+.about-border {
+  display: block;
+  width: 50%;
+  height: 0.01rem;
+  background: gray;
+  margin: 20px auto;
+}
+
+.main-container {
+  padding: 0;
+  background-image: url("/assets/img/pexels-pavel-danilyuk-baground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.input-grey-rounded {
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  background: #000000;
+  border: none;
+  background-image: url("/assets/img/search.png");
+  background-repeat: no-repeat;
+  background-position: 1.5rem 1rem;
+  background-size: 2rem 2rem;
+  border-radius: 2.5rem;
+  padding: 0.5em 1em 0.5em 3em;
+  color: white;
+}
+
+// .first-dropdown {
+//   margin-top: 5em;
+// }
+
+// .second-dropdown {
+//   margin-top: 15em;
+// }
+
+// .dropdown {
+//   display: inline-block;
+//   position: relative;
+//   margin-bottom: 0rem;
+// }
+
+// .dd-button {
+//   display: inline-block;
+//   border: none;
+//   border-radius: 4px;
+//   padding: 10px 30px 10px 20px;
+//   cursor: pointer;
+//   white-space: nowrap;
+// }
+
+// // dropdown
+// .filter-button {
+//   padding: 0.5rem 4rem;
+//   background: #6a3791;
+//   // border: none;
+//   font-size: 2rem;
+//   border-radius: 15rem;
+//   cursor: pointer;
+// }
+
+// .dd-input {
+//   display: none;
+// }
+
+// .dd-menu {
+//   position: absolute;
+//   top: 100%;
+//   // border: 1px solid #6a3791;
+//   border-radius: 2rem;
+//   padding: 0;
+//   margin: 2px 0 0 0;
+//   // box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+//   // background-color: #242424;
+//   list-style-type: none;
+//   font-size: 1.5rem;
+// }
+
+// .dd-input + .dd-menu {
+//   display: none;
+// }
+
+// .dd-input:checked + .dd-menu {
+//   display: block;
+// }
+
+// .dd-menu li {
+//   padding: 1rem 4rem;
+//   cursor: pointer;
+//   white-space: nowrap;
+// }
+
+// .dd-menu li:hover {
+//   background-color: none;
+// }
+
+// .dd-menu li a {
+//   display: block;
+//   margin: -10px -20px;
+//   padding: 10px 20px;
+// }
+
+// .dd-menu li.divider {
+//   padding: 0;
+//   border-bottom: 1px solid #cccccc;
+// }
+
+.accordion {
+  background: none;
+  margin-bottom: 3em;
+}
+.accordion-item {
+  background: none;
+  color: white;
+  border: none;
+}
+
+#leaderboardAccordion {
+  margin-top: 6em;
+}
+
+.accordion-button {
+  width: 50%;
+  background: #6a3791;
+  color: white;
+  border: none;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.accordion-collapse {
+  width: 50%;
+}
+.accordion-body {
+  font-size: 1rem;
+}
+
+.nav-link {
+  font-size: 1.7rem;
+}
+
+.nav-link.active,
+.nav-pills .show > .nav-link {
+  background: none;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: url("/assets/img/up_arrow.png"); /* Replace "path_to_white_button_image" with the path to your white button image or use a CSS color value like "white" */
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+
+.faq-title::after {
+  color: white;
+}
+
+.list-unstyled {
+  font-size: 1.7rem;
+
+  li {
+    cursor: pointer;
+  }
+}
+
+.show-mobile{
+  display: none;
+}
+
+.hide-mobile{
+  display: block;
+}
+
+.padding-5rem{
+  padding: 5rem;
+}
+.online-poker-room-heading{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  color: #fff;
+}
+@media (max-width: 992px) and (min-width: 300px){
+
+  .show-mobile{
+    display: flex;
+  }
+
+  .hide-mobile{
+    display: none;
+  }
+
+  .padding-5rem{
+    padding: 1rem;
+  } 
+  .online-poker-room-heading{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.9rem;
+    color: #fff;
+  }
+
+  .accordion-button {
+    width: 100%;
+    background: #6a3791;
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  #leaderboardAccordion {
+    margin-top: 0;
+  }
+
+  .accordion {
+    background: none;
+    margin-bottom: 0;
+  }
+  
+}

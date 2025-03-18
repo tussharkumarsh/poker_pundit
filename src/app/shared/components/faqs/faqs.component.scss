@@ -1,0 +1,75 @@
+.input-inset {
+  font-size: 16px;
+  line-height: 1.5;
+  background: #000000;
+  color: white;
+  background-image: url("/assets/img/search.png");
+  background-repeat: no-repeat;
+  background-position: 10px 18px;
+  background-size: 20px 20px;
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 01em 1em 1em 3em;
+  margin-bottom: 2em;
+}
+
+.accordion {
+  background: none;
+  margin-bottom: 6em;
+}
+.accordion-item {
+  background: none;
+  color: white;
+  border: none;
+}
+
+.accordion-body {
+  font-size: 2rem;
+  background: #242424;
+  border-radius: 2.5rem;
+  padding: 2rem 4rem;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: url("/assets/img/up_arrow.png"); /* Replace "path_to_white_button_image" with the path to your white button image or use a CSS color value like "white" */
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+
+.faq-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background: none;
+  color: #ffffff;
+}
+
+.accordion-button {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.faq-title::after {
+  color: white;
+}
+
+
+@media (max-width: 992px) and (min-width: 300px){
+  .font-17-mob{
+    font-size: 17px;
+  }
+
+  .font-20-mob{
+    font-size: 20px;
+  }
+
+  .font-12-mob{
+    font-size: 12px;
+  }
+}

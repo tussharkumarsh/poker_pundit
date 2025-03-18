@@ -1,0 +1,43 @@
+<div class="message alert">
+  <!-- <marquee scrollamount="10">
+    <div class="col-md-12 d-flex align-items-center justify-content-center">
+      <p
+        style="
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 0rem;
+          margin-right: 2rem;
+        "
+      >
+        APT Taipei 2023 Super High Roller - 8 Max
+      </p>
+      <button class="ticker-button">Live Updates</button>
+    </div>
+  </marquee> -->
+
+  <div class="marquee">
+    <div class="marquee--inner">
+      <span>
+        <div class="d-flex" style="align-items: center; width: 800px;">
+          <p style=" font-size: 1.5rem; font-weight: 700; margin-bottom: 0rem; margin-right: 2rem;">
+            {{promotions[0].heading}}
+          </p>
+          <a [attr.href]="'//' + promotions[0].bannerUrls[0]" target="_blank">
+            <button class="ticker-button">{{promotions[0].description}}</button>
+          </a>
+        </div>
+      </span>
+      <span>
+        <div class="d-flex" style="align-items: center;  width: 800px;">
+          <p style=" font-size: 1.5rem; font-weight: 700; margin-bottom: 0rem; margin-right: 2rem;">
+            {{promotions[0].heading}}
+          </p>
+            <a [attr.href]="'//' + promotions[0].bannerUrls[0]" target="_blank">
+            <button class="ticker-button">{{promotions[0].description}}</button>
+          </a>
+        </div>
+      </span>
+  
+    </div>
+  </div>
+</div>

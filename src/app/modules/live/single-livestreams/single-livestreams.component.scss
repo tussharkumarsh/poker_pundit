@@ -1,0 +1,106 @@
+.tab {
+  cursor: pointer;
+  padding: 2rem 10rem;
+  background: #242424;
+  display: inline-block;
+  color: #fff;
+  border-radius: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.player-table tr td,
+tr th {
+  padding: 20px 0; /* add padding to the top and bottom of each table cell */
+  margin-bottom: 5rem;
+  border-radius: 10px;
+}
+
+.player-table tr {
+  border: #1e1e1e solid 2rem;
+
+  margin-bottom: 2rem !important;
+  background: #242424;
+}
+
+.box {
+  background-color: #242424;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+.entries-card {
+  margin-top: 3rem;
+  background-color: #242424;
+  height: 150px;
+  padding: 5rem;
+}
+.table-card {
+  margin-top: 3rem;
+  background-color: #242424;
+  height: 500px;
+  border-radius: 5rem;
+  padding: 5rem;
+}
+
+.table td {
+  text-align: center;
+  font-size: 2rem;
+}
+.table th {
+  font-size: 2rem;
+  text-align: center;
+}
+
+// .panels {
+//   min-height: 200px;
+//   width: 100%;
+//   max-width: 500px;
+//   border-radius: 3px;
+//   overflow: hidden;
+//   padding: 20px;
+// }
+
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.radio {
+  display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel,
+#four:checked ~ .panels #four-panel {
+  display: block;
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab,
+#four:checked ~ .tabs #four-tab {
+  background: #6a3791;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tab {
+    margin-bottom: 10px;
+  }
+}

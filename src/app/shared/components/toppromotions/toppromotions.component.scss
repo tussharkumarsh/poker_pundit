@@ -1,0 +1,221 @@
+// .common-card-background {
+//   background: #242424;
+// }
+
+// .enter-button {
+//   padding: 0.5em 4em;
+//   background: #6a3791;
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   border: none;
+//   border-radius: 2rem;
+//   color: #ffffff;
+// }
+
+// .share-button {
+//   padding: 0.5em 4em;
+//   background: #363636;
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   border: none;
+//   border-radius: 2rem;
+//   color: #ffffff;
+// }
+
+// .add-div {
+//   padding: 5em 8em;
+// }
+
+// @media only screen and (max-width: 1400px) {
+//   .add-div {
+//     padding: 3em 5em;
+//   }
+//   .enter-button {
+//     padding: 0.5em 2em;
+//   }
+//   .share-button {
+//     padding: 0.5em 2em;
+//   }
+// }
+// @media only screen and (max-width: 768px) {
+//   .add-div {
+//     padding: 5em 8em;
+//   }
+//   .enter-button {
+//     padding: 0.5em 4em;
+//   }
+//   .share-button {
+//     padding: 0.5em 4em;
+//   }
+// }
+
+//second part
+// .common-card-background {
+//   background: #242424;
+// }
+
+// .enter-button {
+//   padding: 0.5em 4em;
+//   background: #6a3791;
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   border: none;
+//   border-radius: 2rem;
+//   color: #ffffff;
+// }
+
+// .share-button {
+//   padding: 0.5em 4em;
+//   background: #363636;
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   border: none;
+//   border-radius: 2rem;
+//   color: #ffffff;
+// }
+
+// .add-div {
+//   padding: 5em 8em;
+//   background: #454545;
+//   border-radius: 2.5rem;
+// }
+
+// @media only screen and (max-width: 1400px) {
+//   .add-div {
+//     padding: 3em 5em;
+//   }
+//   .enter-button {
+//     padding: 0.5em 2em;
+//   }
+//   .share-button {
+//     padding: 0.5em 2em;
+//   }
+// }
+
+// @media only screen and (max-width: 768px) {
+//   .add-div {
+//     padding: 3em 5em;
+//   }
+//   .enter-button {
+//     padding: 0.5em 2em;
+//   }
+//   .share-button {
+//     padding: 0.5em 2em;
+//     margin-top: 1em;
+//   }
+//   .mx-3 {
+//     margin: 0 1.5rem;
+//   }
+// }
+
+//third
+.common-card-background {
+  background: #242424;
+}
+
+.enter-button {
+  padding: 0.5em 1.5em;
+  background: #6a3791;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  color: #ffffff;
+}
+.share-button {
+  padding: 0.5em 1.5em;
+  background: #363636;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  color: #ffffff;
+}
+
+.enter-button:hover {
+  background: #542c7b;
+  cursor: pointer;
+}
+.share-button:hover {
+  cursor: pointer;
+}
+
+.add-div {
+  padding: 1em 3em;
+  // background: #454545;
+  border-radius: 2.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .add-div {
+    padding: 6em 10em;
+  }
+
+  .enter-button,
+  .share-button {
+    padding: 1em 2em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .add-div {
+    padding: 5em 8em;
+  }
+
+  .enter-button,
+  .share-button {
+    padding: 0.5em 2em;
+  }
+}
+
+// @media only screen and (max-width: 992px) {
+//   .add-div {
+//     padding: 3em 5em;
+//   }
+// }
+
+// @media only screen and (max-width: 1200px) {
+//   .add-div {
+//     padding: 4em 6em;
+//   }
+// }
+
+// @media only screen and (max-width: 1400px) {
+//   .add-div {
+//     padding: 5em 8em;
+//   }
+// }
+
+// @media only screen and (min-width: 1400px) {
+//   .add-div {
+//     padding: 5em 8em;
+//   }
+// }
+
+
+.padding-5{
+  padding: 40px;
+}
+
+.padding-img{
+  padding: 0px;
+}
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .padding-5{
+    padding: 10px;
+  }
+  .padding-img{
+    padding: 40px;
+  }
+}
+
+
+
+.text-cut {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}

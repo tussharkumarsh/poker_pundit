@@ -1,0 +1,156 @@
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 1em 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sub-total-amt{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;      
+  color: #FFFFFF;
+}
+
+.tax-included{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;     
+  color: #FFFFFF;
+}
+
+.btn-checkout{
+  background: #00ECEC;
+  border: 1px solid #00ECEC;
+  border-top-left-radius: 30px; border-bottom-left-radius: 30px; 
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  padding: 5px 20px;        
+  color: #000;
+  padding-right: 7rem;
+  width: max-content;
+}
+
+.checkout-div{
+  margin-top: 5px;
+  background-color: #6A3791 !important;
+  align-items: center; 
+  position: absolute; 
+  width: 106%; 
+  left: -46px;
+}
+
+.description-text{
+  font-size: 2.5rem; font-weight: 600; word-wrap: break-word
+}
+.description-text-price{
+  font-size: 2rem
+}
+
+.delete-btn{
+  background-color: #900000; padding: 10px 35px; font-size: 1.5rem; font-weight: bold; border-radius: 20px;
+}
+
+.show-mobile{
+  display: none;
+}
+
+.hide-mobile{
+  display: flex;
+}
+@media (max-width: 992px) and (min-width: 300px) {
+
+  .show-mobile{
+    display: flex;
+  }
+
+  .hide-mobile{
+    display: none;
+  }
+
+  .checkout-div{
+    margin-top: 5px;
+    background-color: #6A3791 !important;
+    align-items: center; 
+    position: absolute; 
+    padding: 0 !important;
+    margin: 0;
+  } 
+  .sub-total-amt{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;      
+    color: #FFFFFF;
+  }
+
+  .btn-checkout{
+    background: #00ECEC;
+    border: 1px solid #00ECEC;
+    border-top-left-radius: 30px; border-bottom-left-radius: 30px; 
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    padding: 5px 10px;        
+    color: #000;
+  }
+  .tax-included{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 6px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+  }
+
+  .description-text{
+    font-size: 1.3rem; font-weight: 600; word-wrap: break-word
+  }
+  .description-text-price{
+    font-size: 1.3rem
+  }
+
+  .btn-outline-light{
+    padding: 0.6em;
+  }
+
+  .delete-btn{
+    background-color: #900000; padding: 10px 15px; font-size: 1.5rem; font-weight: bold; border-radius: 20px;
+  }
+}

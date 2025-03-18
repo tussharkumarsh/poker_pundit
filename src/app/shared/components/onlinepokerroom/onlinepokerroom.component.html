@@ -1,0 +1,165 @@
+<div class="row mt-5">
+    <div class="col-md-12">
+      <h1 class="section-heading">
+        Online Poker Rooms
+      </h1>
+    </div>
+    <div class="row hero-pokerRooms">
+      <div class="col-md-12 pokerRooms" *ngFor="let onlinePokerRoomsObj of onlinePokerRooms">
+        <div class="row" style="place-items: center;">
+          <div class="col-6 col-sm-6 col-md-4 align-items-center">
+            <img
+              style="width: 100%"
+              src="{{onlinePokerRoomsObj.images[0]}}"
+              alt="website-img-1"
+            />
+            <div></div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 justify-content-betwee">
+            <p class="pokerRoom-title" style="text-align: center">
+              {{onlinePokerRoomsObj.heading}}
+            </p>
+            <p class="pookerRoom-description" style="text-align: center">
+              {{onlinePokerRoomsObj.timeForReadingMinutes}}
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="row">
+              <div class="col-md-12 col-6 my-2">
+                <a [attr.href]="'//' + onlinePokerRoomsObj.links[0]" target="_blank">
+                  <button class="pokerRoom-button" style="width: 100%;">Play Now</button>
+                </a>
+              </div>
+              <div class="col-md-12 col-6 my-2">
+                <button class="second pokerRoom-button share" (click)="copyText(onlinePokerRoomsObj.links[1])" style="width: 100%;">Share</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-md-12 pokerRooms">
+        <div class="row" style="place-items: center;">
+          <div class="col-6 col-sm-6 col-md-4 align-items-center">
+            <img
+              style="width: 100%"
+              src="/assets/img/website-img-3.png"
+              alt="website-img-1"
+            />
+            <div></div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 justify-content-betwee">
+            <p class="pokerRoom-title" style="text-align: center">
+              MPL
+            </p>
+            <p class="pookerRoom-description" style="text-align: center">
+              2,500/- First Deposit Bonus
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="row">
+              <div class="col-md-12 col-6 my-2">
+                <button class="pokerRoom-button" style="width: 100%;">Play Now</button>
+              </div>
+              <div class="col-md-12 col-6 my-2">
+                <button class="pokerRoom-button share" style="width: 100%;">Share</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 pokerRooms">
+        <div class="row" style="place-items: center;">
+          <div class="col-6 col-sm-6 col-md-4 align-items-center">
+            <img
+              style="width: 100%"
+              src="/assets/img/website-img-1.png"
+              alt="website-img-1"
+            />
+            <div></div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 justify-content-betwee">
+            <p class="pokerRoom-title" style="text-align: center">
+              PokerBaazi
+            </p>
+            <p class="pookerRoom-description" style="text-align: center">
+              2,500/- First Deposit Bonus
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="row">
+              <div class="col-md-12 col-6 my-2">
+                <button class="pokerRoom-button" style="width: 100%;">Play Now</button>
+              </div>
+              <div class="col-md-12 col-6 my-2">
+                <button class="pokerRoom-button share" style="width: 100%;">Share</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 pokerRooms">
+        <div class="row" style="place-items: center;">
+          <div class="col-6 col-sm-6 col-md-4 align-items-center">
+            <img
+              style="width: 100%"
+              src="/assets/img/website-img-2.png"
+              alt="website-img-1"
+            />
+            <div></div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 justify-content-betwee">
+            <p class="pokerRoom-title" style="text-align: center">
+              Khelo365
+            </p>
+            <p class="pookerRoom-description" style="text-align: center">
+              2,500/- First Deposit Bonus
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="row">
+              <div class="col-md-12 col-6 my-2">
+                <button class="pokerRoom-button" style="width: 100%;">Play Now</button>
+              </div>
+              <div class="col-md-12 col-6 my-2">
+                <button class="pokerRoom-button share" style="width: 100%;">Share</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 pokerRooms">
+        <div class="row" style="place-items: center;">
+          <div class="col-6 col-sm-6 col-md-4 align-items-center">
+            <img
+              style="width: 100%"
+              src="/assets/img/website-img-1.png"
+              alt="website-img-1"
+            />
+            <div></div>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 justify-content-betwee">
+            <p class="pokerRoom-title" style="text-align: center">
+              PokerBaazi
+            </p>
+            <p class="pookerRoom-description" style="text-align: center">
+              2,500/- First Deposit Bonus
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <div class="row">
+              <div class="col-md-12 col-6 my-2">
+                <button class="pokerRoom-button" style="width: 100%;">Play Now</button>
+              </div>
+              <div class="col-md-12 col-6 my-2">
+                <button class="pokerRoom-button share" style="width: 100%;">Share</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>

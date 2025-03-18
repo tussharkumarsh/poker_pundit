@@ -1,0 +1,35 @@
+.item {
+  opacity: 0.4;
+  transition: 0.4s ease all;
+  margin: 0 20px;
+  transform: scale(0.8);
+}
+
+.active .item {
+  opacity: 1;
+  transform: scale(1);
+}
+
+// .owl-item {
+//   /*loop issue fixed*/
+//   -webkit-backface-visibility: hidden;
+//   -webkit-transform: translateZ(0) scale(1, 1);
+// }
+
+.owl-carousel:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -4%;
+  pointer-events: none;
+  background-size: 100% auto;
+}
+
+.owl-controls {
+  position: absolute;
+  margin-top: 300px;
+}

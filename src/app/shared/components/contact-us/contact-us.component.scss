@@ -1,0 +1,99 @@
+.contact-us-title {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 1em;
+}
+
+.contact-us-input {
+  font-size: 2rem;
+  line-height: 1.5;
+  background: #242424;
+
+  color: white;
+  border: none;
+  border-radius: 2.5rem;
+  width: 100%;
+
+  padding: 1rem 4rem;
+  margin-bottom: 2em;
+}
+
+button {
+  font-size: 2rem;
+  font-weight: 600;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2.5rem;
+  background: #6b3691;
+  border: none;
+  color: white;
+}
+
+.contact-us-input-message {
+  font-size: 2rem;
+  line-height: 1.5;
+  background: #242424;
+
+  color: white;
+  border: none;
+  border-radius: 2.5rem;
+  width: 100%;
+
+  padding: 1rem 4rem;
+  margin-bottom: 2em;
+}
+
+.contact-us-inputs-wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.contact-text {
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+.contact-us-info {
+  padding: 10em 0em;
+  border-right: 2px solid white;
+}
+
+.contact-us-info-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  // width: 60%;
+}
+
+.shark-img{
+  max-height: 45rem; width: auto
+}
+
+@media (max-width: 992px) and (min-width: 300px){
+  .font-17-mob{
+    font-size: 17px !important;
+  }
+
+  .font-20-mob{
+    font-size: 20px !important;
+  }
+
+  .font-12-mob{
+    font-size: 12px !important;
+  }
+
+  .contact-us-inputs-wrapper {
+    width: 100%;
+    margin: auto;
+  }
+
+  .shark-img{
+    max-height: 20rem; 
+    width: auto;
+    padding-top: 20px;
+  }
+}

@@ -1,0 +1,351 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > <img src="./assets/side-bar-img/new_poker_logo.svg" alt=""> </p></ngx-spinner>
+<div *ngIf="waitLoader" style="height: 100vh"></div>
+
+<div class="container" #pageContainer style="min-width: 100%" *ngIf="!waitLoader">
+
+  <div class="row gx-5">
+    <div class="col-md-8" style="z-index: 999;">
+      <div class="row mb-5">
+        <span
+          routerLink="/home/news"
+          class="d-flex align-items-center"
+          style="gap: 2rem; cursor: pointer"
+        >
+          <svg
+            width="12"
+            height="30"
+            viewBox="0 0 24 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M23.1686 58.8142C23.7229 58.0237 24 57.0877 24 56.0063C24 54.927 23.7229 53.9921 23.1686 53.2016L6.92841 30.0395L23.224 6.79842C23.7413 6.06061 24 5.13834 24 4.03162C24 2.9249 23.7229 1.97628 23.1686 1.18577C22.6143 0.395257 21.9581 0 21.1998 0C20.443 0 19.7875 0.395257 19.2333 1.18577L0.609699 27.8261C0.387991 28.1423 0.230577 28.4848 0.137461 28.8538C0.0458202 29.2227 0 29.6179 0 30.0395C0 30.4611 0.0458202 30.8564 0.137461 31.2253C0.230577 31.5942 0.387991 31.9368 0.609699 32.253L19.2887 58.8933C19.806 59.6311 20.443 60 21.1998 60C21.9581 60 22.6143 59.6047 23.1686 58.8142Z"
+              fill="#6A3791"
+            />
+          </svg>
+          <span style="font-size: 2.5rem; font-weight: 500">All News</span>
+        </span>
+      </div>
+
+      <div class="row">
+        <div
+          class="col-lg-12 col-md-12 col-sm-12"
+          style="position: relative; padding: 0em"
+        >
+          <img
+            src="{{ newsObj.images[0] }}"
+            alt="artical-img"
+            class="img-fluid"
+          />
+          <div class="top-right" *ngIf="newsObj.tags == 'News'" style="background-color: #0460ac;">{{newsObj.tags}}</div>
+          <div class="top-right" *ngIf="newsObj.tags == 'Promotion'" style="background-color: #ef1178;">{{newsObj.tags}}</div>
+          <div class="top-right" *ngIf="newsObj.tags == 'Featured'" style="background-color: #ba1616;">{{newsObj.tags}}</div>
+          <div class="top-right" *ngIf="newsObj.tags != 'News' && newsObj.tags != 'Featured' && newsObj.tags != 'Promotion'" style="background-color: #6a3791;">{{newsObj.tags}}</div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+          <h2 class="news-title">
+            {{newsObj.heading}}
+          </h2>
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="artical-time-text text-start mt-3">
+              <i>
+                {{newsObj.timeForReadingMinutes}} | {{newsObj.createdAt | dateAgo}}
+              </i>
+            </span>
+
+
+
+
+            <div
+              class="d-flex justify-content-around"
+              style="margin-left: 1rem; font-size: 3.5rem; width: 15%"
+            >
+
+              <span style="padding-right: 10px; cursor: pointer;" (click)="copyRouteLink()" title="Copy Link">
+                <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="28" height="26" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16"> 
+                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" fill="white"></path> <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" fill="white"></path> </svg>
+              </span>
+
+              <span (click)="copyRouteLinkFacebook()">
+                  <a href="{{shareonWhatsapp}}" data-action="share/whatsapp/share" title="Share on Whatsapp">
+                    <svg
+                      class="custom-svg"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M23.9196 4.21957C22.6296 2.87677 21.0931 1.8121 19.3997 1.08766C17.7063 0.363215 15.8898 -0.00649615 14.0563 8.63757e-05C6.37387 8.63757e-05 0.112563 6.45257 0.112563 14.3695C0.112563 16.907 0.759799 19.372 1.96985 21.547L0 29L7.38693 26.999C9.42714 28.1445 11.7206 28.7535 14.0563 28.7535C21.7387 28.7535 28 22.301 28 14.384C28 10.5416 26.5508 6.93107 23.9196 4.21957ZM14.0563 26.3175C11.9739 26.3175 9.93367 25.7375 8.14673 24.65L7.72462 24.389L3.33467 25.578L4.50251 21.17L4.22111 20.7205C3.06417 18.8166 2.44985 16.6159 2.44824 14.3695C2.44824 7.78656 7.65427 2.42158 14.0422 2.42158C17.1377 2.42158 20.0503 3.66858 22.2312 5.93057C23.311 7.03831 24.1668 8.35592 24.7489 9.80702C25.331 11.2581 25.6278 12.8139 25.6221 14.384C25.6503 20.967 20.4442 26.3175 14.0563 26.3175ZM20.4161 17.3855C20.0643 17.2115 18.3477 16.3415 18.0382 16.211C17.7146 16.095 17.4894 16.037 17.2503 16.385C17.0111 16.7475 16.3497 17.5595 16.1528 17.7915C15.9558 18.038 15.7447 18.067 15.393 17.8785C15.0412 17.7045 13.9156 17.313 12.593 16.095C11.5518 15.138 10.8623 13.9635 10.6513 13.601C10.4543 13.2385 10.6231 13.05 10.806 12.8615C10.9608 12.702 11.1578 12.441 11.3266 12.238C11.4955 12.035 11.5658 11.8756 11.6784 11.6436C11.791 11.3971 11.7347 11.1941 11.6503 11.0201C11.5658 10.8461 10.8623 9.07706 10.5809 8.35206C10.2995 7.65606 10.004 7.74306 9.79296 7.72856H9.11759C8.87839 7.72856 8.51256 7.81556 8.18894 8.17806C7.8794 8.54056 6.97889 9.41056 6.97889 11.1796C6.97889 12.9485 8.23116 14.6595 8.4 14.8915C8.56884 15.138 10.8623 18.763 14.3518 20.3145C15.1819 20.6915 15.8291 20.909 16.3357 21.0685C17.1658 21.344 17.9256 21.3005 18.5307 21.2135C19.206 21.112 20.599 20.3435 20.8804 19.5025C21.1759 18.6615 21.1759 17.951 21.0774 17.7915C20.9789 17.632 20.7678 17.5595 20.4161 17.3855Z"
+                        fill="white"
+                      />
+                    </svg>
+
+                </a>
+              </span>
+
+              <span (click)="copyRouteLinkFacebook()"> 
+                <a [attr.href]="'//' + shareonFacebook" target="_blank" title="Share on Facebook">
+                  <svg
+                    class="custom-svg"
+                    viewBox="0 0 25 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 13.067C0 19.0417 4.36282 24.0099 10.0688 25.0174V16.3378H7.04817V12.9999H10.0688V10.329C10.0688 7.32465 12.0151 5.65622 14.7679 5.65622C15.6399 5.65622 16.5803 5.78942 17.4523 5.92261V8.99408H15.9087C14.4316 8.99408 14.0963 9.72815 14.0963 10.6635V12.9999H17.3184L16.7817 16.3378H14.0963V25.0174C19.8023 24.0099 24.1652 19.0427 24.1652 13.067C24.1652 6.42034 18.728 0.982422 12.0826 0.982422C5.43716 0.982422 0 6.42034 0 13.067Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </span>
+
+              <span (click)="copyRouteLinkFacebook()">
+                <a [attr.href]="'//' + shareonTwitter" target="_blank" title="Share on Twitter">
+                  <img src="./assets/img/twitter-new.png" style="width: 20px;" alt="">
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 mt-3">
+          <div class="row">
+            <div class="col-md-12">
+              <div [innerHtml]='newsObj.description | safeHtml' id="image-container" style="font-size: 18px !important; width: 100%;" class="image-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-5">
+        <div class="col-md-12">
+
+          <div class="row">
+            <div
+              style="border-bottom: 0.5px solid #ffffff; padding-bottom: 1.5rem"
+            ></div>
+            <div class="col-md-4 col-4">
+              <div
+                class="d-flex aligh-item justify-content-center flex-column"
+              >
+                <h1 class="sp-category mb-5 mt-5">
+                  Categories
+                </h1>
+                <p style="font-size: 1.5rem">{{newsObj.category}}</p>
+              </div>
+              <div
+                style="
+                  border-bottom: 0.5px solid #ffffff;
+                  padding-bottom: 1.5rem;
+                "
+              ></div>
+              <div class="hide-mobile">
+                <div
+                  class="d-flex align-items-center justify-content-center flex-column mt-5"
+                >
+                  <img
+                    src="{{ newsObj.authorImage }}"
+                    alt="{{ users[0].profile_img }}"
+                    style="
+                      max-width: 70%;
+                      max-height: 70%;
+                      object-fit: cover;
+                      border-radius: 50%;
+                    "
+                  />
+                  <p
+                    style="
+                      font-size: medium;
+                      text-align: center;
+                      display: flex;
+                      flex-wrap: wrap;
+                    "
+                  >
+                    {{ newsObj.authorName }}<br />
+                    {{newsObj.authorDescription}}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-8">
+              <h1 class="sp-category mb-5 mt-5">
+                Keywords
+              </h1>
+              <p style="font-size: 1.5rem; line-height: 2.5rem">
+                {{newsObj.authorKeywords}}
+              </p>
+            </div>
+          </div>
+          <div class="row hide-mobile">
+            <div
+              style="border-bottom: 0.5px solid #ffffff; padding-bottom: 1.5rem"
+            ></div>
+            <h1 style="font-weight: 600; font-size: 3rem" class="mb-5 mt-5">
+              Related Articles
+            </h1>
+            <div class="row">
+              <div
+                class="col-md-6 g-5"
+                style="cursor: pointer"
+                *ngFor="let article of selectedObjects;"
+              >
+                <div style="position: relative">
+                  <img
+                      src="{{ article.images[1] }}"
+                      alt="artical-img"
+                      style="width: 100%"
+                      (click)="goToSinglePage(article)"
+                    />
+                    <div
+                      class="top-right"
+                      *ngIf="article.tags == 'News'"
+                      style="background-color: #0460ac"
+                    >
+                      {{ article.tags }}
+                    </div>
+                    <div
+                      class="top-right"
+                      *ngIf="article.tags == 'Promotion'"
+                      style="background-color: #ef1178"
+                    >
+                      {{ article.tags }}
+                    </div>
+                    <div
+                      class="top-right"
+                      *ngIf="article.tags == 'Featured'"
+                      style="background-color: #ba1616"
+                    >
+                      {{ article.tags }}
+                    </div>
+                    <div
+                      class="top-right"
+                      *ngIf="
+                        article.tags != 'News' &&
+                        article.tags != 'Featured' &&
+                        article.tags != 'Promotion'
+                      "
+                      style="background-color: #6a3791"
+                    >
+                      {{ article.tags }}
+                    </div>
+
+                </div>
+                <p class="mt-3 small-article-text" (click)="goToSinglePage(article)">
+                  {{ article.heading }}
+                </p>
+                <p class="mt-4 artical-time-text">
+                  <i style="color: gray">
+                    {{ article.timeForReadingMinutes }} |
+                    {{ article.createdAt | dateAgo }}</i
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+                <!-- Second carousel -->
+          <div class="row show-mobile" style="position: relative">
+            <div class="row">
+              <!-- <h1 style="font-weight: 700; font-size: 35px" class="mb-5 mt-5">
+                Tournament Highlights
+              </h1> -->
+              <div class="col-md-12 title-border-bottom mb-5">              
+                <h1 style="font-weight: 600; font-size: 3rem" class="mb-5 mt-5">
+                  Related Articles
+                </h1>
+              </div>
+              
+            </div>
+            <div class="owl-carousel owl-theme owl-loaded carousel2">
+              <div class="owl-stage-outer">
+                <div class="owl-stage">
+                  <div class="owl-item" *ngFor="let article of selectedObjects;">
+                    <div style="position: relative">
+                      <img
+                          src="{{ article.images[1] }}"
+                          alt="artical-img"
+                          style="width: 100%"
+                          (click)="goToSinglePage(article)"
+                        />
+                        <div
+                          class="top-right"
+                          *ngIf="article.tags == 'News'"
+                          style="background-color: #0460ac"
+                        >
+                          {{ article.tags }}
+                        </div>
+                        <div
+                          class="top-right"
+                          *ngIf="article.tags == 'Promotion'"
+                          style="background-color: #ef1178"
+                        >
+                          {{ article.tags }}
+                        </div>
+                        <div
+                          class="top-right"
+                          *ngIf="article.tags == 'Featured'"
+                          style="background-color: #ba1616"
+                        >
+                          {{ article.tags }}
+                        </div>
+                        <div
+                          class="top-right"
+                          *ngIf="
+                            article.tags != 'News' &&
+                            article.tags != 'Featured' &&
+                            article.tags != 'Promotion'
+                          "
+                          style="background-color: #6a3791"
+                        >
+                          {{ article.tags }}
+                        </div>
+    
+                    </div>
+                    <p class="mt-3 small-article-text" (click)="goToSinglePage(article)">
+                      {{ article.heading }}
+                    </p>
+                    <p class="mt-4 artical-time-text">
+                      <i style="color: gray">
+                        {{ article.timeForReadingMinutes }} |
+                        {{ article.createdAt | dateAgo }}</i
+                      >
+                    </p>
+                  </div>  
+                </div>
+              </div>
+            </div>         
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- <div class="col-md-4 mt-5">
+      <app-rankings></app-rankings>
+      <div id="stickey-page" style="height: auto; background-color: #1f1f1f;">
+        <div class="containfer">
+          <app-onlinepokerroom></app-onlinepokerroom>
+        </div>        
+      </div>
+    </div> -->
+
+    <div class="col-md-4 show-mobile">
+      <app-onlinepokerroom></app-onlinepokerroom>
+    </div>
+
+    <div class="hide-mobile col-md-4" id="stickey-page" style="height: auto">
+      <div style="padding-left: 1rem">
+        <app-onlinepokerroom></app-onlinepokerroom>
+      </div>
+
+      <div
+        style="background-color: #1f1f1f"
+        class="container"
+        id="stickey-page-container"
+      >
+        <app-onlinepokerroom></app-onlinepokerroom>
+      </div>
+    </div>
+
+  </div>
+</div>

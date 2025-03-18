@@ -1,0 +1,508 @@
+<div class="container" style="min-width: 100%">
+  <div class="row hero-tabs">
+    <div class="topnav show-mobile" id="pills-tab11" style="position: relative;">
+      <button
+        (click)="myFunction()"
+        class="btn" 
+        style="height: auto; background-color: transparent; font-size: 10px; border: 2px solid #6a3791; border-radius: 30px; padding: 1rem 3rem; color: #fff; font-weight: 500;"
+      >
+        {{selectedMenuName}} &nbsp;&nbsp; <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6a3791" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+          <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+        </svg>
+      </button>
+      <div id="myLinks" style="position: absolute; background-color: #6a3791; top: 55px; z-index: 99999999999; width: 20rem; padding: 1rem; border-radius: 10px;">
+        <ul
+          class="nav col-md-12 d-flex align-items-center justify-content-between"
+          id="pills-tab1"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="pills-home-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-home"
+              type="button"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+              (click)="myFunction()"
+              (click)="selectedMenuName = 'Home'"
+            >
+              Home
+            </button>
+          </li>
+
+          <li class="nav-item" role="presentation" *ngFor="let modifiedDataObj of modifiedData">
+            <button
+              class="nav-link"
+              [id]=modifiedDataObj.name+1
+              data-bs-toggle="pill"
+              [attr.data-bs-target]="'#'+modifiedDataObj.id"
+              type="button"
+              role="tab"
+              [attr.aria-controls]="modifiedDataObj.name+'2'"
+              aria-selected="true"
+              (click)="getAllProductsWithFilter(modifiedDataObj.name)"
+              (click)="myFunction()"
+            >
+            {{modifiedDataObj.name}}
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div style="cursor: pointer; position: relative;" (click)="goToCartPage('productObj')">
+        <img src="./assets/img/cart.png" width="25px" alt="" />
+        <span class="badge">
+          {{ productCartArr.length }}
+        </span>
+      </div>
+    </div>
+
+    <ul
+      class="nav col-md-12 d-flex align-items-center justify-content-between hide-mobile"
+      id="pills-tab"
+      role="tablist"
+    >
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="pills-home-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#pills-home"
+          type="button"
+          role="tab"
+          aria-controls="pills-home"
+          aria-selected="true"
+        >
+          Home
+        </button>
+      </li>
+
+
+      <li class="nav-item" role="presentation" *ngFor="let modifiedDataObj of modifiedData">
+        <button
+          class="nav-link"
+          [id]=modifiedDataObj.name+1
+          data-bs-toggle="pill"
+          [attr.data-bs-target]="'#'+modifiedDataObj.id"
+          type="button"
+          role="tab"
+          [attr.aria-controls]="modifiedDataObj.name+'2'"
+          aria-selected="true"
+          (click)="getAllProductsWithFilter(modifiedDataObj.name)"
+        >
+        {{modifiedDataObj.name}}
+        </button>
+      </li>
+
+      <div style="cursor: pointer" (click)="goToCartPage('productObj')">
+        <span style="position: relative">
+          <img src="./assets/img/cart.png" width="25px" alt="" />
+          <span class="badge">
+            {{ productCartArr.length }}
+          </span>
+        </span>
+        <span
+          style="
+            font-size: 2rem;
+            font-weight: 500;
+            vertical-align: middle;
+            padding-left: 10px;
+          "
+        >
+          View Cart
+        </span>
+      </div>
+      <!-- here add to cart button -->
+      <!-- <li class="d-flex align-item-center">
+        <label class="dropdown">
+          <div class="dd-button">
+            <span class="filter-button">Sort by: Featured</span>
+          </div>
+
+          <input type="checkbox" class="dd-input" id="test" />
+
+          <ul class="dd-menu">
+            <li>A-Z</li>
+            <li>A-Z</li>
+            <li>Z-A</li>
+            <li>Decreasing Price</li>
+          </ul>
+        </label>
+      </li> -->
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="pills-home"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+      >
+        <div class="row" style="place-content: center">
+          <div class="col-lg-12 col-md-12 col-sm-12 margin-top-5">
+            <div>
+              <img
+                src="{{banner[1].bannerImages[0]}}"
+                
+                alt="artical-img"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+            <div class="row d-flex justify-content-center">
+              <div
+                class="col-md-12 d-flex align-item-center justify-content-between"
+              >
+                <span class="product-title">{{homeCategoriesListWithoutName[0].name?homeCategoriesListWithoutName[0].name:'Poker Pundit'}}</span>
+                <div id="product-title-2" style="display: none !important">
+                  <span
+                    class="product-title"
+                    style="padding-left: 10px"
+                    type="button"
+                    (click)="loadLess()"
+                    >View Less</span
+                  >
+                </div>
+                <div id="product-title-1">
+                  <span class="product-title" type="button" (click)="loadMore()"
+                    >View All</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row d-flex justify-content-center">
+              <div class="chips-grid">
+                <div
+                  class="mt-5"
+                  *ngFor="let pokerChipsSet of CategoryOneProducts.slice(0, showCount)"
+                  (click)="goToSinglePage(pokerChipsSet)"
+                >
+                  <div
+                    class="box d-flex align-items-center flex-column justify-content-between"
+                    style="position: relative"
+                  >
+                      <div *ngIf="pokerChipsSet.discountCode != ''" class="off50">{{homeCategoriesListWithoutName[0].name?homeCategoriesListWithoutName[1].name:'Poker Pundit'}}</div>
+
+                    <img
+                      class="img-fluid product-img-width"
+                      src="{{ pokerChipsSet.images }}"
+                      alt="gamezy.png"
+                    />
+                    <p
+                      class="p-font-size text-cut"
+                      style="
+                        font-weight: 600;
+                        word-wrap: break-word;
+                        text-align: center;
+                        padding-top: 20px;
+                        height: 10rem;
+                      "
+                    >
+                      {{ pokerChipsSet.productName }}
+                    </p>
+                    <p class="text-center p-font-size pricing-font ">
+                      ₹ {{ pokerChipsSet.pricing }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row hero-chip-card mt-5" style="background-color: transparent !important;">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="row d-flex justify-content-center">
+                <div
+                  class="col-md-12 d-flex align-item-center justify-content-between"
+                >
+                  <span class="product-title">{{homeCategoriesListWithoutName[1].name}}</span>
+
+                  <div id="product-title-3">
+                    <span
+                      class="product-title"
+                      type="button"
+                      (click)="loadMore1()"
+                      >View All</span
+                    >
+                  </div>
+
+                  <div id="product-title-4" style="display: none !important">
+                    <span
+                      class="product-title"
+                      style="padding-left: 10px"
+                      type="button"
+                      (click)="loadLess2()"
+                      >View Less</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="row d-flex justify-content-center">
+                <div class="chips-grid">
+                  <div
+                    class="mt-5"
+                    *ngFor="let pokerChipsSet of CategoryTwoProducts.slice(0, showCount1)"
+                    (click)="goToSinglePage(pokerChipsSet)"
+                  >
+                    <div
+                      class="box d-flex align-items-center flex-column justify-content-between"
+                      style="position: relative"
+                    >
+                        <div *ngIf="pokerChipsSet.discountCode != ''" class="off50">{{pokerChipsSet.discountCode}} {{pokerChipsSet.discountPercentage}}</div>
+
+                      <img
+                        class="img-fluid product-img-width"
+                        src="{{ pokerChipsSet.images }}"
+                        alt="gamezy.png"
+                      />
+                      <p
+                        class="p-font-size"
+                        style="
+                          font-weight: 600;
+                          word-wrap: break-word;
+                          text-align: center;
+                          padding-top: 20px;
+                          height: 10rem;
+                        "
+                      >
+                        {{ pokerChipsSet.productName }}
+                      </p>
+                      <p class="text-center p-font-size pricing-font">
+                        ₹ {{ pokerChipsSet.pricing }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-4">
+                <div class="padding-3rem">
+                  <p class="fw-bold mb-0 font-size-5rem">
+                    Customizable Poker Sets
+                  </p>
+                  <span class="d-block mb-0">By PokerPundit</span>
+                </div>
+              </div>
+
+              <div class="col-md-7">
+                <div class="row" style="position: relative">
+                  <div class="owl-carousel owl-theme owl-loaded carousel1">
+                    <div class="owl-stage-outer">
+                      <div class="owl-stage">
+                        <div class="owl-item padding-3rem" style="width: 100%">
+                          <img
+                            src="assets/img/Customizable_chips.png"
+                            alt="artical-img"
+                            class="img-fluid"
+                          />
+
+                          <p style="text-align: center" class="pt-3">
+                            8-Striped
+                          </p>
+                        </div>
+                        <div class="owl-item padding-3rem">
+                          <img
+                            src="assets/side-bar-img/mic_chips.svg"
+                            alt="artical-img"
+                            class="img-fluid"
+                          />
+
+                          <p style="text-align: center" class="pt-3">
+                            8-Striped
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-wrap button-position">
+                    <svg
+                      class="prev-btn prev-btn1"
+                      width="24"
+                      height="40"
+                      viewBox="0 0 24 60"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="user-select: none"
+                    >
+                      <path
+                        d="M23.1686 58.8142C23.7229 58.0237 24 57.0877 24 56.0063C24 54.927 23.7229 53.9921 23.1686 53.2016L6.92841 30.0395L23.224 6.79842C23.7413 6.06061 24 5.13834 24 4.03162C24 2.9249 23.7229 1.97628 23.1686 1.18577C22.6143 0.395257 21.9581 0 21.1998 0C20.443 0 19.7875 0.395257 19.2333 1.18577L0.609699 27.8261C0.387991 28.1423 0.230577 28.4848 0.137461 28.8538C0.0458202 29.2227 0 29.6179 0 30.0395C0 30.4611 0.0458202 30.8564 0.137461 31.2253C0.230577 31.5942 0.387991 31.9368 0.609699 32.253L19.2887 58.8933C19.806 59.6311 20.443 60 21.1998 60C21.9581 60 22.6143 59.6047 23.1686 58.8142Z"
+                        fill="#ffffff"
+                      />
+                    </svg>
+
+                    <svg
+                      class="next-btn next-btn1"
+                      width="24"
+                      height="40"
+                      viewBox="0 0 24 60"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="user-select: none"
+                    >
+                      <path
+                        d="M0.831409 58.8142C0.277136 58.0237 0 57.0877 0 56.0063C0 54.927 0.277136 53.9921 0.831409 53.2016L17.0716 30.0395L0.775981 6.79842C0.25866 6.06061 0 5.13834 0 4.03162C0 2.9249 0.277136 1.97628 0.831409 1.18577C1.38568 0.395257 2.04194 0 2.80018 0C3.55695 0 4.21247 0.395257 4.76674 1.18577L23.3903 27.8261C23.612 28.1423 23.7694 28.4848 23.8625 28.8538C23.9542 29.2227 24 29.6179 24 30.0395C24 30.4611 23.9542 30.8564 23.8625 31.2253C23.7694 31.5942 23.612 31.9368 23.3903 32.253L4.71132 58.8933C4.19399 59.6311 3.55695 60 2.80018 60C2.04194 60 1.38568 59.6047 0.831409 58.8142Z"
+                        fill="#ffffff"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 button-div">
+                <button class="btn btn-without-border">
+                  Contact us and get a Quote
+                </button>
+              </div>
+            </div>
+          </div> -->
+
+          <div style="border-top: 1px solid #fff; margin-top: 30px">
+            <span class="DeliveryReturnsHeader">Delivery and Returns</span>
+            <div class="row text-res-center">
+              <div class="col-md-3 col-3">
+                <div class="row">
+                  <div class="col-md-3 height-80">
+                    <img
+                      src="./assets/img/shop/FreeShipping.png"
+                      alt=""
+                      style="padding: 10px; width: 100%"
+                    />
+                  </div>
+                  <div class="col-md-9">
+                    <span class="DeliveryReturnsTitle">Free Shipping </span>
+                    <span class="DeliveryReturnsSubTitle"
+                      >Free shipping on all orders above INR 990</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-3">
+                <div class="row">
+                  <div class="col-md-3 height-80">
+                    <img
+                      src="./assets/img/shop/support247.png"
+                      alt=""
+                      style="padding: 10px; width: 100%"
+                    />
+                  </div>
+                  <div class="col-md-9">
+                    <span class="DeliveryReturnsTitle">Support 24/7</span>
+                    <span class="DeliveryReturnsSubTitle"
+                      >Contact us 24 hrs a day, 7 days a week</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-3">
+                <div class="row">
+                  <div class="col-md-3 height-80">
+                    <img
+                      src="./assets/img/shop/30daysreturn.png"
+                      alt=""
+                      style="padding: 10px; width: 100%"
+                    />
+                  </div>
+                  <div class="col-md-9">
+                    <span class="DeliveryReturnsTitle">30 days return </span>
+                    <span class="DeliveryReturnsSubTitle"
+                      >Simply return it within 30 days for an exchange</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-3">
+                <div class="row">
+                  <div class="col-md-3 height-80">
+                    <img
+                      src="./assets/img/shop/100paymentsecure.png"
+                      alt=""
+                      style="padding: 10px; width: 100%"
+                    />
+                  </div>
+                  <div class="col-md-9">
+                    <span class="DeliveryReturnsTitle"
+                      >100% payment secure</span
+                    >
+                    <span class="DeliveryReturnsSubTitle"
+                      >We ensure secure payment with PEV</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngFor="let selectedModifiedDataObj of modifiedData" class="tab-pane fade"
+          [id]=selectedModifiedDataObj.id
+          role="tabpanel"
+          [attr.aria-label]="'pills-'+selectedModifiedDataObj.name+'-tab'">
+            <div class="row" style="place-content: center">
+              <div class="col-lg-12 col-md-12 col-sm-12 mt-5">
+                <div class="row d-flex justify-content-center">
+                  <div
+                    class="col-md-12 d-flex align-item-center justify-content-between"
+                  >
+                    <span class="product-title">{{selectedModifiedDataObj.name}}</span>
+                  
+                    <div id="product-title-1"> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="row d-flex justify-content-center">
+                  <div class="chips-grid">
+                    <div
+                      class="mt-5"
+                      *ngFor="let pokerChipsSet of allProductWithFiltered"
+                      (click)="goToSinglePage(pokerChipsSet)"
+                    >
+                      <div
+                        class="box d-flex align-items-center flex-column justify-content-between"
+                        style="position: relative"
+                      >
+                          <div *ngIf="pokerChipsSet.discountCode != ''" class="off50">{{pokerChipsSet.discountCode}} {{pokerChipsSet.discountPercentage}}</div>
+    
+                        <img
+                          class="img-fluid product-img-width"
+                          src="{{ pokerChipsSet.images }}"
+                          alt="gamezy.png"
+                        />
+                        <p
+                          class="p-font-size"
+                          style="
+                            font-weight: 600;
+                            word-wrap: break-word;
+                            text-align: center;
+                            padding-top: 20px;
+                            height: 10rem;
+                          "
+                        >
+                          {{ pokerChipsSet.productName }}
+                        </p>
+                        <p class="text-center p-font-size pricing-font">
+                          ₹ {{ pokerChipsSet.pricing }}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

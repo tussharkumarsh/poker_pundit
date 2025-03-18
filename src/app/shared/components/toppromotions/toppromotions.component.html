@@ -1,0 +1,83 @@
+<div class="container bg-trasparent p-3" style="position: relative">
+  <div class="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-lg-1 g-3">
+    <div class="col">
+      <div class="col-md-12">
+        <h1 style="font-weight: 700; font-size: 3.5rem">Top Promotions</h1>
+      </div>
+    </div>
+    <div class="col" style="margin: 1.5rem 0rem" *ngFor="let topPromotionsObj of topPromotions">
+      <div
+        class="padding-5 d-flex align-items-flex-start justify-content-between flex-column common-card-background rounded-5"
+      >
+        <div class="row mb-5">
+          <div class="col-md-6">
+              <img
+                width="100%"
+                class="padding-img"
+                src="{{topPromotionsObj.images[0]}}"
+                alt="website-img"
+              />
+          </div>
+          <div class="col-md-6" style="text-align: center; padding: 0 2rem; align-self: center;">
+            <div class="row" style="row-gap: 10px;">
+              <div class="col-md-12 col-6">
+                <button type="button" class="btn enter-button" style="white-space: nowrap; width: -webkit-fill-available;" (click)="goToSinglePage(topPromotionsObj)">View Info</button>
+              </div>
+              <div class="col-md-12 col-6">
+                <button type="button" class="btn share-button" (click)="copyText(topPromotionsObj.links[1])" style="white-space: nowrap; width: -webkit-fill-available;">Share</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between mt-3">
+          <p style="font-weight: 300; font-size: 1.5rem">{{topPromotionsObj.createdAt | date}}</p>
+          <p style="font-weight: 300; font-size: 1.5rem">{{topPromotionsObj.createdAt | date:'shortTime'}}</p>
+        </div>
+        <p style="font-weight: 600; font-size: 18px">{{topPromotionsObj.heading}}</p>
+        <p style="font-weight: 300; font-size: 1.5rem">
+          <span class="text-cut" [innerHtml]=topPromotionsObj.description></span>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- <div class="col" style="margin: 1.5rem 0rem">
+      <div
+        class="padding-5 d-flex align-items-flex-start justify-content-between flex-column common-card-background rounded-5"
+      >
+
+          <div class="row">
+            <div class="col-md-6">
+                <img
+                  width="100%"
+                  class="padding-img"
+                  src="/assets/img/website-img-2.png"
+                  alt="website-img"
+                />
+            </div>
+            <div class="col-md-6" style="text-align: center; padding: 0 2rem; align-self: center;">
+              <div class="row" style="row-gap: 10px;">
+                <div class="col-md-12 col-6">
+                  <button type="button" class="btn enter-button" style="white-space: nowrap; width: -webkit-fill-available;">View Info</button>
+                </div>
+                <div class="col-md-12 col-6">
+                  <button type="button" class="btn share-button" style="white-space: nowrap; width: -webkit-fill-available;">Share</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="d-flex align-items-center justify-content-between mt-3">
+          <p style="font-weight: 300; font-size: 1.5rem">12/2/23</p>
+          <p style="font-weight: 300; font-size: 1.5rem">3:30PM</p>
+        </div>
+        <p style="font-weight: 600; font-size: 1.8rem">PokerBaazi</p>
+        <p style="font-weight: 300; font-size: 1.5rem">
+          Dates - 5 to 12 Feb | Venue - PokerBaazi | GTD - ₹5+ Crore | Dates - 5
+          to 12 Feb | Venue - PokerBaazi | GTD - ₹5+ Crore
+        </p>
+      </div>
+    </div> -->
+  </div>
+</div>

@@ -1,0 +1,185 @@
+
+<!-- version 2 -->
+<div class="row" style="background: #242424">
+  <div class="container" style="margin-bottom: 2rem">
+    <div class="row hero-footer">
+      <div class="col-md-3 col-6">
+        <h1 class="mb-3 footer-title">Quick Links</h1>
+        <ul
+          class="d-flex align-items-flex-start justify-content-around flex-column"
+          style="padding: 0px"
+        >
+          <li>
+            <span role="button" class="footer-link" routerLink="/home/about-us"
+              >About Us</span
+            >
+          </li>
+          <li>
+            <span
+              role="button"
+              class="footer-link"
+              routerLink="/home/contact-us"
+              >Contact Us</span
+            >
+          </li>
+          <li>
+            <span
+              role="button"
+              class="footer-link"
+              routerLink="/home/tds-return"
+              >TDS Return</span
+            >
+          </li>
+          <li>
+            <span
+              role="button"
+              class="footer-link"
+              routerLink="/home/privacy-policy"
+              >Privacy Policy</span
+            >
+          </li>
+          <li>
+            <span
+              role="button"
+              class="footer-link"
+              routerLink="/home/terms-and-conditions"
+              >Terms &amp; Conditions</span
+            >
+          </li>
+          <li>
+            <span role="button" class="footer-link" routerLink="/home/faqs"
+              >FAQs</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-6">
+        <div>
+          <h1 class="mb-3 footer-title">Address</h1>
+          <p class="footer-address">
+            Western Avenue <br />
+            Sainik Farms <br />
+            New Delhi - 110062
+          </p>
+        </div>
+      </div>
+      <!-- <div class="col-md-1"></div> -->
+      <div class="col-md-6">
+        <div class="row mt-md-0 mt-3 mb-3">
+          <form #form="ngForm">
+            <div class="row">
+              <div
+                class="col-md-6 col-sm-12 input-card mb-0 mt-md-0 input-error-div d-flex flex-column justify-content-between"
+              >
+                <h1 class="mb-3 footer-title">Subscribe to our Newsletter</h1>
+                <input
+                  class="input-style"
+                  type="email"
+                  placeholder="Email"
+                  required
+                  minlength="5"
+                  name="email"
+                  [(ngModel)]="newsLetter.email"
+                  #email="ngModel"
+                  [ngClass]="{ 'is-invalid': email.invalid && email.touched }"
+                />
+                <div
+                  class="invalid-feedback"
+                  class="newsLetter-form-error"
+                  *ngIf="email.invalid && email.touched"
+                >
+                  <div *ngIf="email.errors?.['required']">
+                    Email is required.
+                  </div>
+                  <div *ngIf="email.errors?.['minlength']">
+                    Email must be at least 5 characters long.
+                  </div>
+                  <div *ngIf="email.errors?.['email']">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-sm-12 input-card mb-0 mt-md-0">
+                <div class="d-flex justify-content-center">
+                  <img
+                    width="60%"
+                    src="/assets/img/PP shark 1.svg"
+                    alt="pp_shark"
+                  />
+                </div>
+                <button
+                  class="footer-submit-button"
+                  (click)="handleSubmit(form)"
+                >
+                  Join The Revolution
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="row mt-5">
+          <h1 class="footer-title follow-up">Follow Us</h1>
+          <div
+            class="d-flex align-items-flex-start justify-content-between footer-follow-us"
+          >
+            <a href="https://www.facebook.com/PokerPundit" target="_blank"
+              ><img
+                style="height: 3rem; width: 3rem"
+                src="/assets/img/facebook.png"
+                alt="facebook icon"
+            /></a>
+            <a href="https://www.instagram.com/pokerpundit/" target="_blank"
+              ><img
+                style="height: 3rem; width: 3rem"
+                src="/assets/img/instagram.png"
+                alt="instagram icon"
+            /></a>
+            <a href="https://twitter.com/pokerpundit_in" target="_blank"
+              ><img
+                style="height: 3rem; width: 3rem"
+                src="/assets/img/twitter.png"
+                alt="twitter icon"
+            /></a>
+            <a href="https://www.youtube.com/@PokerPunditin" target="_blank"
+              ><img
+                style="height: 3rem; width: 4rem"
+                src="/assets/img/youtube-nav-logo.png"
+                alt="linkdin icon"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="marquee-wrapper">
+        <div class="marquee" style="animation-duration: 20s">
+          <div>
+            <a [attr.href]="'//' + website.links[0]" target="_blank" *ngFor="let website of websites">
+              <img
+                style="max-width: 100%; height: auto; margin: 0rem 3rem"
+                src="{{ website.images[0] }}"
+                alt="footer img"
+              />
+            </a>
+            <a [attr.href]="'//' + website.links[0]" target="_blank" target="_blank" *ngFor="let website of websites">
+              <img
+                style="max-width: 100%; height: auto; margin: 0rem 3rem"
+                src="{{ website.images[0] }}"
+                alt="footer img"
+              />
+            </a>
+            <a [attr.href]="'//' + website.links[0]" target="_blank" *ngFor="let website of websites">
+              <img
+                style="max-width: 100%; height: auto; margin: 0rem 3rem"
+                src="{{ website.images[0] }}"
+                alt="footer img"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

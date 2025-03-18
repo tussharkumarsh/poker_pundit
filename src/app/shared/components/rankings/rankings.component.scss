@@ -1,0 +1,105 @@
+button {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.nav-link {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+.poker-ranking-top-border {
+  width: 100%;
+  margin: 0.5em 0em;
+  border-bottom: 0.5px solid gray;
+  border-top: 0.5px solid gray;
+}
+
+.pages {
+  display: flex;
+  gap: 0.1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  & a {
+    text-decoration: none;
+    color: gray;
+  }
+}
+.page {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.page:hover {
+  background-color: #6a3791;
+  color: #fff;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+.active {
+  // background-color: #6a3791;
+  color: #fff;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.nav-link {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.tab-content {
+  font-size: 1.7rem;
+}
+
+.nav-link.active {
+  background: none;
+  color: white;
+  background-color: #6a3791;
+  border-color: #6a3791;
+  border-radius: 1rem;
+}
+.nav {
+  padding: 0;
+}
+
+.nav-link:not(.active) {
+  color: gray;
+}
+
+.rankings-button {
+  width: 100%;
+}
+
+.rankings-button button {
+  background: #242424;
+}
+
+// .rankings-button button {
+//   // border: 1px solid #ced4da;
+// }
+.rankings-button button.active {
+  background-color: #6a3791;
+  color: #fff;
+  border-color: #6a3791;
+}
+
+.about-border {
+  display: block;
+  width: 50%;
+  height: 0.01rem;
+  background: gray;
+  margin: 20px auto;
+}

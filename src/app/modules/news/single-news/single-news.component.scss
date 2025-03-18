@@ -1,0 +1,292 @@
+.box {
+  margin-top: 1rem;
+  background-color: #393939;
+  min-height: 150px;
+}
+
+.news-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+.news-description {
+  font-size: 2rem;
+}
+
+.top-right {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #0460ac;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-bottom-left-radius: 0.5rem;
+  font-size: 14px;
+}
+
+.artical-time-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.small-article-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.small-article-text:hover {
+  cursor: pointer;
+  color: #a86fbb;
+}
+
+.box_square {
+  margin-top: 1rem;
+  background-color: #393939;
+  min-height: 150px;
+}
+
+.custom-svg {
+  width: 52%;
+  height: 52%;
+}
+
+// @media only screen and (max-width: 1200px) {
+//   .col-md-8 {
+//     flex: 0 0 100%; /* make the column take full width of the screen */
+//     max-width: 100%; /* set the maximum width to 100% */
+//   }
+//   .col-md-4 {
+//     flex: 0 0 100%; /* make the column take full width of the screen */
+//     max-width: 100%; /* set the maximum width to 100% */
+//   }
+// }
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .news-description {
+    font-size: 1.5rem;
+  }
+}
+
+
+.show-mobile{
+  display: none;
+}
+
+.hide-mobile{
+  display: block;
+}
+
+.sp-category{
+  font-weight: 600; font-size: 3rem
+}
+
+.aligh-item{
+  align-items: center;
+}
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .show-mobile{
+    display: block;
+  }
+
+  .aligh-item{
+    align-items: flex-start !important;
+  }
+
+  .hide-mobile{
+    display: none;
+  }
+
+  .sp-category{
+    font-weight: 600; font-size: 2rem
+  }
+}
+
+.prev-btn,
+.next-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: black;
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.owl-prev:before,
+.owl-next:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+
+.hero-pokerRooms {
+  gap: 1.5rem;
+}
+.pokerRooms {
+  background: #242424;
+  padding: 1.5em;
+  border-radius: 2rem;
+}
+.pokerRoom-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.pookerRoom-description {
+  font-size: 1.5rem;
+}
+.pokerRoom-button {
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+.share {
+  background: #363636;
+}
+button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  background: #6a3791;
+  border: none;
+  cursor: pointer;
+}
+
+.section-heading{
+  font-weight: 700; 
+  font-size: 3.5rem
+}
+
+@media (max-width: 992px) and (min-width: 300px) {
+  .section-heading{
+    font-weight: 700; 
+    font-size: 2.9rem
+  }
+
+  #stickey-page{
+    position: relative !important;
+    padding: 0 !important;
+    width: 100%!important;
+  }
+}
+
+
+@media (max-width: 1450px) and (min-width: 993px) {
+  .section-heading{
+    font-weight: 700; 
+    font-size: 2.6rem
+  } 
+  .pookerRoom-description {
+    font-size: 1.1rem;
+  }
+  button {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background: #6a3791;
+    border: none;
+    cursor: pointer;
+  }
+  .pokerRooms {
+    background: #242424;
+    padding: 1em;
+    border-radius: 2rem;
+  }
+}
+
+
+span{
+  p{
+
+    img{
+      width: 100% !important;
+    }
+  }
+}
+
+.image-container {
+  width: 100% !important;
+  background-image: url('/assets/img/wht.png'); 
+  background-repeat: repeat;
+}
+.image-container img {
+  width: 100% !important;
+  /* Optionally, you can set max-width to prevent image stretching */
+  max-width: 100% !important;
+}
+
+
+
+
+p img
+{
+  max-width:100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+.image-container img {
+  max-width:100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+#image-container p img {
+  max-width:100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+:host ::ng-deep .bloghtml { 
+  display: inline-flex;
+  max-width: 100px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+:host ::ng-deep #image-container p img { 
+  max-width: 100% !important; 
+}
+
+
+
+::ng-host .bloghtml { 
+  display: inline-flex;
+  max-width: 100px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  width: 100% !important;
+}
+
+::ng-host #image-container p img { 
+  max-width: 100% !important; 
+  width: 100% !important;
+}
