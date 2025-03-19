@@ -1,154 +1,96 @@
-<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > <img src="./assets/side-bar-img/new_poker_logo.svg" alt=""> </p></ngx-spinner>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+  <p style="color: white"> <img src="./assets/side-bar-img/new_poker_logo.svg" alt=""> </p>
+</ngx-spinner>
 <div *ngIf="waitLoader" style="height: 100vh"></div>
 <div class="container" style="min-width: 100%" *ngIf="!waitLoader">
   <div class="row gx-5">
     <div class="col-md-8">
       <div class="row" style="place-content: center">
         <div class="col-md-12 title-border-bottom">
-          <h1 class="section-heading">Spotlight</h1>
+          <h1 class="section-heading">Spotlight </h1>
         </div>
 
         <div class="row mt-5">
-          <div
-            class="col-md-8 cursor-pointer hover padding-0"
-            style="position: relative"
-          >
-            <img
-              class="artical-img-opacity"
-              src="{{ featuredNews[0].images[0] }}"
-              alt="article-img"
-              style="width: 100%"
-              (click)="goToSingleNewsPage(featuredNews[0])"
-            />
+          <div class="col-md-8 cursor-pointer hover padding-0" style="position: relative">
+            <img class="artical-img-opacity" src="{{ featuredNews[0].images[0] }}" alt="article-img" style="width: 100%"
+              (click)="goToSingleNewsPage(featuredNews[0])" />
             <!-- <div class="top-right" style="right: 8px;">News</div> -->
 
-            <div
-              class="top-right"
-              style="right: 8px"
-              *ngIf="featuredNews[0].tags == 'News'"
-              style="background-color: #0460ac"
-            >
+            <div class="top-right" style="right: 8px" *ngIf="featuredNews[0].tags == 'News'"
+              style="background-color: #0460ac">
               {{ featuredNews[0].tags }}
             </div>
-            <div
-              class="top-right"
-              style="right: 8px"
-              *ngIf="featuredNews[0].tags == 'Promotion'"
-              style="background-color: #ef1178"
-            >
+            <div class="top-right" style="right: 8px" *ngIf="featuredNews[0].tags == 'Promotion'"
+              style="background-color: #ef1178">
               {{ featuredNews[0].tags }}
             </div>
-            <div
-              class="top-right"
-              style="right: 8px"
-              *ngIf="featuredNews[0].tags == 'Featured'"
-              style="background-color: #ba1616"
-            >
+            <div class="top-right" style="right: 8px" *ngIf="featuredNews[0].tags == 'Featured'"
+              style="background-color: #ba1616">
               {{ featuredNews[0].tags }}
             </div>
-            <div
-              class="top-right"
-              style="right: 8px"
-              *ngIf="
+            <div class="top-right" style="right: 8px" *ngIf="
                 featuredNews[0].tags != 'News' &&
                 featuredNews[0].tags != 'Featured' &&
                 featuredNews[0].tags != 'Promotion'
-              "
-              style="background-color: #6a3791"
-            >
+              " style="background-color: #6a3791">
               {{ featuredNews[0].tags }}
             </div>
           </div>
 
           <div class="col-md-4 mt-md-0 mt-3 padding-0">
-            <p
-              class="artical-description artical-text"
-              (click)="goToSingleNewsPage(featuredNews[0])"
-            >
+            <p class="artical-description artical-text" (click)="goToSingleNewsPage(featuredNews[0])">
               {{ featuredNews[0].heading }}
             </p>
             <p class="text-cut">
-              <span
-                style="font-size: 1.5rem"
-                [innerHtml]="featuredNews[0].description"
-              ></span>
+              <span style="font-size: 1.5rem" [innerHtml]="featuredNews[0].description"></span>
             </p>
             <p class="artical-time-text mt-md-0 mt-3">
               <i style="color: gray">
                 {{ featuredNews[0].timeForReadingMinutes }} |
-                {{ featuredNews[0].createdAt | dateAgo }}</i
-              >
+                {{ featuredNews[0].createdAt | dateAgo }}</i>
             </p>
           </div>
         </div>
 
         <div class="row mt-5">
-          <div
-            class="col-md-4 col-sm-6 my-3 cursor-pointer hover"
-            *ngFor="let slicedFeaturedNewsObj of slicedFeaturedNews"
-          >
+          <div class="col-md-4 col-sm-6 my-3 cursor-pointer hover"
+            *ngFor="let slicedFeaturedNewsObj of slicedFeaturedNews">
             <div class="row">
               <div class="col-md-12 col-5 padding-0">
                 <div style="position: relative">
-                  <img
-                    src="{{ slicedFeaturedNewsObj.images[0] }}"
-                    alt="artical-img"
-                    class="artical-img-opacity"
-                    style="width: 100%"
-                    (click)="goToSingleNewsPage(featuredNews[0])"
-                  />
+                  <img src="{{ slicedFeaturedNewsObj.images[0] }}" alt="artical-img" class="artical-img-opacity"
+                    style="width: 100%" (click)="goToSingleNewsPage(featuredNews[0])" />
                   <!-- <div class="top-right">News</div> -->
 
-                  <div
-                    class="top-right"
-                    style="right: 8px"
-                    *ngIf="slicedFeaturedNewsObj.tags == 'News'"
-                    style="background-color: #0460ac"
-                  >
+                  <div class="top-right" style="right: 8px" *ngIf="slicedFeaturedNewsObj.tags == 'News'"
+                    style="background-color: #0460ac">
                     {{ slicedFeaturedNewsObj.tags }}
                   </div>
-                  <div
-                    class="top-right"
-                    style="right: 8px"
-                    *ngIf="slicedFeaturedNewsObj.tags == 'Promotion'"
-                    style="background-color: #ef1178"
-                  >
+                  <div class="top-right" style="right: 8px" *ngIf="slicedFeaturedNewsObj.tags == 'Promotion'"
+                    style="background-color: #ef1178">
                     {{ slicedFeaturedNewsObj.tags }}
                   </div>
-                  <div
-                    class="top-right"
-                    style="right: 8px"
-                    *ngIf="slicedFeaturedNewsObj.tags == 'Featured'"
-                    style="background-color: #ba1616"
-                  >
+                  <div class="top-right" style="right: 8px" *ngIf="slicedFeaturedNewsObj.tags == 'Featured'"
+                    style="background-color: #ba1616">
                     {{ slicedFeaturedNewsObj.tags }}
                   </div>
-                  <div
-                    class="top-right"
-                    style="right: 8px"
-                    *ngIf="
+                  <div class="top-right" style="right: 8px" *ngIf="
                       slicedFeaturedNewsObj.tags != 'News' &&
                       slicedFeaturedNewsObj.tags != 'Featured' &&
                       slicedFeaturedNewsObj.tags != 'Promotion'
-                    "
-                    style="background-color: #6a3791"
-                  >
+                    " style="background-color: #6a3791">
                     {{ slicedFeaturedNewsObj.tags }}
                   </div>
                 </div>
               </div>
               <div class="col-md-12 col-7">
-                <p
-                  class="mt-3 artical-text small-article-text"
-                  (click)="goToSingleNewsPage(slicedFeaturedNewsObj)"
-                >
+                <p class="mt-3 artical-text small-article-text" (click)="goToSingleNewsPage(slicedFeaturedNewsObj)">
                   {{ slicedFeaturedNewsObj.heading }}
                 </p>
                 <p class="mt-4 artical-time-text">
                   <i style="color: gray">
                     {{ slicedFeaturedNewsObj.timeForReadingMinutes }} |
-                    {{ slicedFeaturedNewsObj.createdAt | dateAgo }}</i
-                  >
+                    {{ slicedFeaturedNewsObj.createdAt | dateAgo }}</i>
                 </p>
               </div>
             </div>
@@ -211,27 +153,17 @@
             <h1 class="section-heading">Websites</h1>
           </div>
           <div class="col-md-12 mt-5" style="padding: 0">
-            <div
-              class="d-flex align-items-center justify-content-around flex-wrap"
-              style="
+            <div class="d-flex align-items-center justify-content-around flex-wrap" style="
                 background: #242424;
                 border-radius: 10px;
                 min-height: 10rem;
                 padding: 1rem;
-              "
-            >
-              <owl-carousel-o
-                [options]="customOptionsWebsite"
-                style="width: 100%"
-              >
+              ">
+              <owl-carousel-o [options]="customOptionsWebsite" style="width: 100%">
                 <ng-container *ngFor="let website of websites">
                   <ng-template class="slide" carouselSlide>
                     <div>
-                      <img
-                        src="{{ website.images[0] }}"
-                        alt="carousel_img"
-                        class="fixed-height-img"
-                      />
+                      <img src="{{ website.images[0] }}" alt="carousel_img" class="fixed-height-img" />
                     </div>
                   </ng-template>
                 </ng-container>
@@ -250,11 +182,7 @@
         <div class="row mt-5">
           <div class="add-card">
             <a [attr.href]="'//' + advertising[0].links[0]" target="_blank">
-              <img
-                src="{{ advertising[0].bannerImages[0] }}"
-                width="100%"
-                alt=""
-              />
+              <img src="{{ advertising[0].bannerImages[0] }}" width="100%" alt="" />
             </a>
           </div>
         </div>
@@ -270,42 +198,27 @@
             <div class="row">
               <div class="col-md-6 col-6">
                 <owl-carousel-o [options]="customOptionsWebsiteCarousel1">
-                  <ng-container
-                    *ngFor="let tournamentCategory1Obj of tournamentCategory1"
-                  >
+                  <ng-container *ngFor="let tournamentCategory1Obj of tournamentCategory1">
                     <ng-template class="slide" carouselSlide>
                       <div class="row">
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-center"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-center">
                           <div style="width: 80%">
-                            <img
-                              style="width: 100%"
-                              src="{{ tournamentCategory1Obj.images[0] }}"
-                              alt="article-img"
-                            />
+                            <img style="width: 100%" src="{{ tournamentCategory1Obj.images[0] }}" alt="article-img" />
                           </div>
                         </div>
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-center"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-center">
                           <p class="mt-3" style="font-size: 1.2rem">
                             {{ tournamentCategory1Obj.heading }}
                           </p>
                         </div>
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-around"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-around">
                           <p style="font-size: 1.2rem; margin-bottom: 0rem">
                             {{ tournamentCategory1Obj.description }}
                           </p>
                           <!-- <button class="upcoming-tournaments-button" (click)="goToSinglePageWebsite(tournamentCategory1Obj)">
                             Play Now
                           </button> -->
-                          <a
-                            [attr.href]="'//' + tournamentCategory1Obj.links[0]"
-                            target="_blank"
-                          >
+                          <a [attr.href]="'//' + tournamentCategory1Obj.links[0]" target="_blank">
                             <button class="upcoming-tournaments-button">
                               Play Now
                             </button>
@@ -318,39 +231,24 @@
               </div>
               <div class="col-md-6 col-6">
                 <owl-carousel-o [options]="customOptionsWebsiteCarousel2">
-                  <ng-container
-                    *ngFor="let websitesCarousel1Obj of tournamentCategory2"
-                  >
+                  <ng-container *ngFor="let websitesCarousel1Obj of tournamentCategory2">
                     <ng-template class="slide" carouselSlide>
                       <div class="row">
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-center"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-center">
                           <div style="width: 80%">
-                            <img
-                              style="width: 100%"
-                              src="{{ websitesCarousel1Obj.images[0] }}"
-                              alt="article-img"
-                            />
+                            <img style="width: 100%" src="{{ websitesCarousel1Obj.images[0] }}" alt="article-img" />
                           </div>
                         </div>
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-center"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-center">
                           <p class="mt-3" style="font-size: 1.2rem">
                             {{ websitesCarousel1Obj.heading }}
                           </p>
                         </div>
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-around"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-around">
                           <p style="font-size: 1.2rem; margin-bottom: 0rem">
                             {{ websitesCarousel1Obj.description }}
                           </p>
-                          <a
-                            [attr.href]="'//' + websitesCarousel1Obj.links[0]"
-                            target="_blank"
-                          >
+                          <a [attr.href]="'//' + websitesCarousel1Obj.links[0]" target="_blank">
                             <button class="upcoming-tournaments-button">
                               Play Now
                             </button>
@@ -367,39 +265,24 @@
             <div class="row">
               <div class="col-md-6 col-6">
                 <owl-carousel-o [options]="customOptionsWebsiteCarousel3">
-                  <ng-container
-                    *ngFor="let websitesCarousel1Obj of tournamentCategory3"
-                  >
+                  <ng-container *ngFor="let websitesCarousel1Obj of tournamentCategory3">
                     <ng-template class="slide" carouselSlide>
                       <div class="row">
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-center"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-center">
                           <div style="width: 80%">
-                            <img
-                              style="width: 100%"
-                              src="{{ websitesCarousel1Obj.images[0] }}"
-                              alt="article-img"
-                            />
+                            <img style="width: 100%" src="{{ websitesCarousel1Obj.images[0] }}" alt="article-img" />
                           </div>
                         </div>
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-center"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-center">
                           <p class="mt-3" style="font-size: 1.2rem">
                             {{ websitesCarousel1Obj.heading }}
                           </p>
                         </div>
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-around"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-around">
                           <p style="font-size: 1.2rem; margin-bottom: 0rem">
                             {{ websitesCarousel1Obj.description }}
                           </p>
-                          <a
-                            [attr.href]="'//' + websitesCarousel1Obj.links[0]"
-                            target="_blank"
-                          >
+                          <a [attr.href]="'//' + websitesCarousel1Obj.links[0]" target="_blank">
                             <button class="upcoming-tournaments-button">
                               Play Now
                             </button>
@@ -412,39 +295,24 @@
               </div>
               <div class="col-md-6 col-6">
                 <owl-carousel-o [options]="customOptionsWebsiteCarousel4">
-                  <ng-container
-                    *ngFor="let websitesCarousel1Obj of tournamentCategory4"
-                  >
+                  <ng-container *ngFor="let websitesCarousel1Obj of tournamentCategory4">
                     <ng-template class="slide" carouselSlide>
                       <div class="row">
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-center"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-center">
                           <div style="width: 80%">
-                            <img
-                              style="width: 100%"
-                              src="{{ websitesCarousel1Obj.images[0] }}"
-                              alt="article-img"
-                            />
+                            <img style="width: 100%" src="{{ websitesCarousel1Obj.images[0] }}" alt="article-img" />
                           </div>
                         </div>
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-center"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-center">
                           <p class="mt-3" style="font-size: 1.2rem">
                             {{ websitesCarousel1Obj.heading }}
                           </p>
                         </div>
-                        <div
-                          class="col-md-12 d-flex align-items-center justify-content-around"
-                        >
+                        <div class="col-md-12 d-flex align-items-center justify-content-around">
                           <p style="font-size: 1.2rem; margin-bottom: 0rem">
                             {{ websitesCarousel1Obj.description }}
                           </p>
-                          <a
-                            [attr.href]="'//' + websitesCarousel1Obj.links[0]"
-                            target="_blank"
-                          >
+                          <a [attr.href]="'//' + websitesCarousel1Obj.links[0]" target="_blank">
                             <button class="upcoming-tournaments-button">
                               Play Now
                             </button>
@@ -463,11 +331,7 @@
         <div class="row mt-5">
           <div class="add-card">
             <a [attr.href]="'//' + advertising[0].links[1]" target="_blank">
-              <img
-                src="{{ advertising[0].bannerImages[1] }}"
-                width="100%"
-                alt=""
-              />
+              <img src="{{ advertising[0].bannerImages[1] }}" width="100%" alt="" />
             </a>
           </div>
         </div>
@@ -479,37 +343,19 @@
         </div>
         <div class="col-md-12" style="position: relative; padding: 0">
           <owl-carousel-o [options]="customOptionsVideos">
-            <ng-container
-              *ngFor="let pokerPunditCuratedVideosObj of livestreamingVideos"
-            >
+            <ng-container *ngFor="let pokerPunditCuratedVideosObj of livestreamingVideos">
               <ng-template class="slide" carouselSlide>
                 <div>
-                  <div
-                    style="position: relative"
-                    (click)="goToSinglePage(pokerPunditCuratedVideosObj)"
-                  >
-                    <img
-                      src="{{ pokerPunditCuratedVideosObj.images[0] }}"
-                      alt="live-streem-img"
-                      class="img-fluid"
-                    />
+                  <div style="position: relative" (click)="goToSinglePage(pokerPunditCuratedVideosObj)">
+                    <img src="{{ pokerPunditCuratedVideosObj.images[0] }}" alt="live-streem-img" class="img-fluid" />
                     <div class="play-button-container">
-                      <img
-                        src="/assets/side-bar-img/play_button.svg"
-                        alt=""
-                        class="img-fluid"
-                      />
+                      <img src="/assets/side-bar-img/play_button.svg" alt="" class="img-fluid" />
                     </div>
                   </div>
 
-                  <div
-                    class="d-flex align-items-center justify-content-between mt-4"
-                  >
+                  <div class="d-flex align-items-center justify-content-between mt-4">
                     <div type="button">
-                      <h3
-                        class="fw-bold fs-md-3"
-                        (click)="goToSinglePage(pokerPunditCuratedVideosObj)"
-                      >
+                      <h3 class="fw-bold fs-md-3" (click)="goToSinglePage(pokerPunditCuratedVideosObj)">
                         {{ pokerPunditCuratedVideosObj.heading }}
                       </h3>
                       <p class="mt-3 fs-md-4" style="font-size: 1.5rem">
